@@ -1,0 +1,15 @@
+- name: Home
+  link: /
+  icon: fa fa-home
+- name: Me
+  link: /about.html
+  image: /assets/images/about.jpg
+  icon: fa fa-user-circle
+- name: Research
+  link: /publications.html
+  image: /assets/images/research.jpg
+  icon: fa fa-graduation-cap
+- name: Blog
+  link: /blog.html
+  image: /assets/images/test.jpg
+  icon: fa fa-pencil-square-o

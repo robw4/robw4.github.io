@@ -1,0 +1,8 @@
+{% if site.social %}
+    <div class="w3-bar">
+        {% for entry in site.social %}
+            <a href="{{ entry.href }}{{ entry.id }}" class="w3-bar-item w3-button w3-round-xxlarge w3-xlarge" title="{{ entry.title }}">
+                    <i class="fa {{ entry.fa-icon }}"></i></a>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,346 @@
+<html><head><title>W3.CSS Template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!--<style>
+        body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    </style> -->
+    <style type="text/css">
+        .stackedit-open-button {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: no-repeat url("chrome-extension://ajehldoplanpchfokmeempkekhnhmoha/icon.svg");
+            background-size: 24px 24px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+        .stackedit-open-button:focus,
+        .stackedit-open-button:hover {
+            opacity: 1;
+        }
+    </style>
+    </head><body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content,
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+    <!-- Header -->
+    <header class="w3-container w3-center w3-padding-32">
+        <div class="w3-xxlarge">
+            robw4.github.io
+        </div>
+        
+
+<div class="w3-bar">
+    
+    <a href="/" class="w3-bar-item w3-button w3-round-xxlarge">
+        <i class="fa fa-home"></i></a>
+    
+    <a href="/about.html" class="w3-bar-item w3-button w3-round-xxlarge">
+        <i class="fa fa-user-circle"></i></a>
+    
+    <a href="/publications.html" class="w3-bar-item w3-button w3-round-xxlarge">
+        <i class="fa fa-graduation-cap"></i></a>
+    
+    <a href="/blog.html" class="w3-bar-item w3-button w3-round-xxlarge">
+        <i class="fa fa-pencil-square-o"></i></a>
+    
+</div>
+    </header>
+
+    <small>27 June 2020</small>
+<h1>Electrical Cheat Sheet</h1>
+
+<p class="view">by robw</p>
+
+<h1 id="electrical-cheat-sheet">Electrical Cheat Sheet</h1>
+<h2 id="classical-electromagnetism">Classical Electromagnetism</h2>
+
+<dl>
+  <dt>Lorentz equation</dt>
+  <dd>The total force experienced by a charge moving through an electric field of strength $\bm{E}$ (V / m = F / q) and magnetic field $\bm{B}$ is given as <script type="math/tex">\bm{F} = q \bm{E} + q \bm{v} \times \bm{B}</script>. From the lorentz equation a wire carrying current $i$ at an angle $\theta$ to a magnet field $B$ will experience a force equal to $F = Bil \sin \theta$.</dd>
+  <dt>Gauss’s Law</dt>
+  <dd>The total amount of electric flux $\Phi_{E}$ passing through the closed boundary $\partial \Omega$  of volume $\Omega$ is proportional to the total charge $Q$ contained within it, <script type="math/tex">\Phi_{E}= Q/ \epsilon</script> where $\Phi_{E} :=\oiint_{\partial \Omega} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$ and $Q := \iiint_{\Omega} \rho \mathrm{d} V$. The constant $\epsilon$ is the <em>permittivity</em> of the medium and is often expressed as $\epsilon = \epsilon_0 \epsilon_r$ where $\epsilon_0$ is the <em>permittivity</em> of free space. This equation can alternatively be expressed in terms of the <em>electric displacement field</em> or <em>D-field</em> $\mathbf{D} := \epsilon \mathbf{E}$.  For a field of strength $E$ passing normally through an area $A$ the electric flux density is given by $\Phi_{E} = EA$.</dd>
+  <dt>Ampere’s circuit Law</dt>
+  <dd>The line magnetic field along a contour $\partial \Sigma$ enclosing area $\Sigma$ is proportional to the total current passing through it. <script type="math/tex">\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l} = \mu I</script>. The constant $\mu$ is the <em>permeability</em> of the medium often expressed as $\mu = \mu_0 \mu_r$. The current $I$ is composed of two parts $I = I_c + I_d$ with  conductive current $I_c :=\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}$ and <em>displacement</em> current $I_d := \epsilon \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$. Alternatively this can be written in terms of the <em>H-field</em> as $\mathbf{B} = \mu \bm{H}$. The conductive current corresponds to the actual movement of free charges whilst the displacement current results from changes in the magnetic field (for example the current flowing in a capacitor).
+    <blockquote>
+      <p>The displacement current is needed to satisfy continuity of current $\nabla \cdot \mathbf{J}=-\frac{\partial \rho}{\partial t}$ and to allow electromagnetic waves to propagate through free space when $\mathbf{J} = \mathbf{0}$</p>
+    </blockquote>
+  </dd>
+  <dt>Maxwell-Faraday equation</dt>
+  <dd>The electromotive force $\epsilon$ induced around a contour is proportional to the time rate of change of magnetic flux flowing through it, <script type="math/tex">\epsilon(t) = -\frac{\mathrm{d}}{\mathrm{dt}} \Phi_{B}(dt)</script> with,$\Phi_{B} :=\iint_{\Sigma} \mathbf{B} \cdot \mathrm{d} \mathbf{S}$ and  $\epsilon := \oint_{\partial \Sigma} \mathbf{E} \cdot \mathrm{d} \boldsymbol{l}$. For a magnetic flux of strength $B$ passing normally to an area $A$ the magnetic flux reduces to $\Phi_{B} = B A$.</dd>
+  <dt>Gauss’s Law for Magnetism</dt>
+  <dd>The total magnetic field passing through a <em>closed surface</em>  $\partial \Omega$ is zero <script type="math/tex">\oiint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0</script>. As a result magnetic monopoles do not exist and magnetic field lines never begin or end but must form loops.</dd>
+</dl>
+
+<blockquote>
+  <p>This is an important result in its own right even if it isn’t typically applied</p>
+  <h2 id="foundations">Foundations</h2>
+  <dl>
+    <dt>Electric Potential</dt>
+    <dd>The electrical potential is equal to the electrical potential energy $\Delta U$ per unit charge between two points. We consider the electric potential gained by unit charge as an electromotive force $\epsilon = \Delta U / q$ and the electric potential lost by each charge as a potential drop $v =  -\Delta  / q$. It is measured in $\text{V} = \text{JC}^{-1}$.</dd>
+  </dl>
+</blockquote>
+
+<dl>
+  <dt>Current</dt>
+  <dd>Current is the rate of change of charge flowing through a circuit $i = dq / dt$. An electromotive force applies to a conductor will cause a current to flow.</dd>
+  <dt>Power</dt>
+  <dd>The power $p = v i$ dissipated by a circuit element is equal to the product of current flowing to it and potential difference across it</dd>
+  <dt>Conductance</dt>
+  <dd>In an electric field charge carriers will experience a force and will accelerate up to an average drift velocity $v = \mu \epsilon$.</dd>
+</dl>
+
+<p>Under an electric potential difference $\epsilon$</p>
+
+<h2 id="linear-circuits">Linear Circuits</h2>
+<h3 id="linear-devices">Linear Devices</h3>
+<p>The electrical properties of a linear device do not change with the voltage applied / current flowing to it. Resistors, inductors, capacitors and power sources are all linear devices.</p>
+
+<dl>
+  <dt>Resistors</dt>
+  <dd>The current flowing through an ohmic resistor is proportional to the electromotive force applied to it <script type="math/tex">\epsilon = iR</script> (ohms law) where $R$ is the resistance of the component measured in ohms ($\Omega$). The resistance of a wire of length $l$, area $A$ and <em>resistivity</em> $\rho$ can be calculated as $R = \rho l / A$. Resistors in series can be combined as $R = \sum_k R_k$ and in parallel as $1/R = \sum_k 1/R_k$.</dd>
+  <dt>Inductors</dt>
+  <dd>A time-varying current $i(t)$ flowing through an inductor creates a time varying magnetic field and induces a back emf $\epsilon(t)$ opposing the flow of current <script type="math/tex">\epsilon(t) = - L \frac{d i}{ dt} \implies v(t) = L \frac{d i}{ dt}</script>. The constant $L$ is the inductance typically deduced from geometry of the inductor (using faradays law) and is given by $L = \Phi / i$ where $\Phi$ is the total amount of magnetic flux flowing through the inductor. The inductance of a solenoid of area $A$, length $l$ and turns $n$ is given by $L = \mu A N^2 / l$.</dd>
+  <dt>Capacitors</dt>
+  <dd>The amount of charge stored by a capacitor is proportional to the voltage applied across it $Q= CV$ where $C$ is <em>capacitance</em> measured in Farads typically calculated from the geometry of the capacitor (using gauss’s law). For a constant $C$ the current flowing through a capacitor is related to the potential difference across it as <script type="math/tex">i(t) = C \frac{dv}{dt}</script></dd>
+  <dt>Power Sources</dt>
+  <dd>An ideal voltage source is able to supply the same voltage to a circuit independent of the current drawn from it whilst an ideal current source is able to supply the same current to a a circuit independent of the potential difference across. Non-ideal voltage sources can be modelled as an ideal voltage source in series with a resistor and non-ideal current sources as an ideal current source in parallel with a resistor.</dd>
+  <dt>Coupled Inductors</dt>
+  <dd>A time-varying current $i_1(t)$ flowing through one inductor, induces a back emf in any inductor on the same magnetic circuit of magnitude equal to <script type="math/tex">\epsilon_2(t)= \pm M \frac{d i_1}{ dt}</script>. The constant $M$ is the mutual inductance $M=\Phi_{12} / i_1 = \Phi_{21} / i_2$ where $\Phi_{12}$ is the total amount of magnetic flux flowing through the 2nd inductor resulting from the first. The sign of this back emf is inferred from Amperes and Faradays law.</dd>
+</dl>
+
+<h3 id="linear-circuits-1">Linear Circuits</h3>
+<p>Any circuit which obeys the principle of superposition is linear. It is composed of only linear circuit components.</p>
+<blockquote>
+  <p>This does not mean that the circuit is composed of only affine functions. Typically a circuit will be characterised by a set of ordinary differential equations.</p>
+</blockquote>
+
+<dl>
+  <dt>Superposition</dt>
+  <dd>The output of a circuit $f(x)$ for linear combination of signals $x =a x_{1} + b x_{2}$ is given by <script type="math/tex">F\left(a x_{1}+b x_{2}\right)=a F\left(x_{1}\right)+b F\left(x_{2}\right)</script> the weighted sum of its response to each signal.</dd>
+</dl>
+
+<p>For any linear circuit kirchoff’s law’s hold:</p>
+
+<dl>
+  <dt>Kirchoff’s Law’s</dt>
+  <dd>Kirchoff’s current law ($\sum_k i_k = 0$) states that the total current flowing into a node must sum to 0. Kirchoff’s voltage law ($\sum_k v_k = 0$) states that the summed potentials along any closed loop must sum to $0$.</dd>
+</dl>
+
+<h3 id="dc-circuit-analysis">DC Circuit Analysis</h3>
+<dl>
+  <dt>Norton / Thevenins Equivalence</dt>
+  <dd>Any combination of resistors, voltage sources and current sources can be replaced with a single voltage source $V_{eq}$ in series with a resistor $R_{eq}$ (Thevenin’s theorem) or a current source $I_{eq}$ in parallel with $R_{eq}$ (Norton’s theorem). Defining the open circuit voltage $V_{oc}$ as the potential difference across the output terminals of a network (circuit) without any load applied and the short circuit current $I_{sc}$ as the current flowing between the output terminals when connected with an ideal wire $V_{eq}=V_{oc}$, $I_{eq}=I_{sc}$  and $R_{eq} = V_{oc} / I_{sc}$. Alternatively, if the current and voltage sources are not dependent on any other current or voltage in the circuit, $R_{eq}$ can be found by replacing all current sources with open circuits, short circuiting all voltage sources, and calculating</dd>
+  <dt>Power Matching</dt>
+  <dd>The maximum power is drawn from a power supply / network when the load resistance is matched to the internal resistance of the power supply / network corresponding to half the power being dissipated to the power supply, half to the load resistance and a resulting efficiency of $50\%$.</dd>
+</dl>
+
+<h3 id="ac-circuit-analysis">AC Circuit Analysis</h3>
+<p>In AC circuit analysis we are interested in the response of a circuit to a steady-state signal of the form $x(t) = X_p \cos( \omega t + \alpha)$ where $\omega$ is the frequency measured in $\text{rad} \text{s}^{-1}$, $\alpha$ is the phase offset and and $X_p$ is the peak amplitude of the wave. The average root mean square of an AC signal $X_{rms} = 1 / T \int x(t) dt = X_p / \sqrt{2}$.</p>
+
+<dl>
+  <dt>Phasors</dt>
+  <dd>
+    <table>
+      <tbody>
+        <tr>
+          <td>For a linear circuit superposition holds; instead of analysing a circuits response to $x(t)$ we analyse the circuits response to $\hat{X}(j\omega t) = \sqrt{2} X e^{j \omega t}$ considering the real part of the solution only. This allows AC signals to be summarised by the complex phasor $X =</td>
+          <td>X</td>
+          <td>e^{j \alpha}$. The magnitude of this phasor gives the rms value of the signal (by convention) whilst its argument gives the phase offset.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>Impedance</dt>
+  <dd>The impedance $Z$ of a component relates the AC current $I(j\omega)$ to the potential difference applied to it $V = IZ$. For a resistor $Z = R$, for a capacitor $Z=1 / j \omega C$ and for an inductor $Z = j \omega L$. The impedance of circuit components in parallel and in series are combined as $Z = \sum_i Z_i$ and in parralel as $1 / Z = \sum_i 1 / Z_i$. The general impedance for a combination of components is given as $Z=R + jX$ where $R$ is <em>resistance</em> and $X$ is <em>reactance</em>.</dd>
+</dl>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>For a capacitor the complex impedance is derived by considering a $V(j \omega) =  1 / C \int I dt = 1 / C \int</td>
+        <td>I</td>
+        <td>e^{j \omega t} dt = I(j \omega) / j \omega C$ giving $Z=1 / j \omega C$. Likewise for an inductor $V(j \omega) = L \ d / dt {</td>
+        <td>I</td>
+        <td>e^{j \omega t} }$ giving $Z = j \omega L$.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<dl>
+  <dt>Norton / Thevenin’s theorem</dt>
+  <dd>Norton’s and thevenin’s theorem hold and equivalent circuits are derived in the same way as for DC with resistances replaced with complex impedances.</dd>
+  <dt>Instantaneous Power</dt>
+  <dd>
+    <table>
+      <tbody>
+        <tr>
+          <td>For phasors $V=</td>
+          <td>V</td>
+          <td>\exp(j\phi)$, $I=</td>
+          <td>I</td>
+          <td>$  and network impedance $Z=R+ jX=</td>
+          <td>Z</td>
+          <td>\exp(j \phi)$ the power phasor is given as <script type="math/tex">\hat{P} = V^* I = P + jQ</script> where $P=</td>
+          <td>I</td>
+          <td> </td>
+          <td>V</td>
+          <td>\cos \phi$ is the real power dissipated in the circuit measured in Watts ($\text{W}$) and $Q=</td>
+          <td>I</td>
+          <td> </td>
+          <td>V</td>
+          <td>\sin \phi$ is the (peak) reactive power measured in Volt-Amperes ($\text{VA}$). They are equivalently expressed as</td>
+        </tr>
+        <tr>
+          <td>$P =</td>
+          <td>I</td>
+          <td>^{2} R =</td>
+          <td>V</td>
+          <td>^{2} / R$ and $Q =</td>
+          <td>I</td>
+          <td>^2 X =</td>
+          <td>V</td>
+          <td>^{2}  / X$.  The instantaneous power is given as $p(t) = P (1+\cos2wt) - Q  \sin 2 \omega t$.</td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>Power Matching</dt>
+  <dd>
+    <table>
+      <tbody>
+        <tr>
+          <td>For internal impedendence $Z_s = R_s + j X_s$ and load impedence $Z_l = R_l + j X_l$ the maximum power is delivered to a load $Z_l = Z_s^*$ if $Z_s$ can be chosen freely, $R_l =</td>
+          <td>Z_s</td>
+          <td>$ if $X_l = 0$ or $R_l = \sqrt{R_s^2 + (X_s + X_l)^2}$ if $X_l$ is fixed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+  <dt>Coupled Inductors</dt>
+  <dd>A voltage source with  phasor $V=\pm j \omega M I’$ is added in series to every coupled inductor where $I’$ is the current phasor flowing through its partner. The polarity of $V$ is determined using dot notation:  a current $I’$ entering / leaving the dotted terminal of one inductor induces $V$ in the second referenced positive to the seconds dotted/ un-dotted terminal.</dd>
+  <dt>Frequency Response</dt>
+  <dd>The frequency response of an AC circuit is characterised by the <em>transfer function</em> $G(j \omega) :=  X_{o}(j \omega) / X_{i}(j \omega)$ which for linear systems is given by $G(j \omega) = K\prod^L_l(jw - z_l) / \prod^D_d (j \omega - p_d)$ where $D \geq L$. The <em>zeros</em> $z_l$ give $G(j \omega) = 0$ whilst the poles $p_d$ give $G(j \omega) = \infty$. $K$ is referred to as the gain of the system. The <em>order</em> of a a system is given by the degree of the denominator (the number of poles) and is equal to the number of independent energy storage elements in the circuit.</dd>
+  <dt>Bode Plots</dt>
+  <dd>
+    <table>
+      <tbody>
+        <tr>
+          <td>By plotting $G_{db} := 20 \log_{10}</td>
+          <td>G(j \omega)</td>
+          <td>$ and $G_{\phi} := \text{arg} {G(j \omega) }$ on a log axis of frequency $\omega$ the frequency response of a system can be visualised. $G_{db}$ is the frequency dependent gain of the system (in decibels) and $G_{\phi}$ is the phase shift. For linear systems $G(j \omega)$ can be written as $G(j \omega) = \prod_l g_l(j \omega) / \prod_d g_d(j \omega)$ with $g(j \omega) = 1 \pm j \omega / \hat{\omega}$ and the bode plots for gain and phase can be constructed through the superposition of each $g_{db}$ and $g_{\phi}$ as $G_{db / \phi} = \sum_l g_{db /\phi}^{(l)} -  \sum_d g_{db / \phi}^{(d)}$. Each $g_{db}$ corresponds to a straight line of gradient $20 \ \text{db dec}^{-1}$ starting at $\hat{\omega}$. Each  $g_{\phi}$ corresponds to a straight line with gradient $\pm \pi / 4 \  \text{rad dec}^{-1}$ starting at $(0.1 \hat{\omega}, 0)$ and ending at  $(10\hat{\omega}, \pi / 2)$. At $\omega = \hat{\omega}$, $g_\phi= \pi /4$ and $g_{db} =3 \text{db} \implies</td>
+          <td>g({j \omega})</td>
+          <td>= 1 / \sqrt{2}$.</td>
+        </tr>
+      </tbody>
+    </table>
+  </dd>
+</dl>
+
+<h3 id="general-circuit-analysis">General Circuit Analysis</h3>
+<p>Generalised Impedance
+:</p>
+
+<h2 id="active-circuits">Active circuits</h2>
+<h3 id="quantum-theory">Quantum Theory</h3>
+<dl>
+  <dt>Bound States and Discrete Energy Levels</dt>
+  <dd>A particle subjected to a potential such that the particle has a tendency to remain localised in one or more regions of space is in a <em>bound state</em>. Particles in a bound state can only take on certain discrete values of energy.
+    <blockquote>
+      <p>Eg. chemical bonds, protons and neutrons all correspond to bound states</p>
+    </blockquote>
+  </dd>
+  <dt>Pauli Exclusion Principle</dt>
+  <dd>Two or more identical fermions cannot occupy the same quantum state within a quantum system simultaneously.</dd>
+</dl>
+
+<h2 id="semi-conductors">Semi Conductors</h2>
+<p>Conductance and ohms Law
+:</p>
+<blockquote>
+  <p>Under an applied electric field $\bm{E}$ charges will experience a force equal to $\bm{F} = q \bm{E}$ (lorentz) and if they are unconstrained accelerate. But t</p>
+</blockquote>
+
+<dl>
+  <dt>Charge Carriers in semi-conductors</dt>
+  <dd>Under an electric field $\epsilon$ free charges will experience a force $F = q \epsilon$ and will on average be accelerated to a drift velocity $v = \mu \epsilon$.</dd>
+  <dt>Semi-Conductors and the Bond Model</dt>
+  <dd>In an electric field $\epsilon$ free charges will drift with velocity $v = \mu \epsilon$ where $\mu$ is a material property known as <em>mobility</em>. The total current is given as, <script type="math/tex">J =J_n + J_p = (qn \mu_n + q p \mu_p) \epsilon \implies \sigma = q(n\mu_n + p \mu_p)</script> where $\sigma$ is the <em>conductivity</em>. <em>Intrinsic</em> semi-conductors have one hole per free electron such that $n_i = p_i$.</dd>
+  <dt>Band Theory</dt>
+  <dd>As a result, the electron energy levels of a lattice of atoms will split and merge forming bands of allowed energy levels. At $T=0K$ every state within the <em>valence band</em> will be completely occupied by electrons and the next highest energy level the <em>conductance band</em> will be completely free of electrons.  The energy gap $\Delta E = E_c - E_v$ is the difference between the lowest energy state in the conductance band $E_c$ and the highest energy state in the valence band $E_v$.  At temperatures above absolute zero the probability that a particular energy level $E$ will be occupied by an electron in a system at thermal equilibrium is given by a Femi-Dirac distribution <script type="math/tex">F(E) = \frac{1}{e^{(E - E_f)/k_BT} + 1}</script> where $E_f$ is the fermi-level corresponding to $F(E)=0.5$ for all temperatures.</dd>
+</dl>
+
+<p>as two atoms in a lattice are brought together, there energy levels split generating to allow for</p>
+
+<dl>
+  <dt>Band Theorem</dt>
+  <dd>As a result of the pauli exclusion principle multiple</dd>
+</dl>
+
+<h3 id="current">Current</h3>
+<p>Electric charges in a an electrical field experience a force $F=qE$ if electrons are free to move this will cause</p>
+
+<p>The electric-field</p>
+
+<h3 id="semi-conductors-1">Semi Conductors</h3>
+
+<dl>
+  <dt>Energy Bands</dt>
+  <dd>Quantum energy</dd>
+  <dt>Free Charges</dt>
+  <dd>Due to the thermal excitement of a material at any one time there will be a net number of delocalised electrons and holes. Under an electric current</dd>
+</dl>
+
+<p>At any time the random thermal excitement of electrons leads to a net number of free electrons $n$ and positively charged holes $q$.</p>
+
+<p>The random thermal excitement of electrons in bonds results in</p>
+
+<p>The random thermal excitement of electrons in bonds results in a net number of free electrons $n$ and positively charged ions $p$ per unit volume at any instance in time.</p>
+
+<p>Extrinsic semi-conductors are interlaced</p>
+
+
+
+<small>tags: <em></em></small>
+
+    <!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+    <div class="w3-container w3-center w3-padding-0">
+        
+    <div class="w3-bar">
+        
+            <a href="mailto:robw@robots.ox.ac.uk" class="w3-bar-item w3-button w3-round-xxlarge w3-xlarge" title="Email">
+                    <i class="fa fa-envelope-square"></i></a>
+        
+            <a href="https://www.twitter.com/robwrobots" class="w3-bar-item w3-button w3-round-xxlarge w3-xlarge" title="Twitter">
+                    <i class="fa fa-twitter-square"></i></a>
+        
+            <a href="https://github.com/robw4" class="w3-bar-item w3-button w3-round-xxlarge w3-xlarge" title="">
+                    <i class="fa fa-github-square"></i></a>
+        
+    </div>
+
+    </div>
+</footer>
+
+</body></html>
