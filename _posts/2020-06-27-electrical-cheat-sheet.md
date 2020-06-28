@@ -4,24 +4,24 @@ author: robw
 image: /assets/images/electrical.jpg
 ---
 
-# Electrical Cheat Sheet
+# Electrical Tute Sheet
 ## Classical Electromagnetism
 
 Lorentz equation
-: The total force experienced by a charge moving through an electric field of strength $\bm{E}$ (V / m = F / q) and magnetic field $\bm{B}$ is given as $$\bm{F} = q \bm{E} + q \bm{v} \times \bm{B}$$. From the lorentz equation a wire carrying current $i$ at an angle $\theta$ to a magnet field $B$ will experience a force equal to $F = Bil \sin \theta$.
+: The total force experienced by a charge moving through an electric field of strength $\boldsymbol{E}$ (V / m = F / q) and magnetic field $\boldsymbol{B}$ is given as $$\boldsymbol{F} = q \boldsymbol{E} + q \boldsymbol{v} \times \boldsymbol{B}$$. From the lorentz equation a wire carrying current $i$ at an angle $\theta$ to a magnet field $B$ will experience a force equal to $F = Bil \sin \theta$.
 
 Gauss's Law
-: The total amount of electric flux $\Phi_{E}$ passing through the closed boundary $\partial \Omega$  of volume $\Omega$ is proportional to the total charge $Q$ contained within it, $$\Phi_{E}= Q/ \epsilon $$ where $\Phi_{E} :=\oiint_{\partial \Omega} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$ and $Q := \iiint_{\Omega} \rho \mathrm{d} V$. The constant $\epsilon$ is the *permittivity* of the medium and is often expressed as $\epsilon = \epsilon_0 \epsilon_r$ where $\epsilon_0$ is the *permittivity* of free space. This equation can alternatively be expressed in terms of the *electric displacement field* or *D-field* $\mathbf{D} := \epsilon \mathbf{E}$.  For a field of strength $E$ passing normally through an area $A$ the electric flux density is given by $\Phi_{E} = EA$.
+: The total amount of electric flux $\Phi_{E}$ passing through the closed boundary $\partial \Omega$  of volume $\Omega$ is proportional to the total charge $Q$ contained within it, $$\Phi_{E}= Q/ \epsilon $$ where $\Phi_{E} :=\oint_{\partial \Omega} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$ and $Q := \iiint_{\Omega} \rho \mathrm{d} V$. The constant $\epsilon$ is the *permittivity* of the medium and is often expressed as $\epsilon = \epsilon_0 \epsilon_r$ where $\epsilon_0$ is the *permittivity* of free space. This equation can alternatively be expressed in terms of the *electric displacement field* or *D-field* $\mathbf{D} := \epsilon \mathbf{E}$.  For a field of strength $E$ passing normally through an area $A$ the electric flux density is given by $\Phi_{E} = EA$.
 
 Ampere's circuit Law
-: The line magnetic field along a contour $\partial \Sigma$ enclosing area $\Sigma$ is proportional to the total current passing through it. $$\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l} = \mu I$$. The constant $\mu$ is the *permeability* of the medium often expressed as $\mu = \mu_0 \mu_r$. The current $I$ is composed of two parts $I = I_c + I_d$ with  conductive current $I_c :=\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}$ and *displacement* current $I_d := \epsilon \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$. Alternatively this can be written in terms of the *H-field* as $\mathbf{B} = \mu \bm{H}$. The conductive current corresponds to the actual movement of free charges whilst the displacement current results from changes in the magnetic field (for example the current flowing in a capacitor).
+: The line magnetic field along a contour $\partial \Sigma$ enclosing area $\Sigma$ is proportional to the total current passing through it. $$\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l} = \mu I$$. The constant $\mu$ is the *permeability* of the medium often expressed as $\mu = \mu_0 \mu_r$. The current $I$ is composed of two parts $I = I_c + I_d$ with  conductive current $I_c :=\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}$ and *displacement* current $I_d := \epsilon \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$. Alternatively this can be written in terms of the *H-field* as $\mathbf{B} = \mu \boldsymbol{H}$. The conductive current corresponds to the actual movement of free charges whilst the displacement current results from changes in the magnetic field (for example the current flowing in a capacitor).
 > The displacement current is needed to satisfy continuity of current $\nabla \cdot \mathbf{J}=-\frac{\partial \rho}{\partial t}$ and to allow electromagnetic waves to propagate through free space when $\mathbf{J} = \mathbf{0}$
 
 Maxwell-Faraday equation
 : The electromotive force $\epsilon$ induced around a contour is proportional to the time rate of change of magnetic flux flowing through it, $$\epsilon(t) = -\frac{\mathrm{d}}{\mathrm{dt}} \Phi_{B}(dt)$$ with,$\Phi_{B} :=\iint_{\Sigma} \mathbf{B} \cdot \mathrm{d} \mathbf{S}$ and  $\epsilon := \oint_{\partial \Sigma} \mathbf{E} \cdot \mathrm{d} \boldsymbol{l}$. For a magnetic flux of strength $B$ passing normally to an area $A$ the magnetic flux reduces to $\Phi_{B} = B A$.
 
 Gauss's Law for Magnetism
-: The total magnetic field passing through a *closed surface*  $\partial \Omega$ is zero $$\oiint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0$$. As a result magnetic monopoles do not exist and magnetic field lines never begin or end but must form loops.
+: The total magnetic field passing through a *closed surface*  $\partial \Omega$ is zero $$\oint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0$$. As a result magnetic monopoles do not exist and magnetic field lines never begin or end but must form loops.
 
 > This is an important result in its own right even if it isn't typically applied
 ## Foundations
@@ -123,7 +123,7 @@ Pauli Exclusion Principle
 ## Semi Conductors
 Conductance and ohms Law
 :
-> Under an applied electric field $\bm{E}$ charges will experience a force equal to $\bm{F} = q \bm{E}$ (lorentz) and if they are unconstrained accelerate. But t
+> Under an applied electric field $\boldsymbol{E}$ charges will experience a force equal to $\boldsymbol{F} = q \boldsymbol{E}$ (lorentz) and if they are unconstrained accelerate. But t
 
 
 Charge Carriers in semi-conductors
@@ -136,10 +136,11 @@ Band Theory
 : As a result, the electron energy levels of a lattice of atoms will split and merge forming bands of allowed energy levels. At $T=0K$ every state within the *valence band* will be completely occupied by electrons and the next highest energy level the *conductance band* will be completely free of electrons.  The energy gap $\Delta E = E_c - E_v$ is the difference between the lowest energy state in the conductance band $E_c$ and the highest energy state in the valence band $E_v$.  At temperatures above absolute zero the probability that a particular energy level $E$ will be occupied by an electron in a system at thermal equilibrium is given by a Femi-Dirac distribution $$F(E) = \frac{1}{e^{(E - E_f)/k_BT} + 1}$$ where $E_f$ is the fermi-level corresponding to $F(E)=0.5$ for all temperatures.
 
 
- as two atoms in a lattice are brought together, there energy levels split generating to allow for
+as two atoms in a lattice are brought together, there energy levels split generating to allow for
 
 Band Theorem
 : As a result of the pauli exclusion principle multiple
+
 
 
 ### Current
@@ -176,3 +177,4 @@ The random thermal excitement of electrons in bonds results in a net number of f
 
 
 Extrinsic semi-conductors are interlaced
+

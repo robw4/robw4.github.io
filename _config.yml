@@ -15,3 +15,6 @@ social:
       tite: GitHub
       fa-icon: 'fa-github-square'
 page_width: 800px
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
