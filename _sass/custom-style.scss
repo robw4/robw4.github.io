@@ -89,10 +89,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-h1, h2, h3 {
+h1, h2{
   display: block;
   border-bottom: 1px solid #ccc;
   padding-bottom: 5px;
+}
+
+h1, h2, h3{
+  display: block;
+  padding-bottom: 5px;
+}
+
+h1 {
+  border-bottom: 2px solid #ccc;
+}
+
+h2 {
+  border-bottom: 1px solid #ccc;
 }
 
 h1 {
@@ -150,20 +163,24 @@ blockquote {
   margin: 0;
   padding: 0 0 0 10px;
   font-style: italic;
+  background-color: #f9f5f7;
 }
 
 dl, dt, dd, dl p {
   color: #444;
 }
 
+
+
 dl dt {
   font-weight: bold;
 }
 
 dl dd {
-  margin-left: 10px;
-  padding-left: 10px;
+  margin: 4px 4px 4px 10px;
+  padding: 0px 0px 0px 0px ;
   font-style: normal;
+  background-color: #f9f5f7
 }
 
 dl p {

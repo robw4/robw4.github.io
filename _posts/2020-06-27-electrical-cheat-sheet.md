@@ -15,6 +15,7 @@ Gauss's Law
 
 Ampere's circuit Law
 : The line magnetic field along a contour $\partial \Sigma$ enclosing area $\Sigma$ is proportional to the total current passing through it. $$\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l} = \mu I$$. The constant $\mu$ is the *permeability* of the medium often expressed as $\mu = \mu_0 \mu_r$. The current $I$ is composed of two parts $I = I_c + I_d$ with  conductive current $I_c :=\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}$ and *displacement* current $I_d := \epsilon \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}$. Alternatively this can be written in terms of the *H-field* as $\mathbf{B} = \mu \boldsymbol{H}$. The conductive current corresponds to the actual movement of free charges whilst the displacement current results from changes in the magnetic field (for example the current flowing in a capacitor).
+
 > The displacement current is needed to satisfy continuity of current $\nabla \cdot \mathbf{J}=-\frac{\partial \rho}{\partial t}$ and to allow electromagnetic waves to propagate through free space when $\mathbf{J} = \mathbf{0}$
 
 Maxwell-Faraday equation
@@ -24,6 +25,7 @@ Gauss's Law for Magnetism
 : The total magnetic field passing through a *closed surface*  $\partial \Omega$ is zero $$\oint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0$$. As a result magnetic monopoles do not exist and magnetic field lines never begin or end but must form loops.
 
 > This is an important result in its own right even if it isn't typically applied
+
 ## Foundations
 Electric Potential
 : The electrical potential is equal to the electrical potential energy $\Delta U$ per unit charge between two points. We consider the electric potential gained by unit charge as an electromotive force $\epsilon = \Delta U / q$ and the electric potential lost by each charge as a potential drop $v =  -\Delta  / q$. It is measured in $\text{V} = \text{JC}^{-1}$.
@@ -81,22 +83,22 @@ Power Matching
 In AC circuit analysis we are interested in the response of a circuit to a steady-state signal of the form $x(t) = X_p \cos( \omega t + \alpha)$ where $\omega$ is the frequency measured in $\text{rad} \text{s}^{-1}$, $\alpha$ is the phase offset and and $X_p$ is the peak amplitude of the wave. The average root mean square of an AC signal $X_{rms} = 1 / T \int x(t) dt = X_p / \sqrt{2}$.
 
 Phasors
-: For a linear circuit superposition holds; instead of analysing a circuits response to $x(t)$ we analyse the circuits response to $\hat{X}(j\omega t) = \sqrt{2} X e^{j \omega t}$ considering the real part of the solution only. This allows AC signals to be summarised by the complex phasor $X = |X| e^{j \alpha}$. The magnitude of this phasor gives the rms value of the signal (by convention) whilst its argument gives the phase offset.
+: For a linear circuit superposition holds; instead of analysing a circuits response to $x(t)$ we analyse the circuits response to $\hat{X}(j\omega t) = \sqrt{2} X e^{j \omega t}$ considering the real part of the solution only. This allows AC signals to be summarised by the complex phasor $X = \|X\| e^{j \alpha}$. The magnitude of this phasor gives the rms value of the signal (by convention) whilst its argument gives the phase offset.
 
 Impedance
 : The impedance $Z$ of a component relates the AC current $I(j\omega)$ to the potential difference applied to it $V = IZ$. For a resistor $Z = R$, for a capacitor $Z=1 / j \omega C$ and for an inductor $Z = j \omega L$. The impedance of circuit components in parallel and in series are combined as $Z = \sum_i Z_i$ and in parralel as $1 / Z = \sum_i 1 / Z_i$. The general impedance for a combination of components is given as $Z=R + jX$ where $R$ is *resistance* and $X$ is *reactance*.
 
-> For a capacitor the complex impedance is derived by considering a $V(j \omega) =  1 / C \int I dt = 1 / C \int |I| e^{j \omega t} dt = I(j \omega) / j \omega C$ giving $Z=1 / j \omega C$. Likewise for an inductor $V(j \omega) = L \ d / dt \{ |I| e^{j \omega t} \}$ giving $Z = j \omega L$.
+> For a capacitor the complex impedance is derived by considering a $V(j \omega) =  1 / C \int I dt = 1 / C \int \|I\| e^{j \omega t} dt = I(j \omega) / j \omega C$ giving $Z=1 / j \omega C$. Likewise for an inductor $V(j \omega) = L \ d / dt \{ \|I\| e^{j \omega t} \}$ giving $Z = j \omega L$.
 
 Norton / Thevenin's theorem
 : Norton's and thevenin's theorem hold and equivalent circuits are derived in the same way as for DC with resistances replaced with complex impedances.
 
 Instantaneous Power
-: For phasors $V=|V|\exp(j\phi)$, $I=|I|$  and network impedance $Z=R+ jX=|Z| \exp(j \phi)$ the power phasor is given as $$\hat{P} = V^* I = P + jQ$$ where $P= |I| |V| \cos \phi$ is the real power dissipated in the circuit measured in Watts ($\text{W}$) and $Q= |I| |V| \sin \phi$ is the (peak) reactive power measured in Volt-Amperes ($\text{VA}$). They are equivalently expressed as
-$P = |I|^{2} R =  |V|^{2} / R$ and $Q = |I|^2 X = |V|^{2}  / X$.  The instantaneous power is given as $p(t) = P (1+\cos2wt) - Q  \sin 2 \omega t$.
+: For phasors $V=\|V\|\exp(j\phi)$, $I=\|I\|$  and network impedance $Z=R+ jX=\|Z\| \exp(j \phi)$ the power phasor is given as $$\hat{P} = V^* I = P + jQ$$ where $P= \|I\| \|V\| \cos \phi$ is the real power dissipated in the circuit measured in Watts ($\text{W}$) and $Q= \|I\| \|V\| \sin \phi$ is the (peak) reactive power measured in Volt-Amperes ($\text{VA}$). They are equivalently expressed as
+$P = \|I\|^{2} R =  \|V\|^{2} / R$ and $Q = \|I\|^2 X = \|V\|^{2}  / X$.  The instantaneous power is given as $p(t) = P (1+\cos2wt) - Q  \sin 2 \omega t$.
 
 Power Matching
-: For internal impedendence $Z_s = R_s + j X_s$ and load impedence $Z_l = R_l + j X_l$ the maximum power is delivered to a load $Z_l = Z_s^*$ if $Z_s$ can be chosen freely, $R_l = |Z_s|$ if $X_l = 0$ or $R_l = \sqrt{R_s^2 + (X_s + X_l)^2}$ if $X_l$ is fixed.
+: For internal impedendence $Z_s = R_s + j X_s$ and load impedence $Z_l = R_l + j X_l$ the maximum power is delivered to a load $Z_l = Z_s^*$ if $Z_s$ can be chosen freely, $R_l = \|Z_s\|$ if $X_l = 0$ or $R_l = \sqrt{R_s^2 + (X_s + X_l)^2}$ if $X_l$ is fixed.
 
 Coupled Inductors
 : A voltage source with  phasor $V=\pm j \omega M I'$ is added in series to every coupled inductor where $I'$ is the current phasor flowing through its partner. The polarity of $V$ is determined using dot notation:  a current $I'$ entering / leaving the dotted terminal of one inductor induces $V$ in the second referenced positive to the seconds dotted/ un-dotted terminal.
@@ -105,11 +107,9 @@ Frequency Response
 : The frequency response of an AC circuit is characterised by the *transfer function* $G(j \omega) :=  X_{o}(j \omega) / X_{i}(j \omega)$ which for linear systems is given by $G(j \omega) = K\prod^L_l(jw - z_l) / \prod^D_d (j \omega - p_d)$ where $D \geq L$. The *zeros* $z_l$ give $G(j \omega) = 0$ whilst the poles $p_d$ give $G(j \omega) = \infty$. $K$ is referred to as the gain of the system. The *order* of a a system is given by the degree of the denominator (the number of poles) and is equal to the number of independent energy storage elements in the circuit.
 
 Bode Plots
-: By plotting $G_{db} := 20 \log_{10} | G(j \omega)|$ and $G_{\phi} := \text{arg} \{G(j \omega) \}$ on a log axis of frequency $\omega$ the frequency response of a system can be visualised. $G_{db}$ is the frequency dependent gain of the system (in decibels) and $G_{\phi}$ is the phase shift. For linear systems $G(j \omega)$ can be written as $G(j \omega) = \prod_l g_l(j \omega) / \prod_d g_d(j \omega)$ with $g(j \omega) = 1 \pm j \omega / \hat{\omega}$ and the bode plots for gain and phase can be constructed through the superposition of each $g_{db}$ and $g_{\phi}$ as $G_{db / \phi} = \sum_l g_{db /\phi}^{(l)} -  \sum_d g_{db / \phi}^{(d)}$. Each $g_{db}$ corresponds to a straight line of gradient $20 \ \text{db dec}^{-1}$ starting at $\hat{\omega}$. Each  $g_{\phi}$ corresponds to a straight line with gradient $\pm \pi / 4 \  \text{rad dec}^{-1}$ starting at $(0.1 \hat{\omega}, 0)$ and ending at  $(10\hat{\omega}, \pi / 2)$. At $\omega = \hat{\omega}$, $g_\phi= \pi /4$ and $g_{db} =3 \text{db} \implies |g({j \omega})| = 1 / \sqrt{2}$.
+: By plotting $G_{db} := 20 \log_{10} \| G(j \omega)\|$ and $G_{\phi} := \text{arg} \{G(j \omega) \}$ on a log axis of frequency $\omega$ the frequency response of a system can be visualised. $G_{db}$ is the frequency dependent gain of the system (in decibels) and $G_{\phi}$ is the phase shift. For linear systems $G(j \omega)$ can be written as $G(j \omega) = \prod_l g_l(j \omega) / \prod_d g_d(j \omega)$ with $g(j \omega) = 1 \pm j \omega / \hat{\omega}$ and the bode plots for gain and phase can be constructed through the superposition of each $g_{db}$ and $g_{\phi}$ as $G_{db / \phi} = \sum_l g_{db /\phi}^{(l)} -  \sum_d g_{db / \phi}^{(d)}$. Each $g_{db}$ corresponds to a straight line of gradient $20 \ \text{db dec}^{-1}$ starting at $\hat{\omega}$. Each  $g_{\phi}$ corresponds to a straight line with gradient $\pm \pi / 4 \  \text{rad dec}^{-1}$ starting at $(0.1 \hat{\omega}, 0)$ and ending at  $(10\hat{\omega}, \pi / 2)$. At $\omega = \hat{\omega}$, $g_\phi= \pi /4$ and $g_{db} =3 \text{db} \implies \|g({j \omega})\| = 1 / \sqrt{2}$.
 
-### General Circuit Analysis
-Generalised Impedance
-:
+
 
 ## Active circuits
 ### Quantum Theory
@@ -122,8 +122,7 @@ Pauli Exclusion Principle
 
 ## Semi Conductors
 Conductance and ohms Law
-:
-> Under an applied electric field $\boldsymbol{E}$ charges will experience a force equal to $\boldsymbol{F} = q \boldsymbol{E}$ (lorentz) and if they are unconstrained accelerate. But t
+: Under an applied electric field $\boldsymbol{E}$ charges will experience a force equal to $\boldsymbol{F} = q \boldsymbol{E}$ (lorentz) and if they are unconstrained accelerate. But t
 
 
 Charge Carriers in semi-conductors
