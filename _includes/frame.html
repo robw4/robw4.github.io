@@ -8,11 +8,11 @@
 -->
 
 
-<div class="w3-card-4 w3-margin w3-white w3-animate-opacity">
+<div class="w3-round w3-card-4 w3-margin w3-white w3-animate-opacity" style="border-radius:50%">
     {% if include.image %}
         <div class="w3-display-container w3-text-white">
             <div class="w3-display-bottommiddle w3-padding">
-                <p><a href="{{ include.link }}" class="w3-button w3-padding-large w3-white w3-round-xxlarge ">
+                <p class="header"><a href="{{ include.link }}" class="w3-button w3-padding-large w3-white w3-round-xxlarge w3-hover-teal">
                         {{ if iclude.icon }}<i class="{{ include.icon }}"></i>{{ endif }} {{ include.name }}</a></p>
             </div>
             <img src="{{ include.image }}" alt={{ include.name }} style="width:100%">

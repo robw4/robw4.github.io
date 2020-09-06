@@ -3,7 +3,7 @@
   icon: fa fa-home
 - name: Me
   link: /about.html
-  image: /assets/images/about.jpg
+  image: /assets/images/me.jpg
   icon: fa fa-user-circle
 - name: Research
   link: /publications.html
@@ -11,5 +11,9 @@
   icon: fa fa-graduation-cap
 - name: Blog
   link: /blog.html
-  image: /assets/images/test.jpg
+  image: /assets/images/blog.jpg
   icon: fa fa-pencil-square-o
+- name: Xmen
+  link: https://robw4.github.io/xmen/
+  image: /assets/images/xmen.jpg
+  icon: fa fa-times-circle

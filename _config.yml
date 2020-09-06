@@ -1,6 +1,8 @@
 theme: jekyll-theme-minimal
 message: Welcome to the blog of Rob Weston
-author: robw
+author: Rob Weston
+title: Rob Weston
+mugshot: /assets/images/mugshot.jpg
 social:
     - id: 'robw@robots.ox.ac.uk'
       href: 'mailto:'
@@ -14,7 +16,7 @@ social:
       href: 'https://github.com/'
       tite: GitHub
       fa-icon: 'fa-github-square'
-page_width: 800px
+page_width: 1000px
 markdown: kramdown
 kramdown:
   math_engine: mathjax

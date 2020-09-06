@@ -4,7 +4,11 @@ author: robw
 image: /assets/images/electrical.jpg
 ---
 
-# Electrical Tute Sheet
+# Electrical Engineering
+Together Maxwell's equations and the Lorentz force equation constitute the foundation of electrical engineering. Remarkably these five equations are enough to describe most of the electronics we experience every day.
+
+
+
 ## Classical Electromagnetism
 
 Lorentz equation
@@ -27,8 +31,9 @@ Gauss's Law for Magnetism
 > This is an important result in its own right even if it isn't typically applied
 
 ## Foundations
+
 Electric Potential
-: The electrical potential is equal to the electrical potential energy $\Delta U$ per unit charge between two points. We consider the electric potential gained by unit charge as an electromotive force $\epsilon = \Delta U / q$ and the electric potential lost by each charge as a potential drop $v =  -\Delta  / q$. It is measured in $\text{V} = \text{JC}^{-1}$.
+: _Electrical potential_ is the electrical potential energy $\Delta U$ per unit charge between two points. We consider the electric potential gained by unit charge as an electromotive force $\epsilon = \Delta U / q$ and the electric potential lost by each charge as a potential drop $v =  -\Delta  / q$. It is measured in $\text{V} = \text{JC}^{-1}$.
 
 Current
 : Current is the rate of change of charge flowing through a circuit $i = dq / dt$. An electromotive force applies to a conductor will cause a current to flow.

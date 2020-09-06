@@ -4,11 +4,11 @@ title: Blog
 ---
 
 <!-- grid -->
+<div class="w3-content"  style="max-width:{{ site.page_width }}">
 <div class="w3-row">
-
     <!-- card entries -->
     {% for post in site.posts %}
-        <div class="w3-col l4 m6 s12">
+        <div class="w3-col l6 m6 s12">
             <!-- card entry -->
             {% include frame.html
                 name=post.title
@@ -16,9 +16,9 @@ title: Blog
                 link=post.url
                 description=post.excerpt
                 icon=post.icon %}
-            <hr>
             <!-- end card entry -->
         </div>
     {% endfor %}
     <!-- end grid entry -->
 </div><br>
+</div>

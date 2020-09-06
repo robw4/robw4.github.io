@@ -1,4 +1,4 @@
-<html><head><title>W3.CSS Template</title>
+<html><head><title>Rob Weston</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,20 +26,24 @@
             opacity: 1;
         }
     </style>
-    </head><body class="w3-light-grey">
+    </head><body class="w3-white">
 
 <!-- w3-content defines a container for fixed size centered content,
 and is wrapped around the whole page content, except for the footer in this example -->
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32 w3-light-gray">
+    <div class="w3-xlarge header">
+        <b>{{ site.title}}</b>
+    </div>
+    <div class="w3-content">
+        <img class="w3-circle w3-padding" width="200" src={{ site.mugshot }}>
+    </div>
+    {% include navigation.html %}
+</header>
+
+
 <div class="w3-content" style="max-width:1400px">
-
-    <!-- Header -->
-    <header class="w3-container w3-center w3-padding-32">
-        <div class="w3-xxlarge">
-            {{ site.title }}
-        </div>
-        {% include navigation.html %}
-    </header>
-
     {{ content }}
     <!-- END w3-content -->
 </div>

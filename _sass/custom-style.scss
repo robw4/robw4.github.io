@@ -163,13 +163,16 @@ blockquote {
   margin: 0;
   padding: 0 0 0 10px;
   font-style: italic;
-  background-color: #f9f5f7;
+  background-color: #f7f7f7;
 }
 
 dl, dt, dd, dl p {
   color: #444;
 }
 
+.header {
+  font-family: Arvo, Monaco, serif;
+}
 
 
 dl dt {
@@ -180,7 +183,7 @@ dl dd {
   margin: 4px 4px 4px 10px;
   padding: 0px 0px 0px 0px ;
   font-style: normal;
-  background-color: #f9f5f7
+  background-color: #f7f7f7
 }
 
 dl p {
@@ -259,6 +262,10 @@ td {
 /* Wrapper */
 .wrapper {
   width:960px;
+}
+
+.round-corner {
+  border-radius: 25px;
 }
 
 
