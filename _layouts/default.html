@@ -36,15 +36,16 @@ and is wrapped around the whole page content, except for the footer in this exam
     <div class="w3-xlarge header">
         <b>{{ site.title}}</b>
     </div>
-    <div class="w3-content">
+    <div class="w3-content content">
         <img class="w3-circle w3-padding" width="200" src={{ site.mugshot }}>
     </div>
     {% include navigation.html %}
 </header>
 
+{{ content }}
 
 <div class="w3-content" style="max-width:1400px">
-    {{ content }}
+
     <!-- END w3-content -->
 </div>
 

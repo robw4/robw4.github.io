@@ -2,11 +2,43 @@
 layout: default
 ---
 
-<div class="w3-content" style="max-width:{{ site.page_width }}">
-    <div class="w3-card-4 w3-margin w3-white w3-animate-opacity">
-        <div class="w3-container w3-padding">
-            {{ content }}
+
+<div class="w3-content w3-padding" style="max-width:{{ site.max-width }}">
+    <div class="w3-content w3-light-gray" id="headerBar" style="max-width:{{ site.max-width }}">
+        <button onclick="onButton('Demo1')" class="w3-button w3-large w3-left-align header w3-round-xxlarge w3-hover-teal" style="outline:none">
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i><small class="header"> Content</small></button>
+        <div id="Demo1" class="w3-container w3-bar-item w3-hide w3-padding w3-white">
+            <p class="header">Some text..</p>
         </div>
+    </div>
+    <div class="w3-content w3-padding">
+        {{ content }}
     </div>
 </div>
 
+
+<script>
+    function onButton(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("headerBar");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            header.classList.add("w3-light-gray");
+        } else {
+            header.classList.remove("sticky");
+            header.classList.remove("w3-light-gray")
+        }
+    }
+</script>
