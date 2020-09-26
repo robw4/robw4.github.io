@@ -38,6 +38,36 @@
 //
 //}
 
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #toc-drop-down{ display: block; }  /* show it on smaller screen */
+}
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #toc-drop-down{ display: none; }   /* hide it on larger screens */
+}
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #toc-side-bar{ display: none; }  /* show it on smaller screen */
+}
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #toc-side-bar{ display: block; position: sticky}   /* hide it on larger screens */
+}
+
+body {
+  counter-reset: h2counter;
+}
+h1 {
+  counter-reset: h2counter;
+}
+h2:before {
+  content: counter(h2counter) "\0000a0";
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+h3:before {
+  content: counter(h2counter) "." counter(h3counter) "\0000a0";
+  counter-increment: h3counter;
+}
+
+
 @font-face {
   font-family: 'cmu-serif';
   font-style: normal;
@@ -67,6 +97,11 @@
   font-style: italic;
   font-weight: bold;
   src: url('/assets/fonts/cmu-serif/cmunbi.woff') format('woff');
+}
+
+
+title span {
+  border-bottom: 1px solid #ccc;;
 }
 
 
@@ -126,14 +161,23 @@ h4, h5, h6 {
 }
 
 a {
-  color:#C30000;
+  //color:#C30000;
   font-weight:200;
   text-decoration:none;
 }
 
-//a:hover {
-//  text-decoration: underline;
-//}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 //
 //a small {
 //  font-size: 12px;
@@ -147,16 +191,39 @@ strong {
   font-weight:700;
 }
 
-ul {
-  list-style-position: inside;
-  list-style: disc;
-  padding-left: 25px;
+.toc-entry li ol p a body{
+  font-weight: bold;
+
 }
 
-ol {
-  list-style-position: inside;
-  list-style: decimal;
-  padding-left: 25px;
+.toc li {
+  font-size: 85%;
+}
+
+.toc ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+.toc ol > li {
+  display: table;
+  counter-increment: item;
+}
+
+.toc ol > li:before {
+  content: counters(item, ".") " ";
+  display: table-cell;
+  padding-right: 0.4em;
+}
+
+.toc li ol > li {
+  margin: 0;
+}
+
+.toc li ol > li:before {
+  content: counters(item, ".") " ";
 }
 
 blockquote {
@@ -279,18 +346,18 @@ td {
 .content {
   padding: 16px;
 }
+//
+//.sticky {
+//  z-index: 100;
+//  position: fixed;
+//  top: 0;
+//  width: 100%;
+//}
 
-.sticky {
-  z-index: 100;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 342px;
-}
+///* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+//.sticky + .content {
+//  padding-top: 342px;
+//}
 
 /* Header */
 //

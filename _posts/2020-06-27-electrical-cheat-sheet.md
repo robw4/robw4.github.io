@@ -1,16 +1,15 @@
 ---
 layout: post
 author: robw
+title: Electrical Engineering
+abstract: "Together Maxwell's equations and the Lorentz force equation constitute the foundation of electrical engineering. Remarkably these five equations are enough to describe most of the electronics we experience every day."
 image: /assets/images/electrical.jpg
 ---
 
 
-# Electrical Engineering
+## Classical Electromagnetism
 
 Together Maxwell's equations and the Lorentz force equation constitute the foundation of electrical engineering. Remarkably these five equations are enough to describe most of the electronics we experience every day.
-
-
-## Classical Electromagnetism
 
 Lorentz equation
 : The total force experienced by a charge moving through an electric field of strength $\boldsymbol{E}$ (V / m = F / q) and magnetic field $\boldsymbol{B}$ is given as $$\boldsymbol{F} = q \boldsymbol{E} + q \boldsymbol{v} \times \boldsymbol{B}$$. From the lorentz equation a wire carrying current $i$ at an angle $\theta$ to a magnet field $B$ will experience a force equal to $F = Bil \sin \theta$.

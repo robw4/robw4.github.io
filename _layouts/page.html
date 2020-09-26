@@ -2,43 +2,29 @@
 layout: default
 ---
 
-
 <div class="w3-content w3-padding" style="max-width:{{ site.max-width }}">
-    <div class="w3-content w3-light-gray" id="headerBar" style="max-width:{{ site.max-width }}">
-        <button onclick="onButton('Demo1')" class="w3-button w3-large w3-left-align header w3-round-xxlarge w3-hover-teal" style="outline:none">
-            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i><small class="header"> Content</small></button>
-        <div id="Demo1" class="w3-container w3-bar-item w3-hide w3-padding w3-white">
-            <p class="header">Some text..</p>
-        </div>
+    <div class="w3-bar sticky">
+        <button class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
+            <a href="#heading"><i class="fa fa-list-ul" aria-hidden="true"></i><small class="header"></small></a>
+        </button>
     </div>
-    <div class="w3-content w3-padding">
+
+    <div class="w3-row">
+        <div class="w3-col l2 m0 s0 w3-container"></div>
+        <div class="w3-col l8 m0 s0 w3-container">
+            <a id="heading"><h1 class="w3-center">{{ page.title }}</h1></a>
+            {{ if page.abstract }}
+                <p><em>{{ page.abstract }}</em></p>
+            {{ endif }}
+            <div class="w3-content w3-padding w3-container" style="font-size: large; font-position: center">
+                {% include toc.html h_min=2 html=content ordered=true item_class="toc-entry" class="toc"%}
+            </div>
+        </div>
+        <div class="w3-col l3 m0 s0 w3-container"><p></p></div>
+    </div>
+
+    <div class="w3-padding">
         {{ content }}
     </div>
+
 </div>
-
-
-<script>
-    function onButton(id) {
-        var x = document.getElementById(id);
-        if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-        } else {
-            x.className = x.className.replace(" w3-show", "");
-        }
-    }
-
-    window.onscroll = function() {myFunction()};
-
-    var header = document.getElementById("headerBar");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-            header.classList.add("w3-light-gray");
-        } else {
-            header.classList.remove("sticky");
-            header.classList.remove("w3-light-gray")
-        }
-    }
-</script>
