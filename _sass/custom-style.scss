@@ -34,7 +34,7 @@ html {
 }
 
 // Header numbering added using the numbered class
-h1, h2, h3, h4, h5, h6 {padding-top: 30px}
+h1, h2, h3, h4, h5, h6 {padding-top: 0px}
 
 body {counter-reset: h2}
 h2 {counter-reset: h3}
@@ -118,6 +118,7 @@ a {
 // Emphasis class
 em {
   font-style: italic;
+  text-align: center;
 }
 
 strong {
@@ -146,9 +147,9 @@ dl dt {
 
 dl dd {
   margin: 4px 4px 4px 10px;
-  padding: 0px 0px 0px 0px ;
-  font-style: normal;
-  background-color: #f7f7f7
+  padding: 0px 5px 10px 0px ;
+  font-style: italic;
+  //background-color: #f7f7f7
 }
 
 dl p {
@@ -164,20 +165,46 @@ hr {
 }
 
 /* Images */
-img {
+p img {
   //position: relative;
-  margin: 0 auto;
-  max-width: 800px; // This is neccessary for the blogs
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 90%;
+  z-index: 100;
+  border: 3px solid #ccc;
+  border-radius: 5px;
 }
 
-p img, .emoji {
-  display: inline;
-  margin: 0;
-  padding: 0;
-  vertical-align: middle;
-  text-align: center;
-  border: none;
+
+p img + em:before{
+  //text-indent: 10px;
+  //text-align: center;
+  content: "Figure ";
+  font-weight: bold;
 }
+
+p img + em {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+//p img:hover {
+//  transform: scale(2);
+//}
+
+//p img, .emoji {
+//  display: inline;
+//  margin: 0;
+//  padding: 0;
+//  vertical-align: middle;
+//  text-align: center;
+//  border: none;
+//
+//}
 
 /* Code blocks */
 
@@ -200,28 +227,85 @@ pre {
 
 /* Tables */
 table {
-  width:100%;
+  border-top: 3px solid  black;
+  border-bottom: 3px solid  black;
+  //border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  //border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+table * {
+  position: relative;
+}
+table th {
+  //background-color: #ccc;
+  border-bottom: 1px solid  #ccc;
+}
+table tr {
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
 
-table {
-  border: 1px solid #ccc;
-  margin-bottom: 32px;
-  text-align: left;
-}
+table tr:nth-child(even) {background-color: #f7f7f7}
 
-th {
-  font-family: cmu-serif, 'Arvo', Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: normal;
-  padding: 10px;
-  background: #232323;
-  color: #FDFEFB;
-}
+//
+//table td, table th {
+//  padding-left: 2px;
+//
+//}
+//table thead tr {
+//  height: 60px;
+//  //background: #36304a;
+//  border-bottom: 1px solid black;
+//}
+//table tbody tr {
+//  height: 50px;
+//  background: white;
+//}
+//table tbody tr:last-child {
+//  border: 0;
+//}
+//table td, table th {
+//  text-align: left;
+//}
+//table td.l, table th.l {
+//  text-align: right;
+//}
+//table td.c, table th.c {
+//  text-align: center;
+//}
+//table td.r, table th.r {
+//  text-align: center;
+//}
 
-td {
-  padding: 10px;
-  background: #ccc;
-}
+//
+//table {
+//  width:100%;
+//}
+//
+//table {
+//  border: 1px solid #ccc;
+//  margin-bottom: 32px;
+//  text-align: left;
+//}
+
+//th {
+//  font-family: cmu-serif, 'Arvo', Helvetica, Arial, sans-serif;
+//  font-size: 18px;
+//  font-weight: normal;
+//  padding: 10px;
+//  background: #232323;
+//  color: #FDFEFB;
+//}
+//
+//td {
+//  padding: 10px;
+//  background: #ccc;
+//}
 
 
 

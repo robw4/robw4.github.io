@@ -16,25 +16,31 @@ layout: default
         <div class="w3-col l8 m0 s0 w3-container">
             <!-- page title and abstract-->
             <h1 class="w3-center">{{ page.title }}</h1>
-            {% if page.abstract %}
-                <p><em>{{ page.abstract }}</em></p>
-            {% endif %}
+            <div class="w3-row">
+                {% if page.abstract %}
+                    <p style="margin: 0 0 5"><em>{{ page.abstract }}</em></p>
+                {% endif %}
+            </div>
             <!-- table of contents -->
-            <div class="w3-container">
+            <div>
                 <div class="outer-center">
-                    <div class="inner-center">
+                    <div class="inner-center w3-round-large w3-padding">
                         <div class="w3-center">
-                        <div class="w3-bar">
-                            <button onclick="toggleContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
-                                <i class="fa fa-chevron-circle-down" aria-hidden="true" id="ContentIcon"></i></button>
-                        </div>
-                        </div>
-                        <div id="Content" class="w3-hide">
-                            <a id="heading"><h2 class="w3-center" style="padding-top: 10px">Content</h2></a>
-                            <div class="toc" style="font-size: large">
-                                {% include toc.html h_min=2 html=content ordered=true %}
+                            <div class="w3-bar">
+                                <button onclick="toggleContent()" class="w3-button w3-large w3-left-align w3-round-xxlarge w3-white w3-hover-amber w3-right" style="outline:none">
+                                    <i class="fa fa-chevron-circle-down" aria-hidden="true" id="ContentIcon"></i></button>
                             </div>
                         </div>
+                        <a id="heading">
+                            <div id="Content" class="w3-hide w3-padding w3-container">
+                                <div class="w3-padding  w3-light-gray w3-round-xxlarge">
+                                    <h2 class="w3-center" style="padding-top: 10px">Content</h2>
+                                    <div class="toc" style="font-size: large">
+                                        {% include toc.html h_min=2 html=content ordered=true %}
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     <div class="clear"/>
                 </div>
@@ -60,12 +66,15 @@ layout: default
     function toggleContent() {
         var x = document.getElementById('Content');
         var ic = document.getElementById('ContentIcon');
+        var outer = document.getElementById('OuterContainer');
         if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
             ic.className = ic.className.replace(" fa-chevron-circle-down", " fa-chevron-circle-up");
+            outer.className += " w3-light-gray"
         } else {
             x.className = x.className.replace(" w3-show", "");
             ic.className = ic.className.replace(" fa-chevron-circle-up", " fa-chevron-circle-down");
+            outer.className = outer.className.replace(" w3-light-gray", "");
         }
     }
 
