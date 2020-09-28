@@ -2,12 +2,16 @@
 layout: default
 ---
 
-<div class="w3-padding-small" style="max-width:{{ site.max-width }}">
+<div class="w3-content w3-padding-small" style="max-width:{{ site.page_width }}">
 
     <!-- page title -->
     <div class="w3-container w3-padding-small w3-bar sticky" id="ToContent">
-        <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
+        <button onclick="goToNextAnchor()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
             <a href="#heading"><i class="fa fa-list" aria-hidden="true"></i><small class="header"></small></a>
+        </button>
+        <!-- contents page-->
+        <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
+            <a href="#heading"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i><small class="header"></small></a>
         </button>
     </div>
 
