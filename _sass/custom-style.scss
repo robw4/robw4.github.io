@@ -1,87 +1,12 @@
 @import "rouge-github";
 @import url('https://fonts.googleapis.com/css?family=Arvo:400,700,400italic');
 
-/* MeyerWeb Reset */
-
-//html, body, div, span, applet, object, iframe,
-//h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-//a, abbr, acronym, address, big, cite, code,
-//del, dfn, em, img, ins, kbd, q, s, samp,
-//small, strike, strong, sub, sup, tt, var,
-//b, u, i, center,
-//dl, dt, dd, ol, ul, li,
-//fieldset, form, label, legend,
-//table, caption, tbody, tfoot, thead, tr, th, td,
-//article, aside, canvas, details, embed,
-//figure, figcaption, footer, header, hgroup,
-//menu, nav, output, ruby, section, summary,
-//time, mark, audio, video {
-//  margin: 0;
-//  padding: 0;
-//  border: 0;
-//  font: inherit;
-//  vertical-align: baseline;
-//}
-
-
-/* Base text styles */
-
-//body {
-//  padding:10px 50px 0 0;
-//  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-//  font-size: 14px;
-//  color: #232323;
-//  background-color: #FBFAF7;
-//  margin: 0;
-//  line-height: 1.8em;
-//  -webkit-font-smoothing: antialiased;
-//
-//}
-
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  #toc-drop-down{ display: block; }  /* show it on smaller screen */
+// ########################
+// defaults
+// ########################
+html {
+  scroll-behavior: smooth;
 }
-@media screen and (min-width: 401px) and (max-width: 1024px) {
-  #toc-drop-down{ display: none; }   /* hide it on larger screens */
-}
-@media screen and (min-width: 0px) and (max-width: 400px) {
-  #toc-side-bar{ display: none; }  /* show it on smaller screen */
-}
-@media screen and (min-width: 401px) and (max-width: 1024px) {
-  #toc-side-bar{ display: block; position: sticky}   /* hide it on larger screens */
-}
-
-//body {
-//  counter-reset: h2counter;
-//}
-//h1 {
-//  counter-reset: h2counter;
-//}
-//h2:before {
-//  content: counter(h2counter) "\0000a0";
-//  counter-increment: h2counter;
-//  counter-reset: h3counter;
-//}
-//h3:before {
-//  content: counter(h2counter) "." counter(h3counter) "\0000a0";
-//  counter-increment: h3counter;
-//}
-
-body {counter-reset: h2}
-h2 {counter-reset: h3}
-h3 {counter-reset: h4}
-h4 {counter-reset: h5}
-h5 {counter-reset: h6}
-
-h2:before {counter-increment: h2; content: counter(h2) " "}
-h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) " "}
-h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) " "}
-h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "}
-h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " "}
-
-h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
-
-
 
 @font-face {
   font-family: 'cmu-serif';
@@ -89,24 +14,18 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
   font-weight: normal;
   src: url('/assets/fonts/cmu-serif/cmunrm.woff') format('woff');
 }
-
-
 @font-face {
   font-family: 'cmu-serif';
   font-style: italic;
   font-weight: normal;
   src: url('/assets/fonts/cmu-serif/cmunti.woff') format('woff');
 }
-
-
 @font-face {
   font-family: 'cmu-serif';
   font-style: normal;
   font-weight: bold;
   src: url('/assets/fonts/cmu-serif/cmunbx.woff') format('woff');
 }
-
-
 @font-face {
   font-family: 'cmu-serif';
   font-style: italic;
@@ -114,15 +33,31 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
   src: url('/assets/fonts/cmu-serif/cmunbi.woff') format('woff');
 }
 
+// Header numbering added using the numbered class
+h1, h2, h3, h4, h5, h6 {padding-top: 30px}
 
+body {counter-reset: h2}
+h2 {counter-reset: h3}
+h3 {counter-reset: h4}
+h4 {counter-reset: h5}
+h5 {counter-reset: h6}
+
+.numbered h2:before {counter-increment: h2; content: counter(h2) " "}
+.numbered h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) " "}
+.numbered h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) " "}
+.numbered h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " "}
+.numbered h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " "}
+
+h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
+
+// Add solid underline to all headings
 title span {
   border-bottom: 1px solid #ccc;;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
-  margin:36px 0 10px;
+  margin:10px 0 10px;
 }
 
 p, ul, ol, table, dl {
@@ -176,69 +111,17 @@ h4, h5, h6 {
 }
 
 a {
-  //color:#C30000;
   font-weight:200;
   text-decoration:none;
 }
 
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
-  z-index: 100;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-//
-//a small {
-//  font-size: 12px;
-//}
-
+// Emphasis class
 em {
   font-style: italic;
 }
 
 strong {
   font-weight:700;
-}
-
-.toc a:hover {
-  text-decoration: underline;
-}
-
-.toc li {
-  font-size: 85%;
-}
-
-
-.toc ol {
-  list-style-type: none;
-  counter-reset: item;
-  margin: 0;
-  padding: 0;
-}
-
-.toc ol > li {
-  display: table;
-  counter-increment: item;
-}
-
-.toc ol > li:before {
-  content: counters(item, ".") " ";
-  display: table-cell;
-  padding-right: 0.4em;
-}
-
-.toc li ol > li {
-  margin: 0;
-}
-
-.toc li ol > li:before {
-  content: counters(item, ".") " ";
 }
 
 blockquote {
@@ -341,161 +224,98 @@ td {
 }
 
 
-/* Wrapper */
+
+// ###########################
+// Custom classes
+// ###########################
+section{
+  background: lightblue;
+  padding: 2em 1em;
+}
+
+
+// sticky class for div subclasses
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  padding-top: 11px;    /* ➜ compensate for the trick */
+  z-index: 100;
+  transition: .5s;
+}
+
+// table of content class
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.toc li {
+  font-size: 85%;
+}
+
+.toc ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+.toc ol > li {
+  display: table;
+  counter-increment: item;
+}
+
+.toc ol > li:before {
+  content: counters(item, ".") " ";
+  display: table-cell;
+  padding-right: 0.4em;
+}
+
+.toc li ol > li {
+  margin: 0;
+}
+
+.toc li ol > li:before {
+  content: counters(item, ".") " ";
+}
+
+//.center { /* This is the item to center... */
+//  display: inline-block;
+//}
+//.center-parent { /* ...and this is its parent container. */
+//  text-align: center;
+//}
+//
+//.centered {
+//  width: 100%;
+//  display: table;
+//}
+
 .wrapper {
   width:960px;
 }
 
-.round-corner {
-  border-radius: 25px;
+.outer-center {
+  float: right;
+  right: 50%;
+  position: relative;
+}
+.inner-center {
+  float: right;
+  right: -50%;
+  position: relative;
+}
+.clear {
+  clear: both;
 }
 
-/* The navigation bar */
-.navbar {
-  overflow: hidden;
-  position: fixed; /* Set the navbar to fixed position */
-  width: 100%; /* Full width */
-}
-
-/* Page content */
-.content {
-  padding: 16px;
-}
 //
-//.sticky {
-//  z-index: 100;
-//  position: fixed;
-//  top: 0;
-//  width: 100%;
+//.navbar {
+//  overflow: hidden;
+//  position: fixed; /* Set the navbar to fixed position */
+//  width: 100%; /* Full width */
 //}
 
-///* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-//.sticky + .content {
-//  padding-top: 342px;
-//}
-
-/* Header */
-//
-//header {
-//  background-color: #171717;
-//  color: #FDFDFB;
-//  width:170px;
-//  float:left;
-//  position:fixed;
-//  border: 1px solid #000;
-//  -webkit-border-top-right-radius: 4px;
-//  -webkit-border-bottom-right-radius: 4px;
-//  -moz-border-radius-topright: 4px;
-//  -moz-border-radius-bottomright: 4px;
-//  border-top-right-radius: 4px;
-//  border-bottom-right-radius: 4px;
-//  padding: 34px 25px 22px 50px;
-//  margin: 30px 25px 0 0;
-//  -webkit-font-smoothing: antialiased;
-//}
-//
-//p.header {
-//  font-size: 16px;
-//}
-//
-//h1.header {
-//  font-family: Arvo, sans-serif;
-//  font-size: 30px;
-//  font-weight: 300;
-//  line-height: 1.3em;
-//  border-bottom: none;
-//  margin-top: 0;
-//}
-//
-//
-//h1.header, a.header, a.name, header a{
-//  color: #fff;
-//}
-//
-//a.header {
-//  text-decoration: underline;
-//}
-//
-//a.name {
-//  white-space: nowrap;
-//}
-//
-//header ul {
-//  list-style:none;
-//  padding:0;
-//}
-//
-//header li {
-//  list-style-type: none;
-//  width:132px;
-//  height:15px;
-//  margin-bottom: 12px;
-//  line-height: 1em;
-//  padding: 6px 6px 6px 7px;
-//
-//  background: #AF0011;
-//  background: -moz-linear-gradient(top, #AF0011 0%, #820011 100%);
-//  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-//  background: -webkit-linear-gradient(top, #AF0011 0%,#820011 100%);
-//  background: -o-linear-gradient(top, #AF0011 0%,#820011 100%);
-//  background: -ms-linear-gradient(top, #AF0011 0%,#820011 100%);
-//  background: linear-gradient(to top, #AF0011 0%,#820011 100%);
-//
-//  border-radius:4px;
-//  border:1px solid #0D0D0D;
-//
-//  -webkit-box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-//  box-shadow: inset 0px 1px 1px 0 rgba(233,2,38, 1);
-//
-//}
-//
-//header li:hover {
-//  background: #C3001D;
-//  background: -moz-linear-gradient(top, #C3001D 0%, #950119 100%);
-//  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-//  background: -webkit-linear-gradient(top, #C3001D 0%,#950119 100%);
-//  background: -o-linear-gradient(top, #C3001D 0%,#950119 100%);
-//  background: -ms-linear-gradient(top, #C3001D 0%,#950119 100%);
-//  background: linear-gradient(to top, #C3001D 0%,#950119 100%);
-//}
-//
-//a.buttons {
-//  -webkit-font-smoothing: antialiased;
-//  background: url(../images/arrow-down.png) no-repeat;
-//  font-weight: normal;
-//  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
-//  padding: 2px 2px 2px 22px;
-//  height: 30px;
-//}
-//
-//a.github {
-//  background: url(../images/octocat-small.png) no-repeat 1px;
-//}
-//
-//a.buttons:hover {
-//  color: #fff;
-//  text-decoration: none;
-//}
-
-
-/* Section - for main page content */
-
-//section {
-//  width:650px;
-//  float:right;
-//  padding-bottom:50px;
-//}
-//
-
-/* Footer */
-
-//footer {
-//  width:170px;
-//  float:left;
-//  position:fixed;
-//  bottom:10px;
-//  padding-left: 50px;
-//}
 
 @media print, screen and (max-width: 960px) {
 

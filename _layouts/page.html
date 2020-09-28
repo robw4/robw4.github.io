@@ -3,28 +3,77 @@ layout: default
 ---
 
 <div class="w3-content w3-padding" style="max-width:{{ site.max-width }}">
-    <div class="w3-bar sticky">
-        <button class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
-            <a href="#heading"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i><small class="header"></small></a>
+
+    <!-- page title -->
+    <div class="w3-container w3-bar sticky" id="ToContent">
+        <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
+            <a href="#heading"><i class="fa fa-list" aria-hidden="true"></i><small class="header"></small></a>
         </button>
     </div>
 
-    <div class="w3-row">
+    <div class="w3-container w3-row">
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0 w3-container">
-            <a id="heading"><h1 class="w3-center">{{ page.title }}</h1></a>
-            {{ if page.abstract }}
+            <!-- page title and abstract-->
+            <h1 class="w3-center">{{ page.title }}</h1>
+            {% if page.abstract %}
                 <p><em>{{ page.abstract }}</em></p>
-            {{ endif }}
-            <div class="w3-content w3-padding w3-container toc" style="font-size: large; font-position: center">
-                {% include toc.html h_min=2 html=content ordered=true %}
+            {% endif %}
+            <!-- table of contents -->
+            <div class="w3-container">
+                <div class="outer-center">
+                    <div class="inner-center">
+                        <div class="w3-center">
+                        <div class="w3-bar">
+                            <button onclick="toggleContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
+                                <i class="fa fa-chevron-circle-down" aria-hidden="true" id="ContentIcon"></i></button>
+                        </div>
+                        </div>
+                        <div id="Content" class="w3-hide">
+                            <a id="heading"><h2 class="w3-center" style="padding-top: 10px">Content</h2></a>
+                            <div class="toc" style="font-size: large">
+                                {% include toc.html h_min=2 html=content ordered=true %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"/>
+                </div>
             </div>
         </div>
         <div class="w3-col l3 m0 s0 w3-container"><p></p></div>
     </div>
 
-    <div class="w3-padding">
+
+
+    {% if page.numbered %}
+        {% assign use_numbers = page.numbered %}
+    {% else %}
+        {% assign use_numbers = site.numbered %}
+    {% endif %}
+    <div class="w3-content w3-container {% if use_numbers %}numbered{% endif %}">
         {{ content }}
     </div>
 
 </div>
+
+<script>
+    function toggleContent() {
+        var x = document.getElementById('Content');
+        var ic = document.getElementById('ContentIcon');
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+            ic.className = ic.className.replace(" fa-chevron-circle-down", " fa-chevron-circle-up");
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+            ic.className = ic.className.replace(" fa-chevron-circle-up", " fa-chevron-circle-down");
+        }
+    }
+
+    function toContent() {
+        var x = document.getElementById('Content');
+        if (x.className.indexOf("w3-show") == -1) {
+            toggleContent()
+        }
+    }
+
+</script>
