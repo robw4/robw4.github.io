@@ -399,6 +399,14 @@ section{
   clear: both;
 }
 
+.change-icon > .fa + .fa,
+.change-icon:hover > .fa {
+  display: none;
+}
+.change-icon:hover > .fa + .fa {
+  display: inherit;
+}
+
 //
 //.navbar {
 //  overflow: hidden;

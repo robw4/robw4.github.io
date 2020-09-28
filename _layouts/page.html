@@ -8,15 +8,15 @@ layout: default
     <div class="w3-container w3-padding-small w3-bar sticky" id="ToContent">
         <!-- contents page-->
 
-        <button onclick="goToPreviousAnchor()" class="w3-button w3-padding w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+        <button onclick="goToPreviousAnchor()" class="w3-button w3-small w3-padding w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
             <i class="fa fa-arrow-circle-up" aria-hidden="true"></i><small class="header"></small>
         </button>
         <a href="#__title">
-            <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-                <i class="fa fa-star" aria-hidden="true"></i><small class="header"></small>
+            <button onclick="toContent()" class="w3-button w3-small w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fa fa-bars" aria-hidden="true"></i><small class="header"></small>
             </button>
         </a>
-        <button onclick="goToNextAnchor()" class="w3-button w3-padding w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+        <button onclick="goToNextAnchor()" class="w3-button w3-small w3-padding w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
             <i class="fa fa-arrow-circle-down" aria-hidden="true"></i><small class="header"></small>
         </button>
     </div>
@@ -24,37 +24,52 @@ layout: default
     <div class="w3-container w3-row w3-padding-small">
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0 w3-container">
-            <!-- page title and abstract-->
             <a id="__title"></a><h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
-            <div class="w3-row">
-                {% if page.abstract %}
-                    <p style="margin: 0 0 5"><em>{{ page.abstract }}</em></p>
-                {% endif %}
-            </div>
-            <!-- table of contents -->
             <div>
                 <div class="outer-center">
                     <div class="inner-center w3-round-large w3-padding">
-                        <div class="w3-center">
-                            <div class="w3-bar">
-                                <button onclick="toggleContent()" class="w3-button w3-large w3-left-align w3-round-xxlarge w3-white w3-hover-amber w3-right" style="outline:none">
-                                    <i class="fa fa-chevron-circle-down" aria-hidden="true" id="ContentIcon"></i></button>
+                        <!-- abstract -->
+                        <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
+                        <div class="w3-padding w3-light-gray w3-round-large" style="outline:none">
+                            <div id="__abstract" class="w3-hide w3-show">
+                                <div class="w3-row">
+                                    {% if page.abstract %}
+                                        <p style="margin: 0 0 5"><em>{{ page.abstract }}</em></p>
+                                    {% endif %}
+                                </div>
+                                <button onclick="toggleContent()" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber change-icon"
+                                        style="outline:none; position:absolute; bottom: 0px; right: 0px;">
+                                    <i class="fa fa-comment"></i>
+                                    <i class="fa fa-list"></i>
+                                </button>
+
                             </div>
-                        </div>
-                        <a id="__TOC">
-                            <div id="Content" class="w3-hide w3-padding w3-container">
-                                <div class="w3-padding  w3-light-gray w3-round-xxlarge">
-                                    <h2 class="w3-center" style="padding-top: 10px">Content</h2>
+                            <a id="__TOC">
+                                <div id="Content" class="w3-hide">
                                     <div class="toc" style="font-size: large">
                                         {% include toc.html h_min=2 html=content ordered=true %}
+                                        <button onclick="toggleContent()" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber change-icon"
+                                                style="outline:none; position:absolute; bottom: 0px; right: 0px;">
+                                               <i class="fa fa-list"></i>
+                                              <i class="fa fa-comment"></i>
+                                            </button>
+                                            <!-- <i class="fa fa-list" aria-hidden="true" id="ContentIcon"></i> -->
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+
+                        </div>
+
+                        <!-- </button> -->
+
+
+                        <!-- ttoc -->
                     </div>
                     <div class="clear"/>
                 </div>
             </div>
+
+
         </div>
         <div class="w3-col l2 m0 s0 w3-container"><p></p></div>
     </div>
@@ -67,20 +82,24 @@ layout: default
     <div class="w3-container w3-padding-small{% if use_numbers %} numbered{% endif %}">
         {% include anchor_headings.html html=content anchorBody="#" h_max=2 anchorClass="Anchor" %}
     </div>
-
 </div>
 
 <script>
     function toggleContent() {
         let x = document.getElementById('Content');
-        let ic = document.getElementById('ContentIcon');
+        // let ic = document.getElementById('ContentIcon');
+        let y = document.getElementById('__abstract');
+        console.log(y.className);
         // var outer = document.getElementById('OuterContainer');
         if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
-            ic.className = ic.className.replace(" fa-chevron-circle-down", " fa-chevron-circle-up");
+            // ic.className = ic.className.replace(" fa-list", " fa-comment");
+            y.className = y.className.replace(" w3-show", "");
+
         } else {
             x.className = x.className.replace(" w3-show", "");
-            ic.className = ic.className.replace(" fa-chevron-circle-up", " fa-chevron-circle-down");
+            // ic.className = ic.className.replace(" fa-comment", " fa-list");
+            y.className += " w3-show";
         }
     }
     function toContent() {
