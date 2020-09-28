@@ -6,12 +6,18 @@ layout: default
 
     <!-- page title -->
     <div class="w3-container w3-padding-small w3-bar sticky" id="ToContent">
-        <button onclick="goToNextAnchor()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
-            <a href="#heading"><i class="fa fa-list" aria-hidden="true"></i><small class="header"></small></a>
-        </button>
         <!-- contents page-->
-        <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none">
-            <a href="#heading"><i class="fa fa-arrow-circle-down" aria-hidden="true"></i><small class="header"></small></a>
+
+        <button onclick="goToPreviousAnchor()" class="w3-button w3-padding w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i><small class="header"></small>
+        </button>
+        <a href="#__title">
+            <button onclick="toContent()" class="w3-button w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fa fa-star" aria-hidden="true"></i><small class="header"></small>
+            </button>
+        </a>
+        <button onclick="goToNextAnchor()" class="w3-button w3-padding w3-large w3-left-align header w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+            <i class="fa fa-arrow-circle-down" aria-hidden="true"></i><small class="header"></small>
         </button>
     </div>
 
@@ -19,7 +25,7 @@ layout: default
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0 w3-container">
             <!-- page title and abstract-->
-            <h1 class="w3-center">{{ page.title }}</h1>
+            <a id="__title"></a><h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
             <div class="w3-row">
                 {% if page.abstract %}
                     <p style="margin: 0 0 5"><em>{{ page.abstract }}</em></p>
@@ -35,7 +41,7 @@ layout: default
                                     <i class="fa fa-chevron-circle-down" aria-hidden="true" id="ContentIcon"></i></button>
                             </div>
                         </div>
-                        <a id="heading">
+                        <a id="__TOC">
                             <div id="Content" class="w3-hide w3-padding w3-container">
                                 <div class="w3-padding  w3-light-gray w3-round-xxlarge">
                                     <h2 class="w3-center" style="padding-top: 10px">Content</h2>
@@ -59,32 +65,79 @@ layout: default
         {% assign use_numbers = site.numbered %}
     {% endif %}
     <div class="w3-container w3-padding-small{% if use_numbers %} numbered{% endif %}">
-        {{ content }}
+        {% include anchor_headings.html html=content anchorBody="#" h_max=2 anchorClass="Anchor" %}
     </div>
 
 </div>
 
 <script>
     function toggleContent() {
-        var x = document.getElementById('Content');
-        var ic = document.getElementById('ContentIcon');
-        var outer = document.getElementById('OuterContainer');
+        let x = document.getElementById('Content');
+        let ic = document.getElementById('ContentIcon');
+        // var outer = document.getElementById('OuterContainer');
         if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
             ic.className = ic.className.replace(" fa-chevron-circle-down", " fa-chevron-circle-up");
-            outer.className += " w3-light-gray"
         } else {
             x.className = x.className.replace(" w3-show", "");
             ic.className = ic.className.replace(" fa-chevron-circle-up", " fa-chevron-circle-down");
-            outer.className = outer.className.replace(" w3-light-gray", "");
         }
     }
-
     function toContent() {
         var x = document.getElementById('Content');
-        if (x.className.indexOf("w3-show") == -1) {
+        if (x.className.indexOf(" w3-show") == -1) {
             toggleContent()
         }
     }
+
+    function goToNextAnchor() {
+        let x = document.getElementsByClassName("Anchor");
+        let current = window.location.hash;
+        var not_found = true;
+        console.log("current = " + current);
+
+        // In the current hash is in list of Anchors go to
+        // the next in the list
+        for (i = 0; i < x.length; i++){
+            console.log(x[i]);
+            if (i > 0 && x[i - 1].hash == current){
+                window.location.href = x[i].href;
+                not_found = false;
+            }
+        }
+        // If hash is last entry do nothing, else go to first
+        if (not_found) {
+            console.log(!(x[x.length - 1].hash == current));
+            if (!(x[x.length - 1].hash == current)){
+                window.location.href = x[0].href;
+            }
+        }
+        return false;
+    }
+
+    function goToPreviousAnchor() {
+        let x = document.getElementsByClassName("Anchor");
+        let current = window.location.hash;
+        var not_found = true;
+        console.log("current = " + current);
+
+        // In the current hash is in list of Anchors go to
+        // the next in the list
+        for (i = x.length - 2; i > 0; i--){
+            if (x[i + 1].hash == current){
+                window.location.href = x[i].href;
+                not_found = false;
+            }
+        }
+        // If hash is last entry do nothing, else go to first
+        if (not_found) {
+            // console.log(x[x.length - 1]);
+            if (!(x[0].hash == current)){
+                window.location.href = x[0].href;
+            }
+        }
+        return false;
+    }
+
 
 </script>

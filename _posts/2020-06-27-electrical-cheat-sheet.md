@@ -4,6 +4,7 @@ author: robw
 title: Electrical Engineering
 abstract: "Together Maxwell's equations and the Lorentz force equation constitute the foundation of electrical engineering. Remarkably these five equations are enough to describe most of the electronics we experience every day."
 image: /assets/images/electrical.jpg
+numbered: false
 ---
 
 ## Classical Electromagnetism

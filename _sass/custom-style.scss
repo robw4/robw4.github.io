@@ -34,7 +34,9 @@ html {
 }
 
 // Header numbering added using the numbered class
-h1, h2, h3, h4, h5, h6 {padding-top: 15px}
+h1, h2 {padding-top: 20px}
+h3, h4, h5, h6 {padding-top: 20px}
+
 
 body {counter-reset: h2}
 h2 {counter-reset: h3}
@@ -57,7 +59,7 @@ title span {
 
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
-  margin:10px 0 10px;
+  margin:0px 0 10px;
 }
 
 p, ul, ol, table, dl {
@@ -111,8 +113,12 @@ h4, h5, h6 {
 }
 
 a {
-  font-weight:200;
+  font-weight: 300;
   text-decoration:none;
+}
+
+a:hover {
+  color: rgb(255, 191, 39);
 }
 
 // Emphasis class
