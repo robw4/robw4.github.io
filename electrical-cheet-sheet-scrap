@@ -1,0 +1,220 @@
+## Maxwell's equations
+We will begin our journey with Maxwell's equation which together with the Lorentz force equation constitute the foundation of classical electromagnetism: from these five equations it is possible to derive all results in classical electromagnetism and optics.
+The chasm between learning what you need to to pass an exam, and learning so that you actually understand a topic is vast. There is lots I had forgotten, and much more still that, in hindsight, I don't think I really ever understood in the first place. Whilst everything is still fresh in my mind, this blog post aims to describe my understanding of the topic now, in the hope it might be a useful resource for my students or anyone else interested starting out in electrical engineering.
+
+In order to express these equations we will need some mathematical machinery from multivariate calculus which I will now define. Let $\Omega$ be a fixed volume with a closed boundary survace $\partial \Omega$.
+
+
+
+
+In order to exemplify the elegance of this system I am going to begin by simply stating the equations.
+
+
+
+Whilst, elegant and concise, they require a foundation in vector calculus, and at times can seem more abstract than the ideas of current and voltage typically familiar to us. But, Maxwell's equations do not come from pure abstract reasoning, rather they aim to describe real world empirical observations. Through this lens the empirical is key rather than the abstract. Developing a model from real world observations we hope to answer the question "if this is true, then what else follows?". These new predictions can in turn be tested in the real world and our model refined. In some cases, this is a re-writing of the equations to account for new factors that were previously missed. In other cases this might rely on defining and deriving new mathematical machinery allowing relationships to be expressed that previously could not. The latter of these facts is something I personally haven't previously given enough weight to in the past. There is a temptation to see maths and science as separate entities, with maths providing the set of absolute rules, facilitating physical discovery. In reality this relationship is far more symbiotic. The discovery of calculus by Newton and Leibniz was born from there attempts to explain movement for example. Similarly, in unifying
+
+a significant amount of mathematical machinary in order
+
+ machinery in order to understand and apply them.
+
+ Instead, a typical course might start with a discussion of more elementary topics such as ohms law and krirchoff's current laws and by simply stating the mathematical properties of inductors and capcitors.
+
+starting with Maxwell's equations relies on a significant amount of extra
+
+ Before doing so I want to give a brief discussion about why starting with Maxwell's equations, which rely on a slightly greater mathematical foundation, and at times can seem inherently abstract is a good idea rather? In many ways this is the wrong way round. Maxwell's equations do not come from pure abstract reasoning, rather they aim to describe real world empirical observations. Through this lens the empirical is key rather than the abstract. Developing a model from real world observations we hope to answer the question "if this is true, then what else follows?". These new predictions can in turn be tested in the real world and our model refined. In some cases, this is a re-writing of the equations to account for new factors that were previously missed. In other cases this might rely on defining and deriving new mathematical machinery allowing relationships to be expressed that previously could not. The latter of these facts is something I personally haven't previously given enough weight to in the past. There is a temptation to see maths and science as separate entities, with maths providing the set of absolute rules, facilitating physical discovery. In reality this relationship is far more symbiotic. The discovery of calculus by Newton and Leibniz was born from there attempts to explain movement for example. Similarly, in unifying
+
+
+
+"Together Maxwell's equations and the Lorentz force equation constitute the foundation of classical electromagnetism. From these five equations it is theoretically possible to derive all results in classical electromagnetism and optics. This is something I have known in theory for a long time but have never done in practice. In this post I aim to correct this: starting from Maxwell's equations what results is it possible to recover?"
+
+
+
+
+
+is an attempt to explain my understanding of this topic. By explaining what I think I know, I hope to improve my understanding and root out any areas of weakness.
+
+I hope it will be a useful resource
+
+It took me a long time to get to a point where I felt like
+
+Over the last few years I have been teaching a first year undergraduate course on electrical engineering. And naturally, this has forced me to revisit and rethink much of what I thought I new about electrical circuit analysis. There is lots I have forgotten, and much more still that, in hindsight, I did not really understand in the first place.
+
+
+Perhaps the thing I struggled with the most was trying to see the bigger picture, not only being able to recite results but explain fully, or as well as we possibly can
+
+Whilst, by no means the full picture, I feel like over the last year things are becom
+
+either because it has been forgotten, or because they were topics that in hindsight I did not really understand in full. This post is a write up of several of
+
+On reflection and part of this process
+
+The field of electromagnetism -- much like the field of physics in general -- is tasked with trying to explain phenomena observed in the real world. In the beginning, its origin can be found in attempts to explain natural phenomena such as lightning and shadows. Over time, as theories are developed, tested and extrapolated, new phenomena are observed, which must be explained with new theories. And, this process repeats. Gradually, links between these often seemingly unrelated phenomena, are discovered and explained through physical models, until today the field of electromagnetism has grown to explain and define not only electricity and magnetism but also optics under one unified theory. This is expressed through maxwell's four equations -- relating charges and currents to electric and magnetic fields -- in combination with the lorentz force equation.
+
+
+Today, typically anything that can be explained by this theory _is_ regarded as part of the field of electromagnetism.
+
+succinctly expressed through Maxwell's equations and the lorentz force equation.
+
+
+
+
+
+And this framework is
+
+w in turn new theories developed. And this process continues for nearly 2000 years until eventually culminating in
+
+
+
+magnetic iron, electric shocks from animals, shadows, rainbows, darkness and light.
+
+the foundations of linear circuit analysis. Our journey will begin with Maxwell's equations, which are able to explain many phenomena that arise in the natural world, that lie at the heart of electrical and optical technologies every day, by relating charges and currents to electric and magnetic fields. In certain situ
+
+
+at there heart describe the interaction between charges and
+
+in certain problem setups, the relationship between current and electrical potential can
+
+
+The aim of this post is to introduce the foundations of linear circuit analysis. From Maxwell's equations we will see how it is possible to describe how in certain setups electrical properties
+
+
+ the electrical phenomena of conductance, capacitance and inductance and how in turn each one of these properties gives rise to an electrical device; the resistor, capacitor and inductor respectively.
+ The characterisation of these devices is expressed through differential equations there relationship with electrical potential and current.
+
+it is possible to derive relations between several different devices
+
+ In perhaps a controversial take, instead of beginning with electrical devices and a description of there properites and interactions in circuits I will instead be starting with Maxwell's equations.
+
+## Classical Electromagnetism
+
+
+This blog aims to be an exploration into the topic of electromagnetism. I aim to show how from Maxwell's equations
+
+ and in starting this exploration it would be remiss of me to not mention Maxwell's equations. My aim is to begin with these equations, proposing them as a foundation, from which it is possible to derive several
+
+from which many relationships we use and observe across electrical engineering result. Before doing so I want to give a brief discussion about why starting with Maxwell's equations, which rely on a slightly greater mathematical foundation, and at times can seem inherently abstract is a good idea rather? In many ways this is the wrong way round. Maxwell's equations do not come from pure abstract reasoning, rather they aim to describe real world empirical observations. Through this lens the empirical is key rather than the abstract. Developing a model from real world observations we hope to answer the question "if this is true, then what else follows?". These new predictions can in turn be tested in the real world and our model refined. In some cases, this is a re-writing of the equations to account for new factors that were previously missed. In other cases this might rely on defining and deriving new mathematical machinery allowing relationships to be expressed that previously could not. The latter of these facts is something I personally haven't previously given enough weight to in the past. There is a temptation to see maths and science as separate entities, with maths providing the set of absolute rules, facilitating physical discovery. In reality this relationship is far more symbiotic. The discovery of calculus by Newton and Leibniz was born from there attempts to explain movement for example. Similarly, in unifying
+
+
+What lies at the heart of our understanding of electromagnetic systems? In order to understanding the field of electromagentism and electrical engineering
+
+Teaching the introduction to electrical engineering course has re-sparked my interest in electrical engineering as a whole. In teaching electromagnetism to someone who has had limited experience before what ideas are essential to get across? What lies at the heart understanding of electromagnetic systems?
+
+
+Does this understanding come from
+
+In teaching the first year electrical engineering course,
+
+When I first started teaching electrical engineering,
+
+
+Over the last couple of years I have been teaching the first year undergraduate course in electrical engineering. Whilst, a course I also studied, teaching this course was
+
+
+
+
+
+
+Before teaching a topic in physics it is first worth briefly considering the question of where our understanding of physics comes from?
+
+
+Does it come from the abstract equations that explain the interaction between objects, or rather from empirical observations that these equations can predict? In reality the
+
+Does our understanding in physics lie in the empirical or the abstract?
+
+
+### Maxwell's equations
+
+
+
+At the heart of electromagnetism lie Maxwell's equations. These four equations, alongside the Lorentz force equation provide a fully unified theorem of classical electromagnetism. And in beginning my journey of exploration of electrical engineering it would be remiss of me not to mention them.
+
+
+For many there existence is remarkable, the fact that all electromagnetic effects can be reduced to four lines of equations,
+
+Maxwell's equations unify our understanding of electricity and magnetism: through the application of these equations alongside the lorentz force equation it is possible to derive all of classical electromagnetism.
+
+
+
+
+
+But through abstraction it becomes possible to link seemingly unrelated observations together in a complete and unifying framework, providing us with new insights, and enabling the next step of discovery (save in the knowledge that our foundations are solid).
+
+
+ Assuming this foundation is true, we are able to derive results purely in the abstract which in turn must also be true. In this way Maxwell's equation provide a deep insight into the benefits and satisfaction attained through the scientific process.
+
+
+
+ In itself this provides us with a mechanism through which it is possible to derive new results, whilst having the reassurance that the foundations are theory relies upon are grounded to real world observations.
+
+
+
+
+Before stating Maxwell's equations it is worth first defining some notations and refreshing
+
+
+
+
+
+## Active circuits
+### Quantum Theory
+Bound States and Discrete Energy Levels
+: A particle subjected to a potential such that the particle has a tendency to remain localised in one or more regions of space is in a *bound state*. Particles in a bound state can only take on certain discrete values of energy.
+> Eg. chemical bonds, protons and neutrons all correspond to bound states
+
+Pauli Exclusion Principle
+: Two or more identical fermions cannot occupy the same quantum state within a quantum system simultaneously.
+
+## Semi Conductors
+Conductance and ohms Law
+: Under an applied electric field $\boldsymbol{E}$ charges will experience a force equal to $\boldsymbol{F} = q \boldsymbol{E}$ (lorentz) and if they are unconstrained accelerate. But t
+
+
+Charge Carriers in semi-conductors
+: Under an electric field $\epsilon$ free charges will experience a force $F = q \epsilon$ and will on average be accelerated to a drift velocity $v = \mu \epsilon$.
+
+Semi-Conductors and the Bond Model
+: In an electric field $\epsilon$ free charges will drift with velocity $v = \mu \epsilon$ where $\mu$ is a material property known as *mobility*. The total current is given as, $$J =J_n + J_p = (qn \mu_n + q p \mu_p) \epsilon \implies \sigma = q(n\mu_n + p \mu_p)$$ where $\sigma$ is the *conductivity*. *Intrinsic* semi-conductors have one hole per free electron such that $n_i = p_i$.
+
+Band Theory
+: As a result, the electron energy levels of a lattice of atoms will split and merge forming bands of allowed energy levels. At $T=0K$ every state within the *valence band* will be completely occupied by electrons and the next highest energy level the *conductance band* will be completely free of electrons.  The energy gap $\Delta E = E_c - E_v$ is the difference between the lowest energy state in the conductance band $E_c$ and the highest energy state in the valence band $E_v$.  At temperatures above absolute zero the probability that a particular energy level $E$ will be occupied by an electron in a system at thermal equilibrium is given by a Femi-Dirac distribution $$F(E) = \frac{1}{e^{(E - E_f)/k_BT} + 1}$$ where $E_f$ is the fermi-level corresponding to $F(E)=0.5$ for all temperatures.
+
+
+as two atoms in a lattice are brought together, there energy levels split generating to allow for
+
+Band Theorem
+: As a result of the pauli exclusion principle multiple
+
+
+
+### Current
+Electric charges in a an electrical field experience a force $F=qE$ if electrons are free to move this will cause
+
+
+The electric-field
+
+
+
+
+
+### Semi Conductors
+
+
+Energy Bands
+: Quantum energy
+
+
+
+Free Charges
+: Due to the thermal excitement of a material at any one time there will be a net number of delocalised electrons and holes. Under an electric current
+
+At any time the random thermal excitement of electrons leads to a net number of free electrons $n$ and positively charged holes $q$.
+
+The random thermal excitement of electrons in bonds results in
+
+The random thermal excitement of electrons in bonds results in a net number of free electrons $n$ and positively charged ions $p$ per unit volume at any instance in time.
+
+
+
+Extrinsic semi-conductors are interlaced
+
+
