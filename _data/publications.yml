@@ -1,0 +1,14 @@
+- title: "Masking By Moving: Learning Distraction-Free Radar Odometry from Pose Information"
+  youtube: "eG4Q-j3_6dk"
+  reference: 'Dan Barnes, <b>Rob Weston</b>, and Ingmar Posner. "Masking by moving: Learning distraction-free radar odometry from pose information. In 2020 Conference on Robot Learning (CoRL)"'
+  paper: "https://arxiv.org/pdf/1909.03752.pdf"
+  poster: "https://dbarnes.github.io/assets/projects/masking-by-moving/MaskingByMovingCoRLPosterCompressedGithub.pdf"
+  id: "mbym"
+
+- title: "Probably Unknown: Deep Inverse Sensor Modelling In Radar"
+  youtube: "zIleQXrFOGM"
+  reference: '<b>Rob Weston</b>, Sarah Cen, Paul Newman, and Ingmar Posner. "Probably unknown: Deep inverse sensor modelling in radar." In 2019 International Conference on Robotics and Automation (ICRA), pp. 5446-5452. IEEE, 2019'
+  paper: "https://arxiv.org/abs/1810.08151"
+  poster: "/assets/pdf/deep-ism-icra-poster.pdf"
+  id: "probs"
+

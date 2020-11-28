@@ -16,7 +16,7 @@ social:
       href: 'https://github.com/'
       tite: GitHub
       fa-icon: 'fa-github-square'
-page_width: 1000px
+page_width: 900px
 numbered: true
 markdown: kramdown
 kramdown:

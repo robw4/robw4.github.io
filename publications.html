@@ -1,10 +1,60 @@
 ---
-layout: page
+title: Research
+layout: plain
 ---
 
+{% for item in site.data.publications %}
+    <div class="w3-container w3-row w3-padding-small">
+    <div class="w3-col l12 m0 s0 w3-container"></div>
+        <div class="outer-center">
+            <div class="inner-center w3-round-large w3-padding">
+                <!-- abstract -->
+                <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
+                <div class="w3-padding w3-light-gray w3-round-large" style="outline:none">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.reference }} </p>
+                    <div id="__abstract{{ item.id }}" class="w3-hide">
+                        <div class="w3-row">
+                            <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1"  width="{{ site.page_width | times: 1.0}}"  height="{{ site.page_width | times: 0.5625 | times: 1.0 }}"></iframe>
+                        </div>
+                    </div>
+                    <p></p>
+                    <p style="text-align: center"><a href="{{ item.paper }}"><i>Paper</i></a> <a href="https://www.youtube.com/watch?v={{ item.youtube }}"><i>Video</i></a>  <a href="{{ item.poster }}"><i>Poster</i></a></p>
+                    <button onclick="toggleContent('{{ item.id }}')" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber"
+                            style="outline:none; position:absolute; bottom: 0px; right: 0px;">
+                        <i id="__button{{ item.id }}" class="fa fa-arrow-down"></i>
+                    </button>
+                </div>
 
-<div class="w3-container w3-center">
-    <h1>Article In The Keble Review</h1>
-    <iframe src="/assets/pdf/The-Keble-Review-2018.pdf" width="80%" height=100%" style="border:none;">
-    </iframe>
-</div>
+                <!-- </button> -->
+
+
+                <!-- ttoc -->
+            </div>
+            <div class="clear"/>
+        </div>
+    </div>
+{% endfor %}
+
+<script>
+    function toggleContent(id) {
+        // let x = document.getElementById('Content');
+        let ic = document.getElementById('__button'+id);
+        let y = document.getElementById('__abstract'+id);
+        console.log(ic);
+        // var outer = document.getElementById('OuterContainer');
+
+        if (y.className.indexOf("w3-show") == -1) {
+            // x.className += " w3-show";
+            // ic.className = ic.className.replace(" fa-list", " fa-comment");
+            y.className = y.className.replace("w3-hide", "w3-show");
+            ic.className = ic.className.replace("fa-arrow-down", "fa-arrow-up");
+
+        } else {
+            // x.className = x.className.replace(" w3-show", "");
+            // ic.className = ic.className.replace(" fa-comment", " fa-list");
+            y.className = y.className.replace("w3-show", "w3-hide");
+            ic.className = ic.className.replace("fa-arrow-up", "fa-arrow-down")
+        }
+    }
+</script>
