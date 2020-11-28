@@ -10,8 +10,8 @@ layout: plain
 [[__Paper__](https://arxiv.org/abs/1810.08151)] [[__Video__](https
 ://www.youtube.com/watch?v=zIleQXrFOGM)] [[__Poster__](/assets/pdf/deep-ism-icra-poster.pdf)]
 
-<iframe width="{{ site.page_width | times: 0.8}}" height
-="{{ site.page_width | times: 0.5625 | times: 0.8 }}"
+<iframe width="{{ site.page_width | times: 1.0}}" height
+="{{ site.page_width | times: 0.5625 | times: 1.0 }}"
 src="https://www.youtube.com/embed/zIleQXrFOGM?autoplay=1&mute=1">
 </iframe>
 

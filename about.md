@@ -18,9 +18,8 @@ I am a final year PhD student researching with the [_Applied
       I am attempting to better harness the potential of radar for
        autonomous driving and robotic applications, through the
         application of state-of-the art machine learning approaches
-        . For more information see my [_research page_](/publications
-        .html
-        ). More broadly
+        . For more information see my [_research page_]({% link
+         publications.html %}). More broadly
          I am
          interested in anything machine learning with a particular
           focus on generative modelling and Bayesian inference.
@@ -29,8 +28,9 @@ I am a final year PhD student researching with the [_Applied
 
 
 Download a copy of my [_resume_](/assets/pdf/robw-resume.pdf), find
-  me on [_linked in_](), or reach out via [_email_](mailto:robw@robots.ox.ac.uk). I am
-   currently
-   Looking for jobs at the intersection of robotics autonomous
+  me on [_LinkedIn_](https://www.linkedin.com/in/rob-weston-a1289a177/), or reach out via [_email_](mailto:robw
+  @robots.ox.ac.uk). I am
+   currently looking for jobs at the intersection of robotics
+    autonomous
     driving and machine learning with an option to publish.
 

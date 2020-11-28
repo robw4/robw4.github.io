@@ -10,16 +10,18 @@ layout: plain
             <div class="inner-center w3-round-large w3-padding">
                 <!-- abstract -->
                 <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
+                <!--  width="{{ site.page_width | times: 1.1}}"  height="{{ site.page_width | times: 0.5625 | times: 1.1 }}"-->
                 <div class="w3-padding w3-light-gray w3-round-large" style="outline:none">
-                    <h3>{{ item.title }}</h3>
-                    <p>{{ item.reference }} </p>
-                    <div id="__abstract{{ item.id }}" class="w3-hide">
+                    <b>{{ item.title }}</b>
+                    <p>{{ item.authors }} {{ item.conference }} <a href="{{ item.paper }}">[ <i>Paper</i> ]</a> <a href="https://www.youtube.com/watch?v={{ item.youtube }}">[ <i>Video</i> ]</a>  <a href="{{ item.poster }}">[ <i>Poster</i> ]</a> </p>
+                    <p style="text-align: center"></p>
+                    <div id="__abstract{{ item.id }}" class="w3-hide video_wrapper">
                         <div class="w3-row">
-                            <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1"  width="{{ site.page_width | times: 1.0}}"  height="{{ site.page_width | times: 0.5625 | times: 1.0 }}"></iframe>
+                            <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1" ></iframe>
                         </div>
                     </div>
                     <p></p>
-                    <p style="text-align: center"><a href="{{ item.paper }}"><i>Paper</i></a> <a href="https://www.youtube.com/watch?v={{ item.youtube }}"><i>Video</i></a>  <a href="{{ item.poster }}"><i>Poster</i></a></p>
+
                     <button onclick="toggleContent('{{ item.id }}')" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber"
                             style="outline:none; position:absolute; bottom: 0px; right: 0px;">
                         <i id="__button{{ item.id }}" class="fa fa-arrow-down"></i>

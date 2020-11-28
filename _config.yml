@@ -8,14 +8,18 @@ social:
       href: 'mailto:'
       title: 'Email'
       fa-icon: 'fa-envelope-square'
-    - id: 'robwrobots'
-      href: 'https://www.twitter.com/'
-      title: 'Twitter'
-      fa-icon: 'fa-twitter-square'
+#    - id: 'robwrobots'
+#      href: 'https://www.twitter.com/'
+#      title: 'Twitter'
+#      fa-icon: 'fa-twitter-square'
     - id: robw4
-      href: 'https://github.com/'
-      tite: GitHub
+      href: https://www.github.com
+      title: GitHub
       fa-icon: 'fa-github-square'
+    - id: rob-weston-a1289a177
+      href: https://www.linkedin.com/in/
+      tite: LinkedIn
+      fa-icon: 'fa-linkedin-square'
 page_width: 900px
 numbered: true
 markdown: kramdown
