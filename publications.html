@@ -3,29 +3,59 @@ title: Research
 layout: plain
 ---
 
+
+
+
+
+
+
+
+
 {% for item in site.data.publications %}
-    <div class="w3-container w3-row w3-padding-small">
-    <div class="w3-col l12 m0 s0 w3-container"></div>
-        <div class="outer-center">
-            <div class="inner-center w3-round-large w3-padding">
+<div class="w3-container w3-row w3-padding-small">
+            <div class="w3-round-large w3-padding">
                 <!-- abstract -->
                 <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
                 <!--  width="{{ site.page_width | times: 1.1}}"  height="{{ site.page_width | times: 0.5625 | times: 1.1 }}"-->
-                <div class="w3-padding w3-light-gray w3-round-large" style="outline:none">
+                <div class="w3-padding w3-light-gray w3-round-large" style="outline:none;">
+                    <div></div>
                     <b>{{ item.title }}</b>
-                    <p>{{ item.authors }} {{ item.conference }} [ <a href="{{ item.paper }}"> Paper </a> ] [<a href="https://www.youtube.com/watch?v={{ item.youtube }}">Video</a> ] [ <a href="{{ item.poster }}">Poster</a> ] </p>
-                    <p style="text-align: center"></p>
-                    <div id="__abstract{{ item.id }}" class="w3-hide video_wrapper">x
-                        <div class="w3-row">
+                    <p style="display:inline">{{ item.authors }} {{ item.conference }}</p>
+
+                    <div class="w3-bar">
+                        <button onclick="toggleContent('{{ item.id }}')" class="w3-bar-item w3-button w3-small w3-round-xxlarge w3-hover-amber"
+                                style="outline:none; position:relative;">
+                            <i id="__button{{ item.id }}" class="fa fa-arrow-down"></i>
+                        </button>
+                        {% if item.poster %}
+                            <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                                    style="outline:none; position:relative;">
+                                <a href="{{ item.poster }}"><i class="fa fa-file-image-o"></i></a>
+                            </button>
+                        {% endif %}
+                        {% if item.youtube %}
+                            <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                                    style="outline:none; position:relative;">
+                                <a href="https://www.youtube.com/watch?v={{ item.youtube }}"><i class="fa fa-file-video-o"></i></a>
+                            </button>
+                        {%  endif %}
+                        {% if item.paper %}
+                            <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                                    style="outline:none; position:relative;"><a href="{{ item.paper }}">
+                                    <i class="fa fa-file-pdf-o"></i></a>
+                            </button>
+                        {%  endif %}
+
+                    </div>
+
+                    <div id="__abstract{{ item.id }}" class="w3-hide">
+                        <p><i>{{ item.abstract }}</i></p>
+                        <div class="w3-row video_wrapper">
                             <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1" ></iframe>
                         </div>
                     </div>
-                    <p></p>
 
-                    <button onclick="toggleContent('{{ item.id }}')" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber"
-                            style="outline:none; position:absolute; bottom: 0px; right: 0px;">
-                        <i id="__button{{ item.id }}" class="fa fa-arrow-down"></i>
-                    </button>
+
                 </div>
 
                 <!-- </button> -->
@@ -33,10 +63,10 @@ layout: plain
 
                 <!-- ttoc -->
             </div>
-            <div class="clear"/>
-        </div>
-    </div>
+</div>
 {% endfor %}
+
+
 
 <script>
     function toggleContent(id) {
