@@ -13,9 +13,9 @@ layout: plain
                 <!--  width="{{ site.page_width | times: 1.1}}"  height="{{ site.page_width | times: 0.5625 | times: 1.1 }}"-->
                 <div class="w3-padding w3-light-gray w3-round-large" style="outline:none">
                     <b>{{ item.title }}</b>
-                    <p>{{ item.authors }} {{ item.conference }} <a href="{{ item.paper }}">[ <i>Paper</i> ]</a> <a href="https://www.youtube.com/watch?v={{ item.youtube }}">[ <i>Video</i> ]</a>  <a href="{{ item.poster }}">[ <i>Poster</i> ]</a> </p>
+                    <p>{{ item.authors }} {{ item.conference }} [ <a href="{{ item.paper }}"> Paper </a> ] [<a href="https://www.youtube.com/watch?v={{ item.youtube }}">Video</a> ] [ <a href="{{ item.poster }}">Poster</a> ] </p>
                     <p style="text-align: center"></p>
-                    <div id="__abstract{{ item.id }}" class="w3-hide video_wrapper">
+                    <div id="__abstract{{ item.id }}" class="w3-hide video_wrapper">x
                         <div class="w3-row">
                             <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1" ></iframe>
                         </div>

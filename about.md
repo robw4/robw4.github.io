@@ -5,11 +5,11 @@ abstract:
 numbered: False
 ---
 
-I am a final year PhD student researching with the [_Applied
+I am a final year PhD student researching with the [Applied
  Artificial
- Intelligence Lab (A2I)_](https://ori.ox.ac.uk/labs/a2i/) attached
+ Intelligence Lab (A2I)](https://ori.ox.ac.uk/labs/a2i/) attached
   to the
-  [_Oxford Robotics Institute_](https://ori.ox.ac.uk/), University of
+  [Oxford Robotics Institute](https://ori.ox.ac.uk/), University of
    Oxford. Our research focuses on the application of AI and machine
     learning to better enable robots to robustly and effectively
      operate in complex real-world environments. 
@@ -27,8 +27,8 @@ I am a final year PhD student researching with the [_Applied
 ![teaser](/assets/images/me.jpg)
 
 
-Download a copy of my [_resume_](/assets/pdf/robw-resume.pdf), find
-  me on [_LinkedIn_](https://www.linkedin.com/in/rob-weston-a1289a177/), or reach out via [_email_](mailto:robw
+Download a copy of my [resume](/assets/pdf/robw-resume.pdf), find
+  me on [LinkedIn](https://www.linkedin.com/in/rob-weston-a1289a177/), or reach out via [_email_](mailto:robw
   @robots.ox.ac.uk). I am
    currently looking for jobs at the intersection of robotics
     autonomous

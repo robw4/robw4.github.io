@@ -113,12 +113,14 @@ h4, h5, h6 {
 }
 
 a {
-  font-weight: 300;
+  font-weight: bold;
+  font-style: italic;
   text-decoration:none;
+  color: rgba(41, 41, 41, 0.87);
 }
 
 a:hover {
-  color: rgb(255, 191, 39);
+  color: black;
 }
 
 // Emphasis class
@@ -344,7 +346,9 @@ iframe{
   height: 100%;
 }
 
-
+.anchor {
+  visibility: hidden;
+}
 
 // ###########################
 // Custom classes
@@ -354,14 +358,6 @@ section{
   padding: 2em 1em;
 }
 
-.Anchor {
-  display: none
-}
-
-
-.Anchor a:hover {
-  display: block;
-}
 
 
 * {
