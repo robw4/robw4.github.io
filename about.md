@@ -23,14 +23,16 @@ I am a final year PhD student researching with the [Applied
          I am
          interested in anything machine learning with a particular
           focus on generative modelling and Bayesian inference.
+          
+Download a copy of my [resume](/assets/pdf/robw-resume.pdf), find
+me on [LinkedIn](https://www.linkedin.com/in/rob-weston-a1289a177/), or reach out via [_email_](mailto:robw
+@robots.ox.ac.uk). I am
+ currently looking for jobs at the intersection of robotics
+  autonomous
+  driving and machine learning with an option to publish.
+
 
 ![teaser](/assets/images/me.jpg)
 
 
-Download a copy of my [resume](/assets/pdf/robw-resume.pdf), find
-  me on [LinkedIn](https://www.linkedin.com/in/rob-weston-a1289a177/), or reach out via [_email_](mailto:robw
-  @robots.ox.ac.uk). I am
-   currently looking for jobs at the intersection of robotics
-    autonomous
-    driving and machine learning with an option to publish.
 
