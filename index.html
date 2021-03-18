@@ -5,12 +5,12 @@ layout: default
 
 
 <!-- grid -->
-<div class="w3-content"  style="max-width: 700px">
+<div class="w3-content"  style="max-width:{{ site.page_width }}">
 <div class="w3-row">
         <!-- card entries -->
         {% for item in site.data.navigation %}
             {%  if item.name != 'Home' %}
-            <div class="w3-col l12 m12 s12">
+            <div class="w3-col l6 m12 s12">
                 <!-- card entry -->
                 {% include frame.html
                     name=item.name
