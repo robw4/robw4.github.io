@@ -55,15 +55,19 @@ These slides were presented at the Bishop reading group with the
     when we have
     large datasets available to us but for smaller $N$ our
      solutions significantly overfit. We explore theoretically why
-      this is the case using the bias-variance deomposition. Regularisation is proposed as an attempt at overcoming the
-       limitations of Maximum likelihood for small $N$. We see that
-        by doing so we are able to significantly reduce the
+      this is the case using the bias-variance deomposition
+      . Introducing a norm penalty on the weights is
+       proposed as an attempt at
+       overcoming the
+       limitations of Maximum likelihood for small $N$. In doing so
+        we are able to significantly reduce the
          variance in our estimator at the expense of increased bias
          . Finally we consider linear regression from the bayesian
-          paradigm: we see that in this case the model is naturally
+          perspective: in this case the model is naturally
            regularised through the process of marginalising
-           , estimating all parameters without the need for a test
-            set.
+           , and all parameters can be estimated without
+            the need for a test set, allowing us to exploit all the
+             observations we have available.
             
 Code for the examples given in the slides can be found [here
 ](https://github.com/robw4/bayesain-regression/blob/master/bayesain_linear_regression.ipynb). 
