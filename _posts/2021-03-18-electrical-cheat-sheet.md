@@ -2,7 +2,21 @@
 layout: post
 author: robw
 title: Electrical Engineering
-abstract: Whilst teaching an electrical engineering course for the first time, I was forced to revisit much of what I thought I knew about electrical circuit analysis. As part of this process I started writing this cheat sheet to electrical circuit analysis. More to follow!
+abstract: This page contains a cheat sheet covering much of the
+ first year electrical engineering course at the University of
+  Oxford. It grew out of a collection of notes I made for myself
+   whilst teaching undergraduate tutorials over the last couple of
+    years and I hope it will be a useful resource for my students. We
+     begin by
+     considering Maxwells equations which - remarkably
+    - are able to describe the entireity of classical
+     electromagentism and optics and underpin the
+      workings of all the electrical devices covered below. Next
+      , linear circuit devices are introduced, including resistors
+      , capacitors and inductors, and a
+       selection of methods for analysing both AC and DC circuits
+        are summarised. If you have any questions / spot any
+         mistakes please do drop me an email.
 image: /assets/images/electrical.jpg
 numbered: false
 ---
@@ -10,7 +24,6 @@ numbered: false
 ![Teaser](/assets/images/electrical.jpg)
 
 ## Classical Electromagnetism
-Together Maxwell's equations and the Lorentz force equation constitute the foundation of electrical engineering.
 
 ### The lorentz force equation
 Lorentz equation
@@ -150,4 +163,3 @@ Frequency Response
 
 Bode Plots
 : By plotting $G_{db} := 20 \log_{10} \| G(j \omega)\|$ and $G_{\phi} := \text{arg} \{G(j \omega) \}$ on a log axis of frequency $\omega$ the frequency response of a system can be visualised. $G_{db}$ is the frequency dependent gain of the system (in decibels) and $G_{\phi}$ is the phase shift. For linear systems $G(j \omega)$ can be written as $G(j \omega) = \prod_l g_l(j \omega) / \prod_d g_d(j \omega)$ with $g(j \omega) = 1 \pm j \omega / \hat{\omega}$ and the bode plots for gain and phase can be constructed through the superposition of each $g_{db}$ and $g_{\phi}$ as $G_{db / \phi} = \sum_l g_{db /\phi}^{(l)} -  \sum_d g_{db / \phi}^{(d)}$. Each $g_{db}$ corresponds to a straight line of gradient $20 \ \text{db dec}^{-1}$ starting at $\hat{\omega}$. Each  $g_{\phi}$ corresponds to a straight line with gradient $\pm \pi / 4 \  \text{rad dec}^{-1}$ starting at $(0.1 \hat{\omega}, 0)$ and ending at  $(10\hat{\omega}, \pi / 2)$. At $\omega = \hat{\omega}$, $g_\phi= \pi /4$ and $g_{db} =3 \text{db} \implies \|g({j \omega})\| = 1 / \sqrt{2}$.
-
