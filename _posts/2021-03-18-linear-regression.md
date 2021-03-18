@@ -1,7 +1,7 @@
 ---
 layout: post
 author: robw
-title: Baysian Inference
+title: Bayesian Inference
 abstract: Here you will find the slides I presented at several
  reading groups designed to be a general intro to Bayesian
   Inference and linear regression. Much of the content is based on the
