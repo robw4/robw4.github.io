@@ -38,13 +38,11 @@ These slides were presented at the Murphy reading
             mechanism to compare the validity of different models
              and naturally favours the simpler explanation.
 
+
 <div class="w3-container w3-center">
 <object data="/assets/pdf/bayesian_statistics.pdf" width="100%" height="60%" type
 ="application/pdf">
-    <div class="w3-container w3-center">
-    <embed src="https://drive.google.com/file/d/1Hw0lb7iycwc3n
-    -v5REGz_6KTBdUiGwM9/preview" width="100%" height="60%"><embed/>
-    </div>
+        <embed src="https://drive.google.com/file/d/1Hw0lb7iycwc3n-v5REGz_6KTBdUiGwM9/preview" width="640" height="480"></embed>
 </object>
 </div>
 
