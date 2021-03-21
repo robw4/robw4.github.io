@@ -1,7 +1,7 @@
 ---
 layout: post
 author: robw
-title: Electrical Engineering
+title: Electrical Engineering Cheat Sheet
 abstract: This page contains a cheat sheet covering much of the
  first year electrical engineering course at the University of
   Oxford. It grew out of a collection of notes I made for myself
@@ -19,6 +19,11 @@ abstract: This page contains a cheat sheet covering much of the
          mistakes please do drop me an email.
 image: /assets/images/electrical.jpg
 numbered: false
+tags:
+- teaching
+- oxford
+- undergraduate
+- electrical engineering
 ---
 
 ![Teaser](/assets/images/electrical.jpg)
@@ -49,13 +54,21 @@ Gauss's Law for Magnetism
 ### Summary
 In Summary we have:
 
- n  | name             | integral equation | differential Equation
------|-----------------|-------------------|-----------------------
-L    | Lorentz Force | $$\mathbf{F}=\iiint(\rho \mathbf{E}+\mathbf{J} \times \mathbf{B}) \mathrm{d} V$$ | $$\frac{d\mathbf{F}}{dq}= \rho \mathbf{E} +  \mathbf{J} \times \mathbf{B}$$
-M1   | Gauss's current | $$\iint_{\partial \Omega} \mathbf{E} \cdot \mathrm{d} \mathbf{S}=\frac{1}{\varepsilon_{0}} \iiint_{\Omega} \rho \mathrm{d} V$$| $$\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_{0}}$$
-M2   | Gauss's Magnetism | $$\iint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0$$ | $$\nabla \cdot \mathbf{B}=0$$
-M3   | Maxwell Faraday | $$\oint_{\partial \Sigma} \mathbf{E} \cdot \mathrm{d} \boldsymbol{l}=-\frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{B} \cdot \mathrm{d} \mathbf{S}$$ | $$\nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t}$$
-M4   | Ampere's Circuit | $$\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l}=\mu_{0}\left(\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}+\varepsilon_{0} \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}\right)$$ | $$\nabla \times \mathbf{B}=\mu_{0}\left(\mathbf{J}+\varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t}\right)$$
+ name             | integral equation
+-----------------|-------------------
+Lorentz Force | $$\mathbf{F}=\iiint(\rho \mathbf{E}+\mathbf{J} \times \mathbf{B}) \mathrm{d} V$$ 
+Gauss's Current | $$\iint_{\partial \Omega} \mathbf{E} \cdot \mathrm{d} \mathbf{S}=\frac{1}{\varepsilon_{0}} \iiint_{\Omega} \rho \mathrm{d} V$$
+Gauss's Magnetism | $$\iint_{\partial \Omega} \mathbf{B} \cdot \mathrm{d} \mathbf{S}=0$$
+Maxwell Faraday | $$\oint_{\partial \Sigma} \mathbf{E} \cdot \mathrm{d} \boldsymbol{l}=-\frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{B} \cdot \mathrm{d} \mathbf{S}$$
+Ampere's Circuit | $$\oint_{\partial \Sigma} \mathbf{B} \cdot \mathrm{d} \boldsymbol{l}=\mu_{0}\left(\iint_{\Sigma} \mathbf{J} \cdot \mathrm{d} \mathbf{S}+\varepsilon_{0} \frac{\mathrm{d}}{\mathrm{d} t} \iint_{\Sigma} \mathbf{E} \cdot \mathrm{d} \mathbf{S}\right)$$
+
+name            | differential Equation
+----------------|-----------------------
+Lorentz Force | $$\frac{d\mathbf{F}}{dq}= \rho \mathbf{E} +  \mathbf{J} \times \mathbf{B}$$
+Gauss's Current | $$\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_{0}}$$
+Gauss's Magnetism | $$\nabla \cdot \mathbf{B}=0$$
+Maxwell Faraday | $$\nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t}$$
+Ampere's Circuit |  $$\nabla \times \mathbf{B}=\mu_{0}\left(\mathbf{J}+\varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t}\right)$$
 
 Where,
 

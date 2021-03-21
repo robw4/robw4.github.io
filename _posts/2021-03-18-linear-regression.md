@@ -10,6 +10,11 @@ abstract: Here you will find the slides I presented at several
      questions or want to discuss anything please drop me an email.
 image: /assets/images/bayesian.png
 numbered: false
+tags:
+    - bayesian
+    - reading group
+    - machine learning
+    - research
 ---
 
 
@@ -38,6 +43,8 @@ These slides were presented at the Murphy reading
             mechanism to compare the validity of different models
              and naturally favours the simpler explanation.
 
+<a href="/assets/pdf/bayesian_statistics.pdf"><i class="fa fa-cloud
+-download"> Download</i></a>
 
 <div class="w3-container w3-center">
 <object data="/assets/pdf/bayesian_statistics.pdf" width="100%" height="60%" type
@@ -74,6 +81,9 @@ These slides were presented at the Bishop reading group with the
             
 Code for the examples given in the slides can be found [here
 ](https://github.com/robw4/bayesain-regression/blob/master/bayesain_linear_regression.ipynb). 
+
+<a href="/assets/pdf/linear_regression.pdf"><i class="fa fa-cloud
+-download"> Download</i></a>
 
 <div class="w3-container w3-center">
 <object data="/assets/pdf/linear_regression.pdf" width="100%" height="60%" type
