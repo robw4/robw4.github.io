@@ -12,7 +12,7 @@
     {% if include.image %}
         <div class="w3-display-container w3-text-white w3-round-xl">
             <div class="w3-display-bottommiddle w3-padding">
-                <p class="header"><a href="{{ include.link }}" class="w3-button w3-padding-large w3-white w3-round-xxlarge w3-hover-amber">
+                <p class="header"><a href="{{ include.link }}" class="w3-button w3-padding-large w3-white w3-round-xxlarge w3-hover-amber" style="font-weight:normal">
                         {{ if iclude.icon }}<i class="{{ include.icon }}"></i>{{ endif }} {{ include.name }}</a></p>
             </div>
             <img class=w3-round-xl" src="{{ include.image }}" alt={{ include.name }} style="width:100%">
