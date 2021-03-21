@@ -42,7 +42,7 @@ These slides were presented at the Murphy reading
 <div class="w3-container w3-center">
 <object data="/assets/pdf/bayesian_statistics.pdf" width="100%" height="60%" type
 ="application/pdf">
-        <embed src="https://drive.google.com/file/d/1Hw0lb7iycwc3n-v5REGz_6KTBdUiGwM9/preview" width="100%" height="60%"></embed>
+        <embed src="https://drive.google.com/file/d/1Hw0lb7iycwc3n-v5REGz_6KTBdUiGwM9/preview" width="100%" height="60%">
 </object>
 </div>
 
@@ -78,6 +78,6 @@ Code for the examples given in the slides can be found [here
 <div class="w3-container w3-center">
 <object data="/assets/pdf/linear_regression.pdf" width="100%" height="60%" type
 ="application/pdf">
-    <embed src="https://drive.google.com/file/d/1DnGq4ZEkiYcFloymOicLIF0Rb4fuolJU/preview" width="100%" height="60%"></embed>
+    <embed src="https://drive.google.com/file/d/1DnGq4ZEkiYcFloymOicLIF0Rb4fuolJU/preview" width="100%" height="60%">
 </object>
 </div>
