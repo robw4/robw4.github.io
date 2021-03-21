@@ -1,7 +1,7 @@
 
 <div class="w3-bar">
     {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" class="w3-bar-item w3-button w3-round-xxlarge w3-hover-amber
+        <a href="{{ item.link }}" class="w3-bar-item w3-button w3-round-xxlarge w3-hover-amber w3-medium
             {% if page.url == item.link %} w3-white {% endif %}">
             <i class="{{ item.icon }}"></i></a>
     {% endfor %}

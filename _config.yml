@@ -7,19 +7,19 @@ social:
     - id: 'robw@robots.ox.ac.uk'
       href: 'mailto:'
       title: 'Email'
-      fa-icon: 'fa-envelope-square'
-#    - id: 'robwrobots'
-#      href: 'https://www.twitter.com/'
-#      title: 'Twitter'
-#      fa-icon: 'fa-twitter-square'
+      fa-icon: 'fas fa-envelope'
+    - id: athletes/5902010
+      href: https://www.strava.com/
+      title: 'strava'
+      fa-icon: "fab fa-strava"
     - id: robw4
       href: https://www.github.com
       title: GitHub
-      fa-icon: 'fa-github-square'
+      fa-icon: 'fab fa-github'
     - id: rob-weston-a1289a177
       href: https://www.linkedin.com/in/
-      tite: LinkedIn
-      fa-icon: 'fa-linkedin-square'
+      title: LinkedIn
+      fa-icon: 'fab fa-linkedin'
 page_width: 900px
 numbered: true
 markdown: kramdown
