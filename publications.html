@@ -18,30 +18,30 @@ layout: plain
                     <div class="w3-bar">
                         <button onclick="toggleContent('{{ item.id }}')" class="w3-bar-item w3-button w3-small w3-round-xxlarge w3-hover-amber"
                                 style="outline:none; position:relative;">
-                            <i id="__button{{ item.id }}" class="fa fa-arrow-down"></i>
+                            <i id="__button{{ item.id }}" class="fas fa-chevron-circle-down"></i>
                         </button>
                         {% if item.poster %}
                             <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
                                     style="outline:none; position:relative;">
-                                <a href="{{ item.poster }}"><i class="fa fa-file-image-o"></i></a>
+                                <a href="{{ item.poster }}"><i class="fas fa-image"></i></a>
                             </button>
                         {% endif %}
                         {% if item.youtube %}
                             <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
                                     style="outline:none; position:relative;">
-                                <a href="https://www.youtube.com/watch?v={{ item.youtube }}"><i class="fa fa-file-video-o"></i></a>
+                                <a href="https://www.youtube.com/watch?v={{ item.youtube }}"><i class="fas fa-video"></i></a>
                             </button>
                         {%  endif %}
                         {% if item.paper %}
                             <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
                                     style="outline:none; position:relative;"><a href="{{ item.paper }}">
-                                    <i class="fa fa-file-pdf-o"></i></a>
+                                    <i class="fas fa-file-pdf"></i></a>
                             </button>
                         {%  endif %}
 
                     </div>
 
-                    <div id="__abstract{{ item.id }}" class="w3-hide">
+                    <div id="__abstract{{ item.id }}" class="w3-hide w3-pad">
                         <p><i>{{ item.abstract }}</i></p>
                         <div class="w3-row video_wrapper">
                             <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1" ></iframe>
@@ -70,18 +70,16 @@ layout: plain
         let y = document.getElementById('__abstract'+id);
         console.log(ic);
         // var outer = document.getElementById('OuterContainer');
-
         if (y.className.indexOf("w3-show") == -1) {
             // x.className += " w3-show";
             // ic.className = ic.className.replace(" fa-list", " fa-comment");
             y.className = y.className.replace("w3-hide", "w3-show");
-            ic.className = ic.className.replace("fa-arrow-down", "fa-arrow-up");
-
+            ic.className = ic.className.replace("fa-chevron-circle-down", "fa-chevron-circle-up");
         } else {
             // x.className = x.className.replace(" w3-show", "");
             // ic.className = ic.className.replace(" fa-comment", " fa-list");
             y.className = y.className.replace("w3-show", "w3-hide");
-            ic.className = ic.className.replace("fa-arrow-up", "fa-arrow-down")
+            ic.className = ic.className.replace("fa-chevron-circle-up", "fa-chevron-circle-down")
         }
     }
 </script>
