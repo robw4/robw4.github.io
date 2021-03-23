@@ -1,19 +1,19 @@
 - name: Home
   link: /
-  icon: fas fa-home
+  icon: fa fa-home
 - name: Me
   link: /about.html
   image: /assets/images/me.jpg
-  icon: fas fa-user
+  icon: fa fa-user-circle
 - name: Research
   link: /publications.html
   image: /assets/images/research.jpg
-  icon: fas fa-graduation-cap
+  icon: fa fa-graduation-cap
 - name: Blog
   link: /blog.html
   image: /assets/images/blog.jpg
-  icon: fas fa-blog
-- name: Code
-  link: /code.html
+  icon: fa fa-pencil-square-o
+- name: Xmen
+  link: https://robw4.github.io/xmen/
   image: /assets/images/xmen.jpg
-  icon: fas fa-code
+  icon: fa fa-code
