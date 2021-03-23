@@ -17,8 +17,7 @@ A lot of work was put into developing xmen and a lot of fun had
  in the process. It is now a key component of my workflow which I
   depend upon every day in my research. Please do give it a go and
    let me know what you think! For more info please see the xmen
-    project [website](rob-otics.co.uk
-/xmen)
+    project [website](https://robw4.github.io/xmen/)
 
 ![](/assets/images/xmen.jpg)
 
