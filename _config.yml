@@ -20,6 +20,10 @@ social:
       href: https://www.linkedin.com/in/
       title: LinkedIn
       fa-icon: 'fab fa-linkedin'
+    - id: HODw_M0AAAAJ&hl=en
+      href: https://scholar.google.com/citations?
+      title: Scholar
+      fa-icon: 'ai ai-google-scholar'
 page_width: 900px
 numbered: true
 markdown: kramdown
