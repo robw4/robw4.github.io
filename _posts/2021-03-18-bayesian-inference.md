@@ -28,7 +28,7 @@ These slides were presented at the Murphy reading
    
    We begin by looking at what
     Bayesian inference
-   _is_ and how it differs from a frequentist paradigm. Next the
+   _is_ and how it differs from a frequentist approach. Next the
     model is considered. Particular attention is given to the
      _prior_. We see how when using _conjugate priors_ inference is
       always
@@ -88,6 +88,6 @@ Code for the examples given in the slides can be found [here
 <div class="w3-container w3-center">
 <object data="/assets/pdf/linear_regression.pdf" width="100%" height="60%" type
 ="application/pdf">
-    <embed src="https://drive.google.com/file/d/1DnGq4ZEkiYcFloymOicLIF0Rb4fuolJU/preview" width="100%" height="60%">
+    <embed src="https://drive.google.com/file/d/1VPMmmgQcz8Dl0zO61Ds3ZKi8xuoKI8Gv/preview" width="100%" height="60%">
 </object>
 </div>
