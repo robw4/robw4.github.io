@@ -6,7 +6,7 @@ abstract: This page contains a cheat sheet covering much of the
  first year electrical engineering course at the University of
   Oxford. It grew out of a collection of notes I made for myself
    whilst teaching undergraduate tutorials over the last couple of
-    years and I hope it will be a useful resource for my students. We
+    years and I hope it will be a useful resource for others. We
      begin by
      considering Maxwells equations which - remarkably
     - are able to describe the entireity of classical
