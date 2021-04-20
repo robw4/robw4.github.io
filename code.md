@@ -13,21 +13,20 @@ numbered: False
   recording experiments, interfacing with the slurm job
    scheduler and visualising experiments from the command line.
 
-A lot of work was put into developing xmen and a lot of fun had
- in the process. It is now a key component of my workflow which I
-  depend upon every day in my research. Please do give it a go and
+A lot of work was put into developing xmen. It is now a key
+ component of my workflow which I
+  depend upon every day in my research. Please give it a go and
    let me know what you think! For more info please see the xmen
-    project [website](rob-otics.co.uk
-/xmen)
+    project [website](https://robw4.github.io/xmen/)  
 
 ![](/assets/images/xmen.jpg)
 
 ## Website
-This website was built using [jeckyll]() and in doing so I
- ended up developing my own Jeckyll theme. This was a complete first
-  for me and I learnt a lot through the process. The aim of the
-  theme was to be as research friendly as possible with built in
-   math support, easy page navigation and support for project
+Ib building this website I developed mu own [jeckyll]() theme. This
+ was a complete first for me and I learnt a lot through the process
+ . The aim was to develop a theme that is as research friendly as
+  possible with built in math support, easy page navigation and
+   support for project
     pages. Much of the appearance is
      inspired by latex. Some work still needs to
       be done to get the theme into a sharable state for an

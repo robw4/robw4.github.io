@@ -8,14 +8,18 @@ title: Blog
 <div class="w3-row">
     <!-- card entries -->
     {% for post in site.posts %}
-        <div class="w3-col l6 m6 s12">
+        <div class="w3-col l12 m12 s12 w3-white">
             <!-- card entry -->
-            {% include frame.html
+            {% include blog-frame.html
                 name=post.title
                 image=post.image
                 link=post.url
                 description=post.excerpt
-                icon=post.icon %}
+                icon=post.icon
+                abstract=post.abstract
+                tags=post.tags
+                date=post.date
+            %}
             <!-- end card entry -->
         </div>
     {% endfor %}
