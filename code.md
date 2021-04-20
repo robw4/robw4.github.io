@@ -5,6 +5,9 @@ abstract:
 numbered: False
 ---
 
+
+![](/assets/images/xmen.jpg)
+
 ## Xmen
 [Xmen](https://robw4.github.io/xmen/) is a python api and command line tool I developed from the
  ground up for writing and running experiments. The user
@@ -19,7 +22,7 @@ A lot of work was put into developing xmen. It is now a key
    let me know what you think! For more info please see the xmen
     project [website](https://robw4.github.io/xmen/)  
 
-![](/assets/images/xmen.jpg)
+
 
 ## Website
 Ib building this website I developed mu own [jeckyll]() theme. This

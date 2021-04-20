@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<div class="w3-content w3-padding-small" style="max-width:{{ site.page_width }}">
 
+<div class="w3-content w3-padding-small" style="max-width:{{ site.page_width }}">
+    <div class="w3-card-4 w3-padding w3-margin">
     <!-- page title -->
     <div class="w3-container w3-padding-small w3-bar sticky" id="ToContent">
         <!-- contents page-->
@@ -83,6 +84,9 @@ layout: default
         {% include anchor_headings.html html=content anchorBody="#" h_max=3 anchorClass="anchor" %}
     </div>
 </div>
+</div>
+
+
 
 <script>
     function toggleContent() {
