@@ -34,8 +34,8 @@ html {
 }
 
 // Header numbering added using the numbered class
-h1, h2 {padding-top: 20px}
-h3, h4, h5, h6 {padding-top: 20px}
+h1, h2 {padding-top: 10px}
+h3, h4, h5, h6 {padding-top: 10px}
 
 
 body {counter-reset: h2}
@@ -59,11 +59,11 @@ title span {
 
 h1, h2, h3, h4, h5, h6 {
   color:#232323;
-  margin:0px 0 10px;
+  margin:0px 0 5px;
 }
 
 p, ul, ol, table, dl {
-  margin:0 0 22px;
+  margin:0 0 10px;
 }
 
 body, html, p, h1, h2, h3 {
@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 h1, h2{
   display: block;
   border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
+  padding-bottom: 0px;
 }
 
 h1, h2, h3{
@@ -184,6 +184,12 @@ hr {
   background:#ccc;
   height:1px;
   margin:0 0 10px;
+}
+
+
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 //iframe {

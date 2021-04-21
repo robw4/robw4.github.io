@@ -4,7 +4,7 @@ layout: default
 
 
 <div class="w3-content w3-padding-small" style="max-width:{{ site.page_width }}">
-    <div class="w3-card-4 w3-padding w3-margin">
+    <div class="w3-card-4 w3-margin w3-padding" id="pad">
     <!-- page title -->
     <div class="w3-container w3-padding-small w3-bar sticky" id="ToContent">
         <!-- contents page-->
@@ -161,6 +161,20 @@ layout: default
         }
         return false;
     }
+
+    //Resize window
+    function resize() {
+        let x = document.getElementById('pad');
+        x.className = x.className.replace('w3-card-4 w3-margin w3-padding', '');
+        console.log(x.className, x.scrollWidth);
+        if (x.scrollWidth  > 700) {
+            x.className += 'w3-card-4 w3-margin w3-padding';
+        } else {
+        }
+    }
+
+    //watch window resize
+    window.onresize = resize;
 
 
 </script>
