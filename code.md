@@ -25,7 +25,7 @@ A lot of work was put into developing xmen. It is now a key
 
 
 ## Website
-Ib building this website I developed mu own [jeckyll]() theme. This
+In building this website I developed mu own [jeckyll]() theme. This
  was a complete first for me and I learnt a lot through the process
  . The aim was to develop a theme that is as research friendly as
   possible with built in math support, easy page navigation and
