@@ -120,12 +120,12 @@ Combining the empty set, with paring and the repeated application of the power s
 ZF5 Unions
 : "For every set A there exists a set who's elements are the union
  of all the elements of A". This is written as $\cup A$. For
-  example, $$\cup\{\{x\}, \{y\}, \{z\}, \{x, y\}, \{x, z\}, \{y, z
-  \}, \{x, y, z\}\} = \{x, y, z\}$$. Once again the union operator
-   allows us to generate sets with more than two elements after the
-    application of (3) and (4). For example, $\cup \\{\\{a, b
-     \\}, \\{c, d\\}\\} = \\{a, b, c, d\\}$. The idea of unions and
-      power sets are need in conjunction in order to define a sufficiently rich set of sets.
+  example, 
+  
+  $$\cup\{\{x\}, \{y\}, \{z\}, \{x, y\}, \{x, z\}, \{y, z\}, \{x, y, z\}\} = \{x, y, z\}$$ 
+: Once again the union operator allows us to generate sets with more than two elements after the application of (3) and (4). 
+For example, $\cup \\{\\{a, b\\}, \\{c, d\\}\\} = \\{a, b, c, d\\}$. The idea of unions and
+power sets are need in conjunction in order to define a sufficiently rich set of sets.
 
 ZF6 Infinity
 : "It is okay to have a set with an infinite number of members" Using the axioms above we are already in a position to define an infinite number of sets. But it would be nice to be able to group them in a single set. This is allowed by the axiom of infinity.
