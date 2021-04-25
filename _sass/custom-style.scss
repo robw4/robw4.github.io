@@ -110,6 +110,7 @@ h3 {
 h4, h5, h6 {
   font-family: cmu-serif, Arvo, Monaco, serif;
   font-weight: 700;
+  font-size: 14px;
 }
 
 a {
@@ -247,19 +248,19 @@ p img + em {
 /* Code blocks */
 
 code, pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
-  color:#000;
-  font-size:14px;
+  font-family: 'Inconsolata', monospace Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  color: #606c71;
+  font-size:12px;
 }
 
 pre {
   padding: 4px 12px;
   background: #FDFEFB;
+
   border-radius:4px;
-  border:1px solid #D7D8C8;
   overflow: auto;
   overflow-y: hidden;
-  margin-bottom: 32px;
+  margin-bottom: 18px;
 }
 
 
