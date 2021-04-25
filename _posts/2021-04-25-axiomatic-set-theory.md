@@ -107,7 +107,15 @@ This in combination with the existence of an empty set allows us to define new s
 We could repeat this process indefinitely defining an infinite number of unique elements. However, each set can currently only have two elements.
 
 ZF4 Power Sets
-: "For every A there exists a set which contains all the subsets of $A$"  This is referred to as the power set of $A$ and is written as $\mathcal{P}(A)$. For example the power set of $\{x, y, z\}$ is $$\mathcal{P}(\{x, y, z\}) = \{\{\}, \{x\}, \{y\}, \{z\}, \{x, y\}, \{x, z\}, \{y, z\}, \{x, y, z\}\}$$.  Note that the power set will always contain the empty set $\varnothing = \{ \}$; whilst $\varnothing$ might not be a *member* of the set it is always a subset. Combining the empty set, with paring and the repeated application of the power set law we are now able to define an infinite number of sets with a finite number of elements $$\mathcal{P}(\varnothing) = \{\varnothing\} \quad \mathcal{P}(\{\varnothing\})=\{\varnothing,\{\varnothing\}\} \quad \mathcal{P}(\{\varnothing,\{\varnothing\}\}) = \{\varnothing,\{\varnothing\},\{\{\varnothing\}\},\{\varnothing,\{\varnothing\}\}\}$$
+: "For every A there exists a set which contains all the subsets of $A$" 
+This is referred to as the power set of $A$ and is written as $\mathcal{P}(A)$. 
+For example the power set of $\{x, y, z\}$ is 
+    
+    $$\mathcal{P}(\{x, y, z\}) = \{\{\}, \{x\}, \{y\}, \{z\}, \{x, y\}, \{x, z\}, \{y, z\}, \{x, y, z\}\}$$
+: Note that the power set will always contain the empty set $\varnothing = \{ \}$; whilst $\varnothing$ might not be a *member* of the set it is always a subset. 
+Combining the empty set, with paring and the repeated application of the power set law we are now able to define an infinite number of sets with a finite number of elements 
+    
+    $$\mathcal{P}(\varnothing) = \{\varnothing\} \quad \mathcal{P}(\{\varnothing\})=\{\varnothing,\{\varnothing\}\} \quad \mathcal{P}(\{\varnothing,\{\varnothing\}\}) = \{\varnothing,\{\varnothing\},\{\{\varnothing\}\},\{\varnothing,\{\varnothing\}\}\}$$
 
 ZF5 Unions
 : "For every set A there exists a set who's elements are the union
