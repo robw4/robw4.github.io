@@ -25,7 +25,7 @@ layout: default
     <div class="w3-row w3-padding-small">
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0">
-            <a id="__title"></a><h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
+            <a id="__title"></a><h1 class="w3-center"><a href="#__title" class="Anchor"># </a>{{ page.title }}</h1>
             <div>
                 <div class="outer-center">
                     <div class="inner-center w3-round-large w3-padding">
@@ -48,7 +48,7 @@ layout: default
                             <a id="__TOC">
                                 <div id="Content" class="w3-hide">
                                     <div class="toc" style="font-size: large">
-                                        {% include toc.html h_min=2 class=toc html=content ordered=true %}
+                                        {% include toc.html h_min=2 h_max=5 class=toc html=content ordered=true %}
                                         <button onclick="toggleContent()" class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-amber change-icon"
                                                 style="outline:none; position:absolute; bottom: 0px; right: 0px;">
                                                <i class="fa fa-list"></i>
@@ -81,7 +81,7 @@ layout: default
         {% assign use_numbers = site.numbered %}
     {% endif %}
     <div class="w3-container w3-padding-small{% if use_numbers %} numbered{% endif %}">
-        {% include anchor_headings.html html=content anchorBody="#" h_max=3 anchorClass="anchor" %}
+        {% include anchor_headings.html html=content anchorBody="#" h_max=5 anchorClass="anchor" beforeHeading=true%}
     </div>
 </div>
 </div>

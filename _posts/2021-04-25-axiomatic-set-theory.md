@@ -9,7 +9,7 @@ abstract: "During the first lockdown, with more free time on my hands,
           Of the solutions proposed, the work of Zermelo and Fraenkel alongside the axiom of choice, commonly abbreviated to ZFC, remains one of the most complete answers to date. 
           In this post I begin by looking at why ZFC is necessary, what it is, how it might be used to ground many of the important
           foundations of mathematics today."
-numbered: true
+numbered: false
 tags:
     - Maths
     - Research
@@ -17,7 +17,6 @@ tags:
     - Axioms
     - Goedel's Incompleteness Theorem
 ---
-
 
 
 ## Naive Set Theory
