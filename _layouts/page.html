@@ -25,7 +25,7 @@ layout: default
     <div class="w3-row w3-padding-small">
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0">
-            <a id="__title"></a><h1 class="w3-center"><a href="#__title" class="Anchor"># </a>{{ page.title }}</h1>
+            <a id="__title"></a><h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
             <div>
                 <div class="outer-center">
                     <div class="inner-center w3-round-large w3-padding">
@@ -81,7 +81,7 @@ layout: default
         {% assign use_numbers = site.numbered %}
     {% endif %}
     <div class="w3-container w3-padding-small{% if use_numbers %} numbered{% endif %}">
-        {% include anchor_headings.html html=content anchorBody="#" h_max=5 anchorClass="anchor" beforeHeading=true%}
+        {% include anchor_headings.html html=content anchorBody="#" h_max=5 anchorClass="anchor"%}
     </div>
 </div>
 </div>
