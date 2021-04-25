@@ -77,7 +77,7 @@ Equivalently it can be stated as, "If it is not false then it must be true" or e
 Paradoxes are worrying because they imply a statement which can be seen as neither true nor false. 
 In order to be compatible with the principle of explosion a system needs to be *consistent*.
 
-#### A crisis at the heart of mathematics
+#### A Crisis at the Heart of Mathematics
 
 The existence of paradoxes like the one above calls into question the very meaning of true and false for the systems of sets we have defined above. 
 And everything else we derive from it. 
@@ -287,12 +287,19 @@ As a result of the _axiom schema of replacement_ some particularly useful sets c
 - $A / B$: The set of all the elements that are in $A$ once the elements that are in $B$ have been removed referred to as "A _complement_ B".
 - $A \times B$: The set of all pairs $(a, b)$ of elements where $a$ is in $A$ and $b$ is in $B$ "The _cartesian product_ between $A$ and $B$" 
 
-#### Real Numbers $\mathbb{R}$
-Not all numbers can be expressed as fractions. This might not necessarily be what you were expecting? To see (at least intuitively) why this is the case lets consider representing fractions as decimals. Each fraction can be equivalently written as a decimal number. For example $5 / 64$ is given by $0.078125$. What do we mean by this? We can think of the decimal numbers as a short-hand way of writing $$0.078125 = 0 \frac{1}{1} + 0  \frac{1}{10} +  7  \frac{1}{100} + 8  \frac{1}{1000} + 1  \frac{1}{10000} + 2  \frac{1}{100000} + 5  \frac{1}{1000000}$$. Two cases arise for fractions expressed in this way. Either we can express a sequence in a finite number of terms (as above) or their will be finitely many terms followed by a term that will repeat itself in a regular pattern for example $1 / 3 = 0.333...$ or $1 / 99 = 0.01010...$. But what happens if we consider adding digits to a decimal indefinitely and never forming a repeated pattern. For example,
+#### The Real Numbers $\mathbb{R}$
+Not all numbers can be expressed as fractions. To see that this is the case lets consider representing fractions as decimals. 
+We can think of the decimal numbers as a short-hand way of writing
+
+$$0.078125 = 0 \frac{1}{1} + 0  \frac{1}{10} +  7  \frac{1}{100} + 8  \frac{1}{1000} + 1  \frac{1}{10000} + 2  \frac{1}{100000} + 5  \frac{1}{1000000}$$
+ 
+Two cases arise for fractions expressed in this way. Either we can express a sequence in a finite number of terms (as above) or their will be finitely many terms followed by a term that will repeat itself in a regular pattern for example $1 / 3 = 0.333...$ or $1 / 99 = 0.01010...$. But what happens if we consider adding digits to a decimal indefinitely and never forming a repeated pattern. For example,
 
 $$0.078125136729420100357399387401377382...$$
 
-Each time we add a decimal point we can think of adding an ever increasingly small part to the number $0.078125$. Expressing this slightly differently we can think of the number $0.07812513...$ as corresponding to a sequence $0, 0.0, 0.07, 0.0781, 0.07812, ...$ where the difference between elements becomes arbitrarily small as the sequence progresses. Sequences of this kind are referred to as Cauchy Sequences and in the limit can be thought of as converging to a single fixed value. In this way we can think of each real number as a unique cauchy sequence!
+Each time we add a decimal point we can think of adding an ever increasingly small part to the number $0.078125$. 
+Expressing this slightly differently we can think of the number $0.07812513...$ as corresponding to a sequence $0, 0.0, 0.07, 0.0781, 0.07812, ...$ where the difference between elements becomes arbitrarily small as the sequence progresses. 
+Sequences of this kind are referred to as [Cauchy Sequences](https://en.wikipedia.org/wiki/Cauchy_sequence) and in the limit can be thought of as converging to a single fixed value. In this way we can think of each real number as a unique cauchy sequence!
 
 In order to represent real numbers in this way we need to construct a sequence from sets. We can think of a sequence of a set of pairs between the natural numbers $(0, 1, 2, ..)$ and the rational numbers $\mathbb{Q}$. For example the sequence  $0, 0.0, 0.07, 0.07, 0.0781, ...$ can be thought of as a set $$\{(0, 0), (1, 0.0), (2, 0.07), (3, 0.078), (4, 0.0781), ... \}$$. Sets of this kind can be generated from the axioms we have defined so far as follows:
 1. First we generate all possible pairs of natural and rational numbers using the cartesian product $\mathbb{N} \times \mathbb{Q}$ we just defined.
@@ -303,7 +310,7 @@ Steps 2 and 3 can be thought of as a function mapping the set $\mathbb{N} \times
 
 Once again we can define arithmetic operations on the real numbers by defining functions which take in one Cauchy sequence and produce another. It can be [shown](http://mathonline.wikidot.com/cauchy-sequences-of-real-numbers) that the sum, product, difference and cauchy sequences all result in cauchy sequences. In each case the operators are defined by summing over corresponding elements of the sequence. For example if $a = (1, 1.01, 1.0105, 1.01052, ...)$ and $b = (2, 2.7, 2.75, 2.758...)$ then $a + b = (3, 3.71,  3.7605,  3.76852)$.
 
-## So crisis avoided?
+## So Crisis Avoided?
 ### Solving Russel's Paradox
 We have seen that ZFC set theory allows us to build increasingly
  complex mathematical ideas: starting with the idea of sets we were
@@ -319,9 +326,6 @@ Regardless ZFC is a truly remarkable achievement of human perseverance and ingen
 
 ## Appendix
 ### Useful Links and References
-- For an intuitive example of what this means see [here](https://www.scientificamerican.com/article/what-is-godels-theorem/).
-- Good articles
-	- [Searching for the missing truth](https://plus.maths.org/content/searching-missing-truth)
 - Wikipedia
 	- [Naive Set Theory](https://en.wikipedia.org/wiki/Naive_set_theory)
 	- [Zermelo-Franenkel Set Theory](https://en.wikipedia.org/wiki/Zermelo%E2%80%93Fraenkel_set_theory)
@@ -342,6 +346,9 @@ Regardless ZFC is a truly remarkable achievement of human perseverance and ingen
 	- [Representing Real Numbers as Sets](https://math.stackexchange.com/questions/62852/in-set-theory-how-are-real-numbers-represented-as-sets)
 - Stanford Encyclopedia of Philosophy
 	- [Set Theory](https://plato.stanford.edu/entries/set-theory/#AxiZFC)
+- Good articles
+    - [Further Discussion on Godels Theorem](https://www.scientificamerican.com/article/what-is-godels-theorem/).
+	- [Searching for the missing truth](https://plus.maths.org/content/searching-missing-truth)
 - Other
 	- [Ohio-State lectures](https://www.asc.ohio-state.edu/pollard.4/680/slides/setssl.pdf)
     - [Brown University Lecture Series](https://www.math.brown.edu/reschwar/INF/handout1.pdf)
@@ -351,42 +358,3 @@ Regardless ZFC is a truly remarkable achievement of human perseverance and ingen
     - [Set Theory Definition of Numbers](https://link.springer.com/content/pdf/bbm%3A978-94-009-2213-6%2F1%2F1.pdf)
 
 
-### Notation
-The mathematical foundation for a set are simply statements which must be true and have nothing to do with the symbols we use to describe them. 
-To see why symbols are useful lets consider De Morgans law which states:
-
-> "the set of all things that are not in A or B is equal to the set of all things that are not in A and not in B"
-
-This is quite a mouthful. It is also ambiguous: does the "not" in
-"not in A or B" apply just to the A or to both A and B for example? In most cases we can imply the meaning of a sentence from the context. 
-But in building ever more sophisticated logical statements about the world, this will no longer suffice. 
-Instead we introduce a new language which is stricter and more precise. In order to express De Morgans law for example we will need to introduce:
-
-Equality | $A=B$ | "A is the same thing as B"
-Complement | $A'$ | "All things that are not in A"
-Intersection | $A \cap B$  | "The set of all things that are both in A and B"
-Union | $A \cup B$  | "The set of all things that are in A or B"
-
-Brackets are used when the order in which operations are carried out is ambiguous. 
-For example $(a + b) \times c$ means we have to add $(a + b)$ first before multiplying by $c$. 
-Having introduced these symbols, de Morgans law becomes:
-
-$$(A \cup B)' = A' \cap B'$$
-
-These symbols will also be useful in what follows
-
-Name | Notation | Meaning
------|----------|-----------
-Set | $A = \\{\mathsf{red}, 1, 2, \mathsf{apple} \\}$ | A set of things
-Universal Set | $U$ | The universal set to which all things belong
-Empty Set | $\varnothing$ | The empty set containing no things
-Belongs to | $\mathsf{red} \in A$ | red in A
-Does not belong to | $\mathsf{blue} \notin A$ | blue is not in A
-Subset | $A \subset B$ | A is a subset of B. All the elements of A are also in B
-Superset | $B \supset A$ | B is a superset of A. 
-Complement | $A'$ | The set of all things that are not in A
-Intersection | $A \cap B$ | A intersection B. The set of all things that are both in A and B
-Union | $A \cup B$ | A union B. The set of all things that are in A or B
-Relative complement | $A / B$ |  A complement B. The set of all things in A that are not in B
-Cartesian Product | $A \times B$ | The set of all possible combinations of things in A and things in B
-Power Set | $\mathcal{P}(A)$ | The set of all subsets of $A$
