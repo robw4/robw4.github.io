@@ -238,34 +238,49 @@ As $$4 = 8 - 4 = 6 - 2 = 10 - 6 = ....$$ in defining integers in this way, each 
 
 So far our choice to represent integers in this way seems fairly arbitrary. So why bother? It allows us to define integer arithmetic in terms of only natural number arithmetic. Given integers $\mathsf{x} = (a, b)$ and  $\mathsf{y} = (c, d)$ we can define the integer arithmetic operations as:
 - __Ordering__  $\mathsf{x} > \mathsf{y}$
-	-  $(a, b) > (c, d)$ if $a + d > c + b$
+	
+	$$(a, b) > (c, d) \text{  if  } a + d > c + b$$
+
 - __Addition__  $\mathsf{x} + \mathsf{y}$ 
-	- $(a, b) + (b, c) = (a + c, b + d)$
+	
+	$$(a, b) + (b, c) = (a + c, b + d)$$
+
 - __Subtraction__ $\mathsf{x} - \mathsf{y}$
-	- $(a, b) - (c, d) = (a, b) + (d, c) = (a + d, b +c)$
+
+	$$(a, b) - (c, d) = (a, b) + (d, c) = (a + d, b +c)$$
+
 - __Multiplication__ $\mathsf{x} \times \mathsf{y}$
-	- $(a, b) \times (c, d) = \big((a \times c) + (b \times d), (a \times d) + (b \times c)\big)$ 
+
+	$$(a, b) \times (c, d) = \big((a \times c) + (b \times d), (a \times d) + (b \times c)\big)$$
 
 For example:
 - $\mathsf{3} > \mathsf{1}$ as $\mathsf{3} = (6, 3)$, $\mathsf{1} = (2, 1)$ and $6 + 1 > 2 + 3$
 - $\mathsf{0} > -\mathsf{3}$ as $\mathsf{0} = (4, 4)$, $-\mathsf{3}=(2, 5)$ and $4 + 5 > 2 + 4$.
 -  $\mathsf{3} + \mathsf{2} = \mathsf{5}$ as $(6, 3) + (4, 2) = (10, 5) = \mathsf{5}$
-- $\mathsf{3} \times \mathsf{2} = 6$ as $\mathsf{3}.= (6, 3)$ and $\mathsf{2}.= (4, 2) = ((6 \times 4) + (3 \times 2), (6 \times 2 + 3 \times 4)) = (24 + 6, 12 + 12) = (30, 24) = \mathsf{6}$
 
 For more see [here](https://link.springer.com/content/pdf/bbm%3A978-94-009-2213-6%2F1%2F1.pdf)
 
 #### The Irrational Numbers $\mathbb{Q}$
 In the same way integers allowed us to answer questions like _"What must we add to 7 to give us 4?"_ the rational numbers allow us to ask _"How many lots of 7 do we need to make 4?"_. They allow us to define an inverse for multiplications for all the integers. We do this by considering ordered pairs, this time of integers instead of natural numbers. We can think of $(\mathsf{7}, \mathsf{3})$ as representing the fraction $\frac{7}{3}$. As $$\frac{7}{3} = \frac{70}{30} = \frac{21}{9}=...$$, we say that two rational numbers are equivalent $(a, b) \sim (c, d)$ if $a \times d = c \times b$.   Using this representation it can be shown that the arithmetic operations on natural numbers can all be defined:
 - __Ordering__  $\mathsf{x} > \mathsf{y}$
-	-  $(a, b) > (c, d)$ if $a \times d > c \times b$
+	
+	$$(a, b) > (c, d) \text{ if } a \times d > c \times b$$
+
 - __Addition__  $\mathsf{x} + \mathsf{y}$ 
-	- $(a, b) + (b, c) = (a \times d + c \times b, b \times d)$
+
+	$$(a, b) + (b, c) = (a \times d + c \times b, b \times d)$$
+
 - __Subtraction__ $\mathsf{x} - \mathsf{y}$
-	- $(a, b) - (c, d) =  (a \times d - c \times b, b \times d)$
+	
+	$$(a, b) - (c, d) =  (a \times d - c \times b, b \times d)$$
+
 - __Multiplication__ $\mathsf{x} \times \mathsf{y}$
-	- $(a, b) \times (c, d) = (a \times c, b \times d)$
+	
+	$$(a, b) \times (c, d) = (a \times c, b \times d)$$
+
 - __Division__  $\mathsf{x} / \mathsf{y}$
-	- $(a, b) / (c, d) = (a \times d, c \times b)$
+
+	$$(a, b) / (c, d) = (a \times d, c \times b)$$
 
 #### Functions $f(x)$
 Numbers are not very useful unless we can do something with them. In defining addition and subtraction for the natural numbers we defined a set of rules which when followed allowed us to take two numbers as input and generate a third. This is an example of what we refer to as a *function*.
