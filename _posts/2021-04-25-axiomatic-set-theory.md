@@ -56,48 +56,7 @@ These are *axioms*: a set of assumptions that are assumed true from which everyt
 
 - **All things are things**
     
-    This implies that there must be a group containing all things which is referred to as the *universal set*
-
-### Notation
-Any group of things for which the above four statements are true is a set. 
-The mathematical foundation for a set are simply statements which must be true and have nothing to do with the symbols we use to describe them. 
-To see why symbols are useful lets consider De Morgans law which states:
-
-> "the set of all things that are not in A or B is equal to the set of all things that are not in A and not in B"
-
-This is quite a mouthful. It is also ambiguous: does the "not" in
-"not in A or B" apply just to the A or to both A and B for example? In most cases we can imply the meaning of a sentence from the context. 
-But in building ever more sophisticated logical statements about the world, this will no longer suffice. 
-Instead we introduce a new language which is stricter and more precise. In order to express De Morgans law for example we will need to introduce:
-
-Equality | $A=B$ | "A is the same thing as B"
-Complement | $A'$ | "All things that are not in A"
-Intersection | $A \cap B$  | "The set of all things that are both in A and B"
-Union | $A \cup B$  | "The set of all things that are in A or B"
-
-Brackets are used when the order in which operations are carried out is ambiguous. 
-For example $(a + b) \times c$ means we have to add $(a + b)$ first before multiplying by $c$. 
-Having introduced these symbols, de Morgans law becomes:
-
-$$(A \cup B)' = A' \cap B'$$
-
-These symbols will also be useful in what follows
-
-Name | Notation | Meaning
------|----------|-----------
-Set | $A = \\{\mathsf{red}, 1, 2, \mathsf{apple} \\}$ | A set of things
-Universal Set | $U$ | The universal set to which all things belong
-Empty Set | $\varnothing$ | The empty set containing no things
-Belongs to | $\mathsf{red} \in A$ | red in A
-Does not belong to | $\mathsf{blue} \notin A$ | blue is not in A
-Subset | $A \subset B$ | A is a subset of B. All the elements of A are also in B
-Superset | $B \supset A$ | B is a superset of A. 
-Complement | $A'$ | The set of all things that are not in A
-Intersection | $A \cap B$ | A intersection B. The set of all things that are both in A and B
-Union | $A \cup B$ | A union B. The set of all things that are in A or B
-Relative complement | $A / B$ |  A complement B. The set of all things in A that are not in B
-Cartesian Product | $A \times B$ | The set of all possible combinations of things in A and things in B
-Power Set | $\mathcal{P}(A)$ | The set of all subsets of $A$
+    This implies that there must be a group containing all things which is referred to as the *universal set*.
 
 ### Russel's Paradox
 Naive set theory on the surface appears to provide a powerful framework for reasoning logically about sets relying on two very intuitive axioms that most people would be happy to accept as true.
@@ -126,8 +85,8 @@ As much of the foundation of maths rests on the existence of sets this is very w
 This sparked a crisis in mathematics at the turn of the 20th century and led to the [Hilbert programme](https://en.wikipedia.org/wiki/Hilbert%27s_program); a challenge to the mathematical world to sure up the foundation of modern mathematics.
 
 ## ZFC Set Theory
-Zermelo-Franco set theory along with the axiom of choice (ZFC) is one complete approach proposed to meet this challenge.
-The central observation here is that paradoxes like Russel's arise from a too general definition of sets.
+Zermelo-Franco set theory along with the axiom of choice (ZFC) is one of the most complete approaches proposed to meet this challenge.
+The central observation here is that paradoxes like Russel's arise from too general a definition of sets.
 In shoring up the foundations of modern mathematics, we must forgo the notion of the _universal set_, instead insisting that only sets satisfying particular properties are allowed to exist.
 
 For this to work, we now need to define the set of rules that dictate which sets are okay, ideally using as few and as un-restrictive rules as possible, so as to maintain a sufficiently rich theory to describe everything in modern mathematics without contradiction or paradox. 
@@ -358,7 +317,8 @@ The first unprovable statement discovered for ZFC was the continuum hypothesis, 
 In some ways Goedel's hypothesis does not change much. All the results which were previously provable by the set of axioms we were previously willing to accept as true still remain valid; this still hinges on the axioms themselves being correct in the first place.
 Regardless ZFC is a truly remarkable achievement of human perseverance and ingenuity.
 
-## Some Useful Links
+## Appendix
+### Useful Links and References
 - For an intuitive example of what this means see [here](https://www.scientificamerican.com/article/what-is-godels-theorem/).
 - Good articles
 	- [Searching for the missing truth](https://plus.maths.org/content/searching-missing-truth)
@@ -389,3 +349,44 @@ Regardless ZFC is a truly remarkable achievement of human perseverance and ingen
     - [Bath University C196 Lecture Notes](https://people.bath.ac.uk/masnnv/Teaching/C196_7.pdf)
     - [Cauchys Construction of R](http://www.math.ucsd.edu/~tkemp/140A/Construction.of.R.pdf)
     - [Set Theory Definition of Numbers](https://link.springer.com/content/pdf/bbm%3A978-94-009-2213-6%2F1%2F1.pdf)
+
+
+### Notation
+The mathematical foundation for a set are simply statements which must be true and have nothing to do with the symbols we use to describe them. 
+To see why symbols are useful lets consider De Morgans law which states:
+
+> "the set of all things that are not in A or B is equal to the set of all things that are not in A and not in B"
+
+This is quite a mouthful. It is also ambiguous: does the "not" in
+"not in A or B" apply just to the A or to both A and B for example? In most cases we can imply the meaning of a sentence from the context. 
+But in building ever more sophisticated logical statements about the world, this will no longer suffice. 
+Instead we introduce a new language which is stricter and more precise. In order to express De Morgans law for example we will need to introduce:
+
+Equality | $A=B$ | "A is the same thing as B"
+Complement | $A'$ | "All things that are not in A"
+Intersection | $A \cap B$  | "The set of all things that are both in A and B"
+Union | $A \cup B$  | "The set of all things that are in A or B"
+
+Brackets are used when the order in which operations are carried out is ambiguous. 
+For example $(a + b) \times c$ means we have to add $(a + b)$ first before multiplying by $c$. 
+Having introduced these symbols, de Morgans law becomes:
+
+$$(A \cup B)' = A' \cap B'$$
+
+These symbols will also be useful in what follows
+
+Name | Notation | Meaning
+-----|----------|-----------
+Set | $A = \\{\mathsf{red}, 1, 2, \mathsf{apple} \\}$ | A set of things
+Universal Set | $U$ | The universal set to which all things belong
+Empty Set | $\varnothing$ | The empty set containing no things
+Belongs to | $\mathsf{red} \in A$ | red in A
+Does not belong to | $\mathsf{blue} \notin A$ | blue is not in A
+Subset | $A \subset B$ | A is a subset of B. All the elements of A are also in B
+Superset | $B \supset A$ | B is a superset of A. 
+Complement | $A'$ | The set of all things that are not in A
+Intersection | $A \cap B$ | A intersection B. The set of all things that are both in A and B
+Union | $A \cup B$ | A union B. The set of all things that are in A or B
+Relative complement | $A / B$ |  A complement B. The set of all things in A that are not in B
+Cartesian Product | $A \times B$ | The set of all possible combinations of things in A and things in B
+Power Set | $\mathcal{P}(A)$ | The set of all subsets of $A$
