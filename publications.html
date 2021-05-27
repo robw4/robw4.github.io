@@ -38,6 +38,19 @@ layout: plain
                                     <i class="fas fa-file-pdf"></i></a>
                             </button>
                         {%  endif %}
+                        {% if item.post %}
+                            <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                                    style="outline:none; position:relative;"><a href="{{ item.post }}">
+                                    <i class="fas fa-blog"></i></a>
+                            </button>
+                        {% endif %}
+                        {% if item.presentation %}
+                            <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                                    style="outline:none; position:relative;">
+                                <a href="https://www.youtube.com/watch?v={{ item.presentation }}"><i class="fas fa-bullhorn"></i></a>
+                            </button>
+                        {% endif %}
+
 
                     </div>
 
@@ -47,8 +60,6 @@ layout: plain
                             <iframe src="https://www.youtube.com/embed/{{ item.youtube }}?autoplay=1&mute=1" ></iframe>
                         </div>
                     </div>
-
-
                 </div>
 
                 <!-- </button> -->
