@@ -13,8 +13,10 @@ tags:
 ---
 
 ### Overview
+#### In words
 Simulating  realistic  radar  data  has  the  potential  to  significantly  accelerate  the  development  of  data-driven approaches  to  radar  processing.  However,  it  is  fraught  with difficulty   due   to   the   notoriously   complex   image   formation process.   Here   we   propose   to   learn   a   radar   sensor   model capable  of  synthesising  faithful  radar  observations  based  on simulated elevation maps. In particular, we adopt an adversarial approach  to  learning  a forward sensor  model  from  unaligned radar  examples.  In  addition,  modelling  the backward model encourages  the  output  to  remain  aligned  to  the  world  state through  a  cyclical  consistency  criterion.  The  backward  model is further constrained to predict elevation maps from real radar data that are grounded by partial measurements obtained from corresponding  lidar  scans.  Both  models  are  trained  in  a  joint optimisation.  We  demonstrate  the  efficacy  of  our  approach  by evaluating  a  down-stream  segmentation  model  trained  purely on  simulated  data  in  a  real-world  deployment.  This  achieves performance  within  four  percentage  points  of  the  same  model trained  entirely  on  real  data.
 
+#### In slides
 <div class="video_wrapper w3-container">
 <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 <div class="pa-gallery-player-widget" style="width:100%; display:none;"
@@ -61,11 +63,12 @@ Simulating  realistic  radar  data  has  the  potential  to  significantly  acce
 </div>
 
 ### Find Out More
-This work carried out by myself, __Oiwi Parker Jones__ and __Ingmar Posner__ at the [Applied Artificial Intelligence Lab]() University of Oxford and presented at the International Conference on Robotics and Automation (ICRA) 2021.
+This work was carried out by myself, __Oiwi Parker Jones__ and __Ingmar Posner__ at the [Applied Artificial Intelligence Lab]() University of Oxford and presented at the [International Conference on Robotics and Automation (ICRA) 2021](ieee-icra.org).
 - Read the paper <a href="https://arxiv.org/pdf/2011.14389.pdf"><i class="fas fa-file-pdf"></i></a>
 - Watch the recorded presentation <a href="https://www.youtube.com/watch?v=xpjXBauGlpE"><i class="fab fa-youtube"></i></a>
 - Watch the video <a href="https://www.youtube.com/watch?v=C3N0R-Jlu7I"><i class="fab fa-youtube"></i></a>
 - Download presentation slides <a href="/assets/pdf/there-and-back-present.pdf"><i class="fas fa-file-pdf"></i></a>
+- Like our research? Checkout the A2I [webpage](https://ori.ox.ac.uk/labs/a2i/).
 
 ### Citation
 ```
