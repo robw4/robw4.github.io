@@ -24,6 +24,10 @@ social:
       href: https://scholar.google.com/citations?
       title: Scholar
       fa-icon: 'ai ai-google-scholar'
+    - id: robwrobots
+      href: https://twitter.com/
+      title: Twitter
+      fa-icon: 'fab fa-twitter'
 page_width: 900px
 numbered: false
 markdown: kramdown

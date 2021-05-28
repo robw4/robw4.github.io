@@ -22,9 +22,8 @@ Simulating  realistic  radar  data  has  the  potential  to  significantly  acce
 <div class="pa-gallery-player-widget" style="width:100%; display:none;"
   data-link="https://photos.app.goo.gl/XoEuZJAw4VTNe9ks6"
   data-title=""
-  data-description="35 new photos added to shared album"
-  data-delay="2">
-  <object data="https://lh3.googleusercontent.com/wGTbGibfQT_jKFt7oJFdj9K69WZYONFHmpOfMZ6Zfr0MapJiPemJbbiMi9TajB7ECB2Wx4wZuzLrGW7PrVJdsKPS6j9ffmcLk3jMKkyYqqiaylCx79PncroVagMYSDYpr3DpGVpBHg=w1920-h1080"></object>
+  data-description="35 new photos added to shared album">
+  <object data="https://lh3.googleusercontent.com/ydsiGQC7sgnFYxq98KTFAKK_DSJCqw3jKVxCMRt8ko-Htw0ii2AnFQhIriKsHhYVMC-iLSr81I2uxTiZzjTCpohQgWyir0rlTRB5MI_M6KknmREKF-WjC6RTJ8ZHnkDUVZ9q7ulJ1Q=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/B3wpWGxBRcifIMuV7XUfgs6xu6fA_nbQjxS0jByJ2elLJ9VsWZVcsbJOW6SqQ086CKj3KDeUOcXAsH5bpXqwez7UFSaaWBhWqwjMl28NYa9H1QOOg6xLWYtJbHTo4PmMNMJqGjgtng=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/zVSOwsKH5zcLV7Jn0VjfRq7uUH7Qua8XFbvIHIb44EatUsB4x7RRrwnAWf7ewatCLl4iExxS17djbWklUEQI7e1nNSLfMMlqOaUw4DBVygNlkawBrCvavJUYkYltWgKXhl4P5kKpow=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/G3l0talYu6b4q053zePAhw2yiOZgEDsZoHCY0kPjw5SM857tdBji7hjxtVRb6R-ys06c4vzGOH3DZtW4MKk74aj9SgIsB2uzHu_6AypltzFThMp3b8STNWvslN50mxfuG3Vfs_rqNw=w1920-h1080"></object>
@@ -58,14 +57,14 @@ Simulating  realistic  radar  data  has  the  potential  to  significantly  acce
   <object data="https://lh3.googleusercontent.com/VYc1vVA7f_jhUf7mT_tH7wVl9TVRwNLNeosVCwzV_V3TJiQGcrwm46U5mTBbuF7fcv2HOkE53Wz8g2w6xIwgkwA_GsG-AJ6hGrrtt8ZzuArKGB8DuQXSyBTVFLIOQB1PsdhYDLdAJw=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/Ef0FiZf_62UxMYmp8HEsW95jPykncus9ilpjTOnhnIhtEjYkW_renUelBy2kiKBpFBnZ0A3xu26FMC5Y2pxVQR8q2NCznlFqF34qVDyQ8jbp3kGMjcRn3l-uqyAadrAoP0mjRFRCOg=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/R_0gM2JGzH_C5YZwVG8Hk1GRSI0sHRkMq7TkF_gbqUNjefEg8EoeF14zcuzjeTJo7aAidWsU0e6cwXNQJBUqkiKHAdWdC8ebwnotI7mAjtsCoRc0gLeUnZRAw-j51LkKc3Ojiy1oNA=w1920-h1080"></object>
-  <object data="https://lh3.googleusercontent.com/HgY9z8awE8bxcsmH_NPaIJSs__la1LSPl8pipi1FL88C047VAcFb-UcQrakBK7XJNb1gaFGt3MA_dOPu8fndg1KNvMnlG5-cowy2OOAYrKjEWqsuoAlYfiYvE8UoT-F6JIXCPUlzKw=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/OPLQWxNAHs1BOI0PlqW10KwoQ3L5rtRdaguB4ThOz5GRvYGCqP2vaTZT6pjqInoyJU9gaiLukPE1kmWdPwAUT3I1tu-jjwNWsidqPW-jcEBe7gbmASke0ztFwUQbDEVcUVwxzX-RTw=w1920-h1080"></object>
 </div>
 </div>
 
 ### Find Out More
 This work was carried out by myself, __Oiwi Parker Jones__ and __Ingmar Posner__ at the [Applied Artificial Intelligence Lab]() University of Oxford and presented at the [International Conference on Robotics and Automation (ICRA) 2021](ieee-icra.org).
 - Read the paper <a href="https://arxiv.org/pdf/2011.14389.pdf"><i class="fas fa-file-pdf"></i></a>
-- Watch the recorded presentation <a href="https://www.youtube.com/watch?v=xpjXBauGlpE"><i class="fab fa-youtube"></i></a>
+- Watch the recorded presentation <a href="https://www.youtube.com/watch?v=xVL4xUMlDY0"><i class="fab fa-youtube"></i></a>
 - Watch the video <a href="https://www.youtube.com/watch?v=C3N0R-Jlu7I"><i class="fab fa-youtube"></i></a>
 - Download presentation slides <a href="/assets/pdf/there-and-back-present.pdf"><i class="fas fa-file-pdf"></i></a>
 - Like our research? Checkout the A2I [webpage](https://ori.ox.ac.uk/labs/a2i/).
