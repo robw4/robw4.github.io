@@ -2,18 +2,7 @@
 layout: page
 ---
 
-{% if page.tags %}
-    <p></p>
-    <div class="w3-container" style="font-size: 12px">
-        <div class="w3-bar">
-            <div class="w3-bar-item"><b>Tags...</b></div>
-            {% for tag in page.tags %}
-                <div class="w3-bar-item w3-round-xxlarge w3-light-gray">{{ tag }}</div>
-            {% endfor %}
-        </div>
-    </div>
-    <p></p>
-{% endif %}
+
 
 
 {{content}}

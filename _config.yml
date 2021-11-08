@@ -8,10 +8,10 @@ social:
       href: 'mailto:'
       title: 'Email'
       fa-icon: 'fas fa-envelope'
-    - id: athletes/5902010
-      href: https://www.strava.com/
-      title: 'strava'
-      fa-icon: "fab fa-strava"
+    - id: 'robw-resume.pdf'
+      href: /assets/pdf/
+      title: cv
+      fa-icon: 'fas fa-book'
     - id: robw4
       href: https://www.github.com/
       title: GitHub
@@ -24,10 +24,14 @@ social:
       href: https://scholar.google.com/citations?
       title: Scholar
       fa-icon: 'ai ai-google-scholar'
-    - id: robwrobots
-      href: https://twitter.com/
-      title: Twitter
-      fa-icon: 'fab fa-twitter'
+#    - id: robwrobots
+#      href: https://twitter.com/
+#      title: Twitter
+#      fa-icon: 'fab fa-twitter'
+    - id: athletes/5902010
+      href: https://www.strava.com/
+      title: 'strava'
+      fa-icon: "fab fa-strava"
 page_width: 900px
 numbered: false
 markdown: kramdown

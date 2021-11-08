@@ -117,6 +117,30 @@ h4, h5, h6 {
   font-size: 14px;
 }
 
+#wrapper {
+  width: 500px;
+  border: 1px solid black;
+  overflow: hidden; /* will contain if #first is longer than #second */
+}
+#first {
+  width: 300px;
+  float:left; /* add this */
+  border: 1px solid red;
+}
+#second {
+  border: 1px solid green;
+  overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+b a {font-weight: bold;
+  font-style: normal;
+  text-decoration:none;
+  color: black;}
+
+b a:hover {
+  color: rgba(41, 41, 41, 0.75);
+}
+
 a {
   font-weight: normal;
   font-style: italic;

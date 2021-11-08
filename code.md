@@ -37,7 +37,7 @@ In building this website I developed mu own [jeckyll]() theme. This
     [here](https://github.com/robw4/robw4.github.io).
 
 ## Vim
-Over the lockdown I got a little obsessed with vim and vim
+Over the lockdown vim and vim
  plugins which have since become a key part of my workflow over the
   last year as all work has gone remote. For anyone who is
    interested you can find my vim config

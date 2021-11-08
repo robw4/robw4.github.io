@@ -1,0 +1,71 @@
+<!-- Exposes:
+- name
+- content
+- image
+- description
+- link
+- format
+- abstract
+- tags
+- date
+-->
+
+
+{% for item in site.posts %}
+<div class="w3-container w3-row w3-padding-small">
+    <div class="w3-round-large w3-padding">
+        <div class="w3-padding w3-light-gray w3-round-large" style="outline:none;">
+            <div></div>
+
+            <b><a href="{{ item.url }}">{{ item.title }}</a></b>
+            <p><i>{{ item.abstract }}</i></p>
+
+
+            <div class="w3-bar">
+
+                {% for tag in item.tags %}
+                    <div class="w3-bar-item w3-round-xxlarge w3-small w3-white">{{tag }}</div>
+                {% endfor %}
+
+                <button class="w3-button w3-dark-gray w3-hover-dark-gray w3-small w3-round-xxlarge"
+                        style="outline:none; position:absolute; bottom: 0px; right: 0px;">
+                    <i class="fa fa-comment"></i>
+                </button>
+
+                <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
+                        style="outline:none; position:relative;"><a href="{{ item.url }}">
+                        <i class="fas fa-blog"></i></a>
+                </button>
+
+
+
+            </div>
+        </div>
+        <!-- </button> -->
+        <!-- ttoc -->
+    </div>
+</div>
+{% endfor %}
+
+
+
+<script>
+    function toggleContent(id) {
+        // let x = document.getElementById('Content');
+        let ic = document.getElementById('__button'+id);
+        let y = document.getElementById('__abstract'+id);
+        console.log(ic);
+        // var outer = document.getElementById('OuterContainer');
+        if (y.className.indexOf("w3-show") == -1) {
+            // x.className += " w3-show";
+            // ic.className = ic.className.replace(" fa-list", " fa-comment");
+            y.className = y.className.replace("w3-hide", "w3-show");
+            ic.className = ic.className.replace("fa-chevron-circle-down", "fa-chevron-circle-up");
+        } else {
+            // x.className = x.className.replace(" w3-show", "");
+            // ic.className = ic.className.replace(" fa-comment", " fa-list");
+            y.className = y.className.replace("w3-show", "w3-hide");
+            ic.className = ic.className.replace("fa-chevron-circle-up", "fa-chevron-circle-down")
+        }
+    }
+</script>
