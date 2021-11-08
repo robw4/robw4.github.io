@@ -26,12 +26,7 @@
                 {% for tag in item.tags %}
                     <div class="w3-bar-item w3-round-xxlarge w3-small w3-white">{{tag }}</div>
                 {% endfor %}
-
-                <button class="w3-button w3-dark-gray w3-hover-dark-gray w3-small w3-round-xxlarge"
-                        style="outline:none; position:absolute; bottom: 0px; right: 0px;">
-                    <i class="fa fa-comment"></i>
-                </button>
-
+                
                 <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
                         style="outline:none; position:relative;"><a href="{{ item.url }}">
                         <i class="fas fa-blog"></i></a>
