@@ -4,35 +4,45 @@ layout: default
 
 
 
-<div class="w3-content" style="max-width:{{ site.page_width }}">
     <!-- page title -->
-    <div class="w3-bar sticky w3-center w3-padding" id="ToContent">
-        <!-- contents page-->
-        <button class="w3-button w3-padding  w3-hover-amber w3-black w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-            <a href="/index.html"><i class="fas fa-home" style="color: #fff";></i></a><small class="header"></small></i>
-        </button>
 
+    <div class="w3-bar sticky w3-center w3-padding header w3-hide" id="BAR">
+        <a href="/index.html">
+            <button id="home" class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right header" style="outline:none; margin: 1px 1px">
+                <i class="fa fa-home" style="color: black"></i><small class="header" > home</small>
+            </button>
+        </a>
+
+        <a id="cv" href="/cv.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-book" style="color: black"></i><small class="header" ></small></i><small>  cv</small>
+            </button></a>
+
+        <a id="blog" href="/blog.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-blog" style="color: black"></i><small class="header" > blog</small></i>
+            </button></a>
+
+        {% unless page.no_nav %}
         <button onclick="goToPreviousAnchor()" class="w3-button w3-padding w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
             <i class="fa fa-arrow-circle-up" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
         </button>
         <button onclick="goToNextAnchor()" class="w3-button w3-padding w3-left-align w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
             <i class="fa fa-arrow-circle-down" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
         </button>
-        <a href="#__TOC">
-            <button onclick="toContent()" class="w3-button w3-padding w3-left-align w3-hover-amber w3-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-                <i class="fa fa-list" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
-        </button>
-        </a>
+        {% endunless %}
     </div>
+
 
 
     <div id="pad">
 
     <div class="w3-row w3-padding-small">
         <div class="w3-col l2 m0 s0 w3-container"></div>
-        <div class="w3-col l8 m0 s0">
-            <a id="__title"></a>{%  if page.title %}
+        <div class="w3-col l8 m0 s0 w3-padding-small">
+            <a id="__title"></a>
+            {%  if page.title %}
                 <h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
+            {% else %}
+                <a href="#__title" class="Anchor"></a>
             {% endif %}
             <div>
                 <div class="outer-center">
@@ -40,24 +50,22 @@ layout: default
                         <!-- abstract -->
                         <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
 
+                        {% if page.abstract %}
                         <div class="w3-padding w3-light-gray w3-round-large" style="outline:none;">
                             <div class="w3-content content" style="float: left">
-
                             </div>
+
                             <div id="__abstract" class="w3-hide w3-show">
                                 <div class="w3-row">
-                                    {% if page.abstract %}
                                         <p style="margin: 0 0 5"><em>{{ page.abstract }}</em></p>
-                                    {% endif %}
                                 </div>
                                 <button class="w3-button w3-dark-gray w3-small w3-round-xxlarge w3-hover-dark-gray"
                                         style="outline:none; position:absolute; bottom: 0px; right: 0px;">
                                     <i class="fa fa-comment"></i>
                                 </button>
-
                             </div>
-
                         </div>
+                        {% endif %}
 
                         <!-- </button> -->
 
@@ -95,34 +103,35 @@ layout: default
         <p></p>
     {% endif %}
 
+
     <div class="w3-container w3-padding-small{% if use_numbers %} numbered{% endif %}">
-        <div class="w3-padding-small w3-light-gray w3-round-large" style="outline:none;">
-        <a id="__TOC"></a>
-        <div></div>
 
-        <div class="w3-bar">
-            <button onclick="toggleContent()" class="w3-button w3-hover-amber w3-white w3-round-xxlarge w3-left" style="outline:none; margin: 1px 1px">
-                <i id="ContentIcon" class="fa fa-angle-down" aria-hidden="true"></i>
-            </button>
-            <button class="w3-button w3-hover-light-gray"><small class="header">Content </small></button>
-        </div>
+        {% unless page.no_content %}
+            <div class="w3-padding-small w3-white  w3-round-large" style="outline:none;">
+            <a id="__TOC"></a>
 
-        <div id="Content" class="w3-hide w3-container w3-padding-small">
-            <div class="w3-padding">
-                <div class="toc" style="font-size: large">
-                    {% include toc.html h_min=2 h_max=5 class=toc html=content ordered=true %}
-                    <!-- <i class="fa fa-list" aria-hidden="true" id="ContentIcon"></i> -->
+            <div class="w3-bar w3-padding-small">
+                <button class="w3-button w3-padding-small w3-hover-white w3-left"><h2><i class="fas fa-list"></i> Content <a href="#__TOC" class="Anchor">#</a></h2> </button>
+                <button onclick="toggleContent()" class="w3-large w3-button w3-hover-amber w3-white w3-round-xxlarge w3-left" style="position:relative; top: 20px">
+                    <i id="ContentIcon" class="fa fa-angle-down" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+            <div id="Content" class="w3-hide w3-container w3-padding-small">
+                <div class="w3-padding">
+                    <div class="toc" style="font-size: large">
+                        {% include toc.html h_min=2 h_max=5 class=toc html=content ordered=true %}
+                        <!-- <i class="fa fa-list" aria-hidden="true" id="ContentIcon"></i> -->
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
+            </div>
+        {% endunless %}
 
         <p></p>
-
-
         {% include anchor_headings.html html=content anchorBody="#" h_max=5 anchorClass="anchor"%}
     </div>
-</div>
 </div>
 
 
@@ -228,6 +237,24 @@ layout: default
             x.className += 'w3-card-4 w3-margin w3-padding';
         }
     }
+
+
+    let headerHeight = document.getElementById("header").offsetHeight;
+    let bar = document.getElementById('BAR');
+
+    window.addEventListener('scroll', function(e) {
+        console.log(headerHeight);
+        if (document.body.scrollTop > bar.getBoundingClientRect().top + headerHeight) {
+            bar.className = bar.className.replace("w3-hide", "w3-show")
+        }
+        if (document.body.scrollTop < bar.getBoundingClientRect().top + headerHeight) {
+            bar.className = bar.className.replace("w3-show", "w3-hide")
+        }
+    });
+
+    // window.addEventListener("hashchange", function () {
+    //     window.scrollTo(window.scrollX, window.scrollY);
+    // });
 
     // //watch window resize
     // window.onresize = resize;

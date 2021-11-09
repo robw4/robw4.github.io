@@ -8,10 +8,10 @@ social:
       href: 'mailto:'
       title: 'Email'
       fa-icon: 'fas fa-envelope'
-    - id: 'robw-resume.pdf'
-      href: /assets/pdf/
-      title: cv
-      fa-icon: 'fas fa-book'
+#    - id: ''
+#      href: /cv.html
+#      title: cv
+#      fa-icon: 'fas fa-book'
     - id: robw4
       href: https://www.github.com/
       title: GitHub

@@ -38,22 +38,41 @@
 and is wrapped around the whole page content, except for the footer in this example -->
 
 <!-- Header -->
-<header class="w3-container w3-center w3-padding w3-light-gray">
+<header class="w3-container w3-center w3-padding w3-light-gray" id="header">
     <div class="w3-xlarge header">
         <b>{{ site.title}}</b>
     </div>
-
-    <div class="w3-content content">
-        <img class="w3-circle w3-padding" width="200" src={{ site.mugshot }}>
-    </div>
     {% include social.html %}
+    <div class="w3-content content">
+        <a href="/index.html"><img class="w3-circle w3-padding" width="200" src={{ site.mugshot }}></a>
+    </div>
+
+    <!-- contents page-->
+    <div class="w3-bar header" >
+        <a href="/index.html">
+        <button id="home" class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-left header" style="outline:none; margin: 1px 1px">
+           <i class="fa fa-home" style="color: black"></i><small class="header" > home</small>
+        </button>
+        </a>
+
+        <a id="cv" href="/cv.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-left" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-book" style="color: black"></i><small class="header" ></small></i><small>  cv</small>
+            </button></a>
+
+        <a id="blog" href="/blog.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-left" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-blog" style="color: black"></i><small class="header" > blog</small></i>
+            </button></a>
+
+    </div>
+
+
+
     <!-- contents page-->
 
 
 </header>
 
-
-<div class="w3-content" style="max-width:1400px">
+<div class="w3-content w3-padding-small" style="max-width:{{ site.page_width }}">
     {{ content }}
     <!-- END w3-content -->
 </div>

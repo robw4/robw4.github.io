@@ -13,14 +13,15 @@ abstract: I am a final year PhD student researching with the <a href="https://or
    towards machine vision - I have spent the last three months interning with Nvidia developing systems for 
    large scale semantic 3D mapping and scene understanding using Stereo cameras for AV applications.
 display_title: false
+no_content: true
 ---
 
 
 ![teaser](/assets/images/research.jpg)
 
 ## <i class='fas fa-briefcase'></i> Jobs
-I am currently looking for jobs at the intersection of robotics autonomous driving and machine learning.
-- Download a copy of my [resume](/assets/pdf/robw-resume.pdf)
+I am currently looking for jobs at the intersection of robotics, autonomous driving and machine learning.
+- Download a copy of my [resume](/cv.html)
 - Find me on [LinkedIn](https://www.linkedin.com/in/rob-weston-a1289a177/) 
 - Or reach out via [email](mailto:robw@robots.ox.ac.uk).
 
@@ -33,8 +34,6 @@ Here you can find a complete list of my publications. For more info (including v
 Here you can find a selection of blog posts that I have written over the last few years:
 
 {% include blog.html %}
-
-
 
 ## <i class='fas fa-code'></i> Code
 ### Xmen

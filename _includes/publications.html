@@ -1,10 +1,10 @@
 {% for item in site.data.publications %}
 <div class="w3-container w3-row w3-padding-small">
-    <div class="w3-round-large w3-padding">
+    <div class="w3-round-large w3-padding-sma;;">
         <!-- abstract -->
         <!-- <button  class="w3-button w3-large w3-left-align w3-hover-amber" style="outline:none"> -->
         <!--  width="{{ site.page_width | times: 1.1}}"  height="{{ site.page_width | times: 0.5625 | times: 1.1 }}"-->
-        <div class="w3-padding w3-light-gray w3-round-large" style="outline:none;">
+        <div class="w3-padding-small w3-light-gray w3-round-large" style="outline:none;">
             <div></div>
             {%  if item.post %}
                 <b><a href="{{ item.post }}">{{ item.title }}</a></b>

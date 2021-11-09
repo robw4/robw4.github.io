@@ -35,6 +35,9 @@ html {
 
 
 img[alt=paper] { width: 400px; }
+a img:hover {
+  opacity: 50%;
+}
 
 // Header numbering added using the numbered class
 h1, h2 {padding-top: 10px}
@@ -189,6 +192,11 @@ dl, dt, dd, dl p {
 
 .header {
   font-family: Arvo, Monaco, serif;
+}
+
+.header a {
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -388,7 +396,7 @@ table tr:nth-child(even) {background-color: #f7f7f7}
   width: 100%;
   padding-top: 50px; padding-right: 30px; padding-left: 80px;
   padding-bottom: 56.25%; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
-  box-shadow: 0px 10px 5px gray;
+  box-shadow: 0px 0px 0px gray;
 }
 
 iframe{
@@ -400,10 +408,13 @@ iframe{
   border: none;
 }
 
+
 .anchor {
   font-style: normal;
-  visibility: hidden;
+  visibility: visible;
+  offset-position: top right 10px;
 }
+
 
 // ###########################
 // Custom classes
@@ -436,6 +447,15 @@ section{
 //}
 
 // sticky class for div subclasses
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  padding-top: 11px;    /* ➜ compensate for the trick */
+  z-index: 100;
+  transition: .5s;
+}
+
 .sticky {
   position: -webkit-sticky;
   position: sticky;
@@ -516,6 +536,8 @@ section{
   clear: both;
 }
 
+
+
 .change-icon > .fa + .fa,
 .change-icon:hover > .fa {
   display: none;
@@ -534,6 +556,14 @@ section{
 //  position: fixed; /* Set the navbar to fixed position */
 //  width: 100%; /* Full width */
 //}
+
+.mugshot-icon {
+  background: url('/assets/images/favicon.ico');
+  height: 20px;
+  width: 20px;
+  display: block;
+  /* Other styles here */
+}
 
 
 @media print, screen and (max-width: 960px) {
@@ -566,6 +596,7 @@ section{
 
   header a small {
     display:inline;
+
   }
 
   header ul {

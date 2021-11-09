@@ -12,9 +12,9 @@
 
 
 {% for item in site.posts %}
-<div class="w3-container w3-row w3-padding-small">
-    <div class="w3-round-large w3-padding">
-        <div class="w3-padding w3-light-gray w3-round-large" style="outline:none;">
+<div class="w3-container w3-padding-small w3-row">
+    <div class="w3-round-large w3-padding-small">
+        <div class="w3-padding-small w3-light-gray w3-round-large" style="outline:none;">
             <div></div>
 
             <b><a href="{{ item.url }}">{{ item.title }}</a></b>
@@ -26,12 +26,11 @@
                 {% for tag in item.tags %}
                     <div class="w3-bar-item w3-round-xxlarge w3-small w3-white">{{tag }}</div>
                 {% endfor %}
-                
+
                 <button class="w3-bar-item  w3-button w3-round-xxlarge w3-hover-amber w3-right"
                         style="outline:none; position:relative;"><a href="{{ item.url }}">
                         <i class="fas fa-blog"></i></a>
                 </button>
-
 
 
             </div>
