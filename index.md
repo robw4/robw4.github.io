@@ -23,7 +23,7 @@ no_content: true
 I am currently looking for jobs at the intersection of robotics, autonomous driving and machine learning.
 - Download a copy of my [resume](/cv.html)
 - Find me on [LinkedIn](https://www.linkedin.com/in/rob-weston-a1289a177/) 
-- Or reach out via [email](mailto:robw@robots.ox.ac.uk).
+- Or reach out via [email](mailto:robw@robots.ox.ac.uk)
 
 ## <i class='fas fa-graduation-cap'></i> Publications
 Here you can find a complete list of my publications. For more info (including videos!) press the drop down arrow or follow the various links to more project content.
@@ -45,8 +45,7 @@ Here you can find a selection of blog posts that I have written over the last fe
    scheduler and visualising experiments from the command line.
 
 A lot of work was put into developing xmen. It is now a key
- component of my workflow which I
-  depend upon every day in my research. Please give it a go and
+ component of my workflow. Please give it a go and
    let me know what you think! For more info please see the xmen
     project [website](https://robw4.github.io/xmen/)  
 
@@ -55,10 +54,9 @@ A lot of work was put into developing xmen. It is now a key
 
 
 ### Website
-In building this website I developed mu own [jeckyll]() theme. This
+In building this website I developed my own [jeckyll](https://jekyllrb.com/) theme. This
  was a complete first for me and I learnt a lot through the process
- . The aim was to develop a theme that is as research friendly as
-  possible with built in math support, easy page navigation and
+ . The aim was to develop a theme that is research friendly, with built in math support, easy page navigation and
    support for project
     pages. Much of the appearance is
      inspired by latex. Some work still needs to
@@ -68,7 +66,6 @@ In building this website I developed mu own [jeckyll]() theme. This
 
 ### Vim
 Over the lockdown vim and vim
- plugins which have since become a key part of my workflow over the
-  last year as all work has gone remote. For anyone who is
+ plugins became a key part of my workflow. For anyone who is
    interested you can find my vim config
    [here](https://github.com/robw4/vim).

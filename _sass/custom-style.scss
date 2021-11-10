@@ -40,7 +40,7 @@ a img:hover {
 }
 
 // Header numbering added using the numbered class
-h1, h2 {padding-top: 10px}
+h1, h2 {padding-top: 20px}
 h3, h4, h5, h6 {padding-top: 10px}
 
 
@@ -81,6 +81,8 @@ body, html, p, h1, h2, h3 {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  padding-top: 50px;
+  margin-top: -45px;
 }
 
 h1, h2{
@@ -409,10 +411,22 @@ iframe{
 }
 
 
-.anchor {
-  font-style: normal;
+a.anchor {
+  //display: block;
+  position: relative;
+  top: 0px;
   visibility: visible;
-  offset-position: top right 10px;
+  opacity: 0.2;
+}
+
+a.anchor:hover {
+  opacity: 100;
+}
+
+
+:target::before {
+  content: '»';
+  margin-right: 0px;
 }
 
 

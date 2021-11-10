@@ -5,8 +5,7 @@ layout: default
 
 
     <!-- page title -->
-
-    <div class="w3-bar sticky w3-center w3-padding header w3-hide" id="BAR">
+    <div class="w3-bar  w3-white sticky w3-center w3-padding header w3-hide" id="BAR">
         <a href="/index.html">
             <button id="home" class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right header" style="outline:none; margin: 1px 1px">
                 <i class="fa fa-home" style="color: black"></i><small class="header" > home</small>
@@ -38,11 +37,11 @@ layout: default
     <div class="w3-row w3-padding-small">
         <div class="w3-col l2 m0 s0 w3-container"></div>
         <div class="w3-col l8 m0 s0 w3-padding-small">
-            <a id="__title"></a>
+            <a id="__title" class="anchor"></a>
             {%  if page.title %}
                 <h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
             {% else %}
-                <a href="#__title" class="Anchor"></a>
+                <a href="#__title" style="padding-top: 50px;margin-top: -50px;" class="Anchor w3-center"></a>
             {% endif %}
             <div>
                 <div class="outer-center">
@@ -139,7 +138,7 @@ layout: default
 
 <script>
     function myFunction(id) {
-        var x = document.getElementById(id);
+        let x = document.getElementById(id);
         if (x.className.indexOf("w3-show") == -1) {
             x.className += " w3-show";
         } else {
@@ -164,7 +163,7 @@ layout: default
         }
     }
     function toContent() {
-        var x = document.getElementById('Content');
+        let x = document.getElementById('Content');
         if (x.className.indexOf(" w3-show") == -1) {
             toggleContent()
         }
@@ -173,7 +172,7 @@ layout: default
     function goToNextAnchor() {
         let x = document.getElementsByClassName("Anchor");
         let current = window.location.hash;
-        var not_found = true;
+        let not_found = true;
         console.log("current = " + current);
 
         // In the current hash is in list of Anchors go to
@@ -182,6 +181,8 @@ layout: default
             console.log(x[i]);
             if (i > 0 && x[i - 1].hash == current){
                 window.location.href = x[i].href;
+                // console.log(window.scrollY)
+                // window.scrollBy(0, 0);
                 not_found = false;
             }
         }
@@ -190,6 +191,7 @@ layout: default
             console.log(!(x[x.length - 1].hash == current));
             if (!(x[x.length - 1].hash == current)){
                 window.location.href = x[0].href;
+                // window.scrollBy(-20, 0);
             }
         }
         return false;
@@ -206,7 +208,10 @@ layout: default
         for (i = x.length - 2; i > 0; i--){
             if (x[i + 1].hash == current){
                 window.location.href = x[i].href;
+                console.log(window.location)
+                // window.scrollBy(-20, 0);
                 not_found = false;
+
             }
         }
         // If hash is last entry do nothing, else go to first
@@ -214,6 +219,7 @@ layout: default
             // console.log(x[x.length - 1]);
             if (!(x[0].hash == current)){
                 window.location.href = x[0].href;
+                // window.scrollBy(-20, 0);
             }
         }
         return false;
@@ -253,7 +259,7 @@ layout: default
     });
 
     // window.addEventListener("hashchange", function () {
-    //     window.scrollTo(window.scrollX, window.scrollY);
+    //     window.scrollTo(window.scrollX, window.scrollY + 100);
     // });
 
     // //watch window resize
