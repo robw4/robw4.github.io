@@ -11,7 +11,7 @@ abstract: I am a final year PhD student researching with the <a href="https://or
    application of state-of-the art machine learning approaches. 
    For more information see my publications below. More recently I have pivoted more
    towards machine vision - I have spent the last three months interning with Nvidia developing systems for 
-   large scale semantic 3D mapping and scene understanding using Stereo cameras for AV applications.
+   vision based large scale semantic 3D mapping and scene understanding for AV applications.
 display_title: false
 no_content: true
 ---
