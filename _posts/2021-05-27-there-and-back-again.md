@@ -5,6 +5,7 @@ title: "There And Back Again: Simulate Radar For Real World Applications"
 abstract: 'Here you will find a landing page supporting the project "There and Back Again: Learning to Simulate Radar For Real World Applications" presented at the International Conference on Robotics and Automation (ICRA) 2021.'
 image: /assets/images/there-and-back-present.png
 numbered: false
+no_content: true
 tags:
 - ICRA
 - research
@@ -12,11 +13,7 @@ tags:
 - generative modelling
 ---
 
-### Overview
-#### In words
-Simulating  realistic  radar  data  has  the  potential  to  significantly  accelerate  the  development  of  data-driven approaches  to  radar  processing.  However,  it  is  fraught  with difficulty   due   to   the   notoriously   complex   image   formation process.   Here   we   propose   to   learn   a   radar   sensor   model capable  of  synthesising  faithful  radar  observations  based  on simulated elevation maps. In particular, we adopt an adversarial approach  to  learning  a forward sensor  model  from  unaligned radar  examples.  In  addition,  modelling  the backward model encourages  the  output  to  remain  aligned  to  the  world  state through  a  cyclical  consistency  criterion.  The  backward  model is further constrained to predict elevation maps from real radar data that are grounded by partial measurements obtained from corresponding  lidar  scans.  Both  models  are  trained  in  a  joint optimisation.  We  demonstrate  the  efficacy  of  our  approach  by evaluating  a  down-stream  segmentation  model  trained  purely on  simulated  data  in  a  real-world  deployment.  This  achieves performance  within  four  percentage  points  of  the  same  model trained  entirely  on  real  data.
-
-#### In slides
+### Slides
 <div class="video_wrapper w3-container">
 <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 <div class="pa-gallery-player-widget" style="width:100%; display:none;"
@@ -59,6 +56,14 @@ Simulating  realistic  radar  data  has  the  potential  to  significantly  acce
   <object data="https://lh3.googleusercontent.com/R_0gM2JGzH_C5YZwVG8Hk1GRSI0sHRkMq7TkF_gbqUNjefEg8EoeF14zcuzjeTJo7aAidWsU0e6cwXNQJBUqkiKHAdWdC8ebwnotI7mAjtsCoRc0gLeUnZRAw-j51LkKc3Ojiy1oNA=w1920-h1080"></object>
   <object data="https://lh3.googleusercontent.com/OPLQWxNAHs1BOI0PlqW10KwoQ3L5rtRdaguB4ThOz5GRvYGCqP2vaTZT6pjqInoyJU9gaiLukPE1kmWdPwAUT3I1tu-jjwNWsidqPW-jcEBe7gbmASke0ztFwUQbDEVcUVwxzX-RTw=w1920-h1080"></object>
 </div>
+</div>
+
+### Abstract
+Simulating  realistic  radar  data  has  the  potential  to  significantly  accelerate  the  development  of  data-driven approaches  to  radar  processing.  However,  it  is  fraught  with difficulty   due   to   the   notoriously   complex   image   formation process.   Here   we   propose   to   learn   a   radar   sensor   model capable  of  synthesising  faithful  radar  observations  based  on simulated elevation maps. In particular, we adopt an adversarial approach  to  learning  a forward sensor  model  from  unaligned radar  examples.  In  addition,  modelling  the backward model encourages  the  output  to  remain  aligned  to  the  world  state through  a  cyclical  consistency  criterion.  The  backward  model is further constrained to predict elevation maps from real radar data that are grounded by partial measurements obtained from corresponding  lidar  scans.  Both  models  are  trained  in  a  joint optimisation.  We  demonstrate  the  efficacy  of  our  approach  by evaluating  a  down-stream  segmentation  model  trained  purely on  simulated  data  in  a  real-world  deployment.  This  achieves performance  within  four  percentage  points  of  the  same  model trained  entirely  on  real  data.
+
+### Video
+<div class="w3-row video_wrapper">
+    <iframe src="https://www.youtube.com/embed/xVL4xUMlDY0?&mute=1&autoplay=1" ></iframe>
 </div>
 
 ### Find Out More

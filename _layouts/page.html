@@ -5,28 +5,39 @@ layout: default
 
 
     <!-- page title -->
-    <div class="w3-bar  w3-white sticky w3-center w3-padding header w3-hide" id="BAR">
-        <a href="/index.html">
+    <div class="w3-bar w3-white sticky w3-center w3-padding-small header" id="BAR">
+        <!--
+        <button id="home" class="w3-button w3-padding  w3-hover-white w3-white w3-round-xxlarge w3-left header">
+            <i class="fa fa-home" style="opacity: 0"></i>
+        </button>-->
+        <a href="/index.html"><img src="/assets/images/mugshot.jpg" class="w3-circle w3-left hidden-button w3-hide" style="width:40px"></a>
+
+
+        <a href="/index.html" class="hidden-button w3-hide">
             <button id="home" class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right header" style="outline:none; margin: 1px 1px">
-                <i class="fa fa-home" style="color: black"></i><small class="header" > home</small>
+                <i class="fa fa-home" style="color: black"></i><small class="header" ></small>
             </button>
         </a>
 
-        <a id="cv" href="/cv.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-                <i class="fas fa-book" style="color: black"></i><small class="header" ></small></i><small>  cv</small>
+        <a id="cv" href="/cv.html" class="hidden-button w3-hide"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-book" style="color: black"></i><small class="header" ></small></i><small> </small>
             </button></a>
 
-        <a id="blog" href="/blog.html"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-                <i class="fas fa-blog" style="color: black"></i><small class="header" > blog</small></i>
+        <a id="blog" href="/blog.html" class="hidden-button w3-hide"><button class="w3-button w3-padding  w3-hover-amber w3-light-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                <i class="fas fa-blog" style="color: black"></i><small class="header" ></small></i>
             </button></a>
 
         {% unless page.no_nav %}
-        <button onclick="goToPreviousAnchor()" class="w3-button w3-padding w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-            <i class="fa fa-arrow-circle-up" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
-        </button>
-        <button onclick="goToNextAnchor()" class="w3-button w3-padding w3-left-align w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
-            <i class="fa fa-arrow-circle-down" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
-        </button>
+            <div class="hidden-button w3-hide">
+                <button onclick="goToPreviousAnchor()" class="w3-button w3-padding w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                    <i class="fa fa-arrow-circle-up" aria-hidden="true" style="color: #fff"></i><small class="header"></small> </button>
+            </div>
+            <div class="hidden-button w3-hide">
+                <button onclick="goToNextAnchor()" class="w3-button w3-padding w3-left-align w3-hover-amber w3-dark-gray w3-round-xxlarge w3-right" style="outline:none; margin: 1px 1px">
+                    <i class="fa fa-arrow-circle-down" aria-hidden="true" style="color: #fff"></i><small class="header"></small>
+                </button>
+            </div>
+
         {% endunless %}
     </div>
 
@@ -41,7 +52,7 @@ layout: default
             {%  if page.title %}
                 <h1 class="w3-center">{{ page.title }} <a href="#__title" class="Anchor">#</a></h1>
             {% else %}
-                <a href="#__title" style="padding-top: 50px;margin-top: -50px;" class="Anchor w3-center"></a>
+                <h1 style="opacity: 0; border-bottom: none; padding-bottom: 15px; margin-bottom: 0px;padding-top: 45px;margin-top: -45px; font-size: 1px"><a href="#__title" class="Anchor w3-center">#</a></h1>
             {% endif %}
             <div>
                 <div class="outer-center">
@@ -197,6 +208,7 @@ layout: default
         return false;
     }
 
+
     function goToPreviousAnchor() {
         let x = document.getElementsByClassName("Anchor");
         let current = window.location.hash;
@@ -208,7 +220,7 @@ layout: default
         for (i = x.length - 2; i > 0; i--){
             if (x[i + 1].hash == current){
                 window.location.href = x[i].href;
-                console.log(window.location)
+                console.log(window.location);
                 // window.scrollBy(-20, 0);
                 not_found = false;
 
@@ -246,17 +258,20 @@ layout: default
 
 
     let headerHeight = document.getElementById("header").offsetHeight;
-    let bar = document.getElementById('BAR');
 
+    let bar = document.getElementById('BAR');
+    let x = document.getElementsByClassName("hidden-button");
     window.addEventListener('scroll', function(e) {
         console.log(headerHeight);
         if (document.body.scrollTop > bar.getBoundingClientRect().top + headerHeight) {
-            bar.className = bar.className.replace("w3-hide", "w3-show")
-        }
+            for (i = 0; i < x.length; i++){
+                x[i].className = x[i].className.replace("w3-hide", "w3-show")
+            }}
         if (document.body.scrollTop < bar.getBoundingClientRect().top + headerHeight) {
-            bar.className = bar.className.replace("w3-show", "w3-hide")
-        }
-    });
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace("w3-show", "w3-hide")
+            }}
+        });
 
     // window.addEventListener("hashchange", function () {
     //     window.scrollTo(window.scrollX, window.scrollY + 100);
